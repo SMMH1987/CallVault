@@ -82,6 +82,7 @@ class AvanegarUploadWorker(ctx: Context, params: WorkerParameters) : CoroutineWo
             if (split) put("channel_map", JSONObject().put("left", "near").put("right", "far"))
             if (details != null) put("details", details)
         }
+        fitMetadata(metadata)
 
         val stream = runCatching { applicationContext.contentResolver.openInputStream(uri) }.getOrNull()
         if (stream == null) {
@@ -116,6 +117,21 @@ class AvanegarUploadWorker(ctx: Context, params: WorkerParameters) : CoroutineWo
         }
     }
 
+    /**
+     * Keeps [metadata] under the server's 8 KB limit (a larger one is refused outright, 422 bad_metadata).
+     * The speaker turns go first: on a long call they are most of the details file, and a dual-track
+     * upload does not need them because the server splits the channels itself. If that is still not
+     * enough, the details file goes, leaving the device fields.
+     */
+    private fun fitMetadata(metadata: JSONObject) {
+        fun size() = metadata.toString().toByteArray(Charsets.UTF_8).size
+        if (size() <= METADATA_MAX_BYTES) return
+        metadata.optJSONObject("details")?.optJSONObject("callvault")?.remove("speaker_turns")
+        if (size() <= METADATA_MAX_BYTES) return
+        metadata.remove("details")
+        AppLogger.w(TAG, "Details file too large for the server's metadata limit; sent device fields only")
+    }
+
     /** The details file beside the recording, as JSON, or null when there is none (yet). */
     private fun readDetails(prefs: AppPreferences, name: String): JSONObject? = runCatching {
         val folder = prefs.getRecordingFolderUri() ?: return null
@@ -145,6 +161,8 @@ class AvanegarUploadWorker(ctx: Context, params: WorkerParameters) : CoroutineWo
         private const val MAX_ATTEMPTS = 30
         private const val DETAILS_WAIT_ATTEMPTS = 3
         private const val JOBS_PREFS = "avanegar_jobs"
+        /** The API refuses a larger `metadata` field; a little under it, for safety. */
+        private const val METADATA_MAX_BYTES = 8000
 
         /**
          * Queues [name] for sending, if server upload is on. One unique job per recording, so a second
