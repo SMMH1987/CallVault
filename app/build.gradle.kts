@@ -168,6 +168,8 @@ android {
 
         buildConfigField("String", "CI_BUILD_NUMBER", "\"${ciBuildNumber.get()}\"")
         buildConfigField("boolean", "ON_DEVICE_AI", onDeviceAi.toString())
+        // Upstream's donation pill, appeal and settings row. Off in this fork's company build.
+        buildConfigField("boolean", "UPSTREAM_SUPPORT_LINKS", "false")
 
         externalNativeBuild {
             cmake {

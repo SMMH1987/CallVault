@@ -58,6 +58,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import android.widget.Toast
+import com.baba.callvault.BuildConfig
 import com.baba.callvault.system.openWirelessDebugging
 import com.baba.callvault.integrations.adb.AdbPairingService
 import com.baba.callvault.system.diagnostics.ReportBundle
@@ -578,7 +579,9 @@ fun SettingsContent(
                     onToggle = { onToggleSection(SECTION_AUDIO) }
                 )
             }
-            item {
+            // On-device transcription is left out of this fork's build (BuildConfig.ON_DEVICE_AI), and a
+            // section full of models and schedules that do nothing would only mislead.
+            if (BuildConfig.ON_DEVICE_AI) item {
                 // Summaries live inside this section rather than beside it. A summary is read from
                 // a transcript and is useless without one, and — the reason this moved — they used
                 // to have a language setting each. Setting the wrong one produced a transcript in
@@ -2900,7 +2903,8 @@ private fun AboutSection(
         SettingsDivider()
 
         // Optional "support development" link. Offers Ko-fi and PayPal; both open in the browser.
-        NavigationRow(
+        // Hidden in this fork's company build: staff are not the audience for the upstream appeal.
+        if (BuildConfig.UPSTREAM_SUPPORT_LINKS) NavigationRow(
             icon = Icons.Filled.Favorite,
             label = stringResource(R.string.settings_support_label),
             value = stringResource(R.string.settings_support_value),

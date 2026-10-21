@@ -22,10 +22,12 @@ object GitHubReleases {
 
     private const val TAG = "CV:GitHubReleases"
     private const val LATEST_RELEASE_URL =
-        "https://api.github.com/repos/madkongo/CallVault/releases/latest"
+        // This fork's own releases: following upstream's would offer its APK, which is signed with a
+        // different key and has none of this fork's changes.
+        "https://api.github.com/repos/SMMH1987/CallVault/releases/latest"
 
     /** The release page users can open when an automatic path fails. */
-    const val RELEASES_PAGE_URL = "https://github.com/madkongo/CallVault/releases/latest"
+    const val RELEASES_PAGE_URL = "https://github.com/SMMH1987/CallVault/releases/latest"
 
     private const val APK_ASSET_NAME = "CallVault.apk"
     private const val CONNECT_TIMEOUT_MS = 15_000

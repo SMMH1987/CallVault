@@ -63,6 +63,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.baba.callvault.BuildConfig
 import com.baba.callvault.R
 import com.baba.callvault.data.AppPreferences
 import com.baba.callvault.data.StorageTarget
@@ -166,7 +167,7 @@ fun WizardScreen(
     // Fixed for the run of the wizard: the mode is chosen during onboarding, before this screen opens.
     val usesEmbeddedAdb = remember { !viewModel.preferences.getPrivilegedMode().needsShizuku }
 
-    val steps = remember(usesDrive, usesEmbeddedAdb) { wizardSteps(usesDrive, usesEmbeddedAdb) }
+    val steps = remember(usesDrive, usesEmbeddedAdb) { wizardSteps(usesDrive, usesEmbeddedAdb, onDeviceAi = BuildConfig.ON_DEVICE_AI) }
 
     var stepIndex by rememberSaveable { mutableIntStateOf(0) }
     // Clamp in case the step list shrank (e.g. user switched away from Drive on step 1).
@@ -287,6 +288,7 @@ internal enum class WizardStep { STORAGE, SCHEDULE, AUTO_RECORD, RELIABILITY, EX
  *
  * @param usesDrive       Drive is a storage target, so there is an upload schedule worth asking about.
  * @param usesEmbeddedAdb CallVault's own ADB provides the privilege (i.e. not Shizuku mode).
+ * @param onDeviceAi      The build carries on-device transcription and summaries.
  *
  * The reliability step is dropped without it. Nothing on that step exists in Shizuku mode — the USB
  * default is applied over the embedded shell and offline recording is the loopback opt-in — and merely
@@ -295,7 +297,7 @@ internal enum class WizardStep { STORAGE, SCHEDULE, AUTO_RECORD, RELIABILITY, EX
  * have benefited. [UsbDefaultConfig.isShellUsable] now refuses that from below as well; this keeps the
  * user from being asked a question with no answer in the first place.
  */
-internal fun wizardSteps(usesDrive: Boolean, usesEmbeddedAdb: Boolean): List<WizardStep> = buildList {
+internal fun wizardSteps(usesDrive: Boolean, usesEmbeddedAdb: Boolean, onDeviceAi: Boolean = true): List<WizardStep> = buildList {
     add(WizardStep.STORAGE)
     if (usesDrive) add(WizardStep.SCHEDULE)
     add(WizardStep.AUTO_RECORD)
@@ -306,7 +308,8 @@ internal fun wizardSteps(usesDrive: Boolean, usesEmbeddedAdb: Boolean): List<Wiz
     // Follows the recording's own life: captured, encoded, named, and then read. It is unconditional
     // because transcription needs nothing from ADB — it is the one flagship feature a fresh install
     // would otherwise never hear about, since the What's New dialog only fires after an *update*.
-    add(WizardStep.TRANSCRIPTION)
+    // A build without on-device AI has nothing to set up here (BuildConfig.ON_DEVICE_AI).
+    if (onDeviceAi) add(WizardStep.TRANSCRIPTION)
     add(WizardStep.UPDATES)
 }
 
