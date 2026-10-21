@@ -39,9 +39,6 @@ jobs:
       - name: Build Debug APK
         run: ./gradlew assembleDebug -PversionCode=${{ github.run_number }} -PciBuildNumber=${{ github.run_id }} --no-daemon --stacktrace
 
-      - name: Lint
-        run: ./gradlew lintDebug --no-daemon
-
       - name: Upload APK
         uses: actions/upload-artifact@v6
         with:
@@ -49,3 +46,24 @@ jobs:
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 30
           if-no-files-found: error
+
+      # After the upload, so a lint finding never withholds a test APK. Findings are re-emitted as
+      # annotations, which can be read back without downloading the log.
+      - name: Lint
+        run: ./gradlew lintDebug --no-daemon
+
+      - name: Report lint findings
+        if: ${{ failure() }}
+        run: |
+          python3 - <<'PY'
+          import glob, xml.etree.ElementTree as ET
+          for f in glob.glob('app/build/reports/lint-results*.xml') + glob.glob('app/build/intermediates/lint_intermediate_text_report/**/*.xml', recursive=True):
+              for i in ET.parse(f).getroot().iter('issue'):
+                  if i.get('severity') not in ('Error', 'Fatal'):
+                      continue
+                  loc = i.find('location')
+                  path = loc.get('file', '').split('/CallVault/')[-1] if loc is not None else ''
+                  line = loc.get('line', '1') if loc is not None else '1'
+                  msg = (i.get('id') + ': ' + i.get('message', '')).replace('\n', ' ')
+                  print(f"::error file={path},line={line}::{msg}")
+          PY
