@@ -59,10 +59,19 @@ jobs:
       - name: Report lint findings
         run: |
           git fetch --no-tags origin main
-          git diff --name-only origin/main...HEAD > changed.txt
+          git diff -U0 origin/main...HEAD > changed.diff
           python3 - <<'PY'
-          import glob, os, sys, xml.etree.ElementTree as ET
-          changed = set(open('changed.txt').read().split())
+          import glob, os, re, sys, xml.etree.ElementTree as ET
+          # Lines this fork added, per file: a finding is ours only when it sits on one of them, so an
+          # old error in a file we merely appended to (a strings.xml) stays upstream's.
+          changed, current = {}, None
+          for l in open('changed.diff', encoding='utf-8', errors='replace'):
+              if l.startswith('+++ '):
+                  current = l[6:].strip() if l.startswith('+++ b/') else None
+              elif l.startswith('@@') and current:
+                  m = re.search(r'\+(\d+)(?:,(\d+))?', l)
+                  start, count = int(m.group(1)), int(m.group(2) or 1)
+                  changed.setdefault(current, set()).update(range(start, start + count))
           ours = 0
           for f in glob.glob('app/build/reports/lint-results*.xml'):
               for i in ET.parse(f).getroot().iter('issue'):
@@ -73,7 +82,7 @@ jobs:
                   path = os.path.relpath(path, os.environ['GITHUB_WORKSPACE']) if path else ''
                   line = loc.get('line', '1') if loc is not None else '1'
                   msg = (i.get('id') + ': ' + i.get('message', '')).replace('\n', ' ')
-                  if path in changed:
+                  if int(line) in changed.get(path, ()):
                       ours += 1
                       print(f"::error file={path},line={line}::{msg}")
                   else:
