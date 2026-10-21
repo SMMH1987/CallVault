@@ -415,6 +415,14 @@ class AppPreferences(context: Context) {
         DEBUG_ENABLED("debug_enabled"),
         DEBUG_CALLER_NUMBER("debug_caller_number"),
         DEVELOPER_MODE_UNLOCKED("developer_mode_unlocked"),
+
+        // --- Avanegar server upload (this fork) ---
+        AVANEGAR_UPLOAD_ENABLED("avanegar_upload_enabled"),
+        AVANEGAR_SERVER_URL("avanegar_server_url"),
+        AVANEGAR_DEVICE_KEY("avanegar_device_key"),
+        AVANEGAR_DEVICE_NAME("avanegar_device_name"),
+        AVANEGAR_SIM_NUMBERS("avanegar_sim_numbers"),
+        AVANEGAR_WIFI_ONLY("avanegar_wifi_only"),
         
         // --- Audio/Scrcpy Quality ---
         AUDIO_SOURCE("audio_source"),
@@ -1416,6 +1424,35 @@ class AppPreferences(context: Context) {
     
     /** Sets the configured audio codec. */
     fun setAudioCodec(codec: String) = setString(Key.AUDIO_CODEC, codec)
+
+    // --- Avanegar server upload (this fork) ---
+
+    /** Whether each finished recording is sent to the Avanegar server. Off until a key is entered. */
+    fun isAvanegarUploadEnabled() = getBoolean(Key.AVANEGAR_UPLOAD_ENABLED, false)
+    fun setAvanegarUploadEnabled(enabled: Boolean) = setBoolean(Key.AVANEGAR_UPLOAD_ENABLED, enabled)
+
+    /** Base URL of the Avanegar API, without a trailing slash (e.g. https://api.example.com). */
+    fun getAvanegarServerUrl() = getString(Key.AVANEGAR_SERVER_URL, "").orEmpty()
+    fun setAvanegarServerUrl(url: String) = setString(Key.AVANEGAR_SERVER_URL, url.trim().trimEnd('/'))
+
+    /**
+     * This phone's own device key: a restricted sub-key that can only submit recordings and read its own
+     * results, up to a monthly cap. Never the account's main key.
+     */
+    fun getAvanegarDeviceKey() = getString(Key.AVANEGAR_DEVICE_KEY, "").orEmpty()
+    fun setAvanegarDeviceKey(key: String) = setString(Key.AVANEGAR_DEVICE_KEY, key.trim())
+
+    /** A name the server shows for this phone; defaults to the model. */
+    fun getAvanegarDeviceName() = getString(Key.AVANEGAR_DEVICE_NAME, null) ?: android.os.Build.MODEL
+    fun setAvanegarDeviceName(name: String) = setString(Key.AVANEGAR_DEVICE_NAME, name.trim())
+
+    /** The company SIM number(s) in this phone, comma-separated, as the user typed them. */
+    fun getAvanegarSimNumbers() = getString(Key.AVANEGAR_SIM_NUMBERS, "").orEmpty()
+    fun setAvanegarSimNumbers(numbers: String) = setString(Key.AVANEGAR_SIM_NUMBERS, numbers.trim())
+
+    /** Send only over Wi-Fi (unmetered), so a day of calls does not spend mobile data. */
+    fun isAvanegarWifiOnly() = getBoolean(Key.AVANEGAR_WIFI_ONLY, false)
+    fun setAvanegarWifiOnly(wifiOnly: Boolean) = setBoolean(Key.AVANEGAR_WIFI_ONLY, wifiOnly)
 
     /** Gets the configured audio bitrate. */
     fun getAudioBitRate() = getInt(Key.AUDIO_BITRATE, DefaultsValue.AUDIO_BITRATE)

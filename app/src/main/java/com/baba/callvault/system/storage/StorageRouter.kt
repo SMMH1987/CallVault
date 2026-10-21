@@ -58,7 +58,9 @@ object StorageRouter {
             .putString(RecordingCopyWorker.KEY_DEST_FOLDER, driveFolder.toString())
             .putString(RecordingCopyWorker.KEY_NAME, displayName)
             .putString(RecordingCopyWorker.KEY_MIME, mimeType)
-            .putBoolean(RecordingCopyWorker.KEY_DELETE_LOCAL, target == StorageTarget.DRIVE)
+            // With server upload on, the local file must outlive the copy: the upload reads it, and may
+            // still be waiting for a network or a top-up. Retention clears it later, as for BOTH.
+            .putBoolean(RecordingCopyWorker.KEY_DELETE_LOCAL, target == StorageTarget.DRIVE && !prefs.isAvanegarUploadEnabled())
             .build()
         val request = OneTimeWorkRequestBuilder<RecordingCopyWorker>()
             .setInputData(data)
