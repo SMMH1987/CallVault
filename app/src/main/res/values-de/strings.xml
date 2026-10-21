@@ -732,4 +732,5 @@
     <string name="tile_recording_stopped">Gestoppt</string>
     <string name="home_hero_pill_starting">Wird gestartet…</string>
     <string name="audio_source_voice_call_dual_description">Nimmt dich auf dem linken und die andere Person auf dem rechten Kanal auf, damit ein Transkript erkennt, wer was gesagt hat. Fällt auf Voice call zurück, wenn das Telefon es ablehnt.</string>
+    <string name="on_device_ai_unavailable">Transkription und Zusammenfassungen auf dem Gerät sind in diesem Build nicht enthalten. Aufnahmen werden auf dem Server verarbeitet.</string>
 </resources>

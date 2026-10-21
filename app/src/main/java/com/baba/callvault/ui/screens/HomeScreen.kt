@@ -8,6 +8,7 @@
 
 package com.baba.callvault.ui.screens
 
+import com.baba.callvault.BuildConfig
 import com.baba.callvault.system.openDeveloperSettings
 import com.baba.callvault.ui.common.bodyFor
 import com.baba.callvault.integrations.adb.AdbShell
@@ -906,7 +907,7 @@ fun HomeScreen(
             TranscribingPill(state = transcribingShown, onClick = { showTranscribingSheet = true })
         } else {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                SupportPill(onClick = { showSupport = true })
+                if (BuildConfig.UPSTREAM_SUPPORT_LINKS) SupportPill(onClick = { showSupport = true })
                 // Where the Telegram card goes when the user long-presses it away — moved, not dismissed,
                 // because someone who tucks it away has usually joined and may still want the way back.
                 // Long-pressing here undoes it, which is the only way back: nothing else mentions it.
@@ -1473,7 +1474,7 @@ fun HomeScreen(
         val dismiss = {
             viewModel.markWhatsNewSeen()
             viewModel.dismissUpdatedBanner()
-            showSupportAppeal = true
+            showSupportAppeal = BuildConfig.UPSTREAM_SUPPORT_LINKS
         }
         WhatsNewDialog(onDismiss = dismiss, onOpenSettings = { dismiss(); onOpenSettings() })
     }
@@ -2117,7 +2118,7 @@ private fun FullReleaseNotesLink() {
 }
 
 /** The releases page rather than one tag, so it keeps working for whatever version is installed. */
-private const val RELEASE_NOTES_URL = "https://github.com/madkongo/CallVault/releases"
+private const val RELEASE_NOTES_URL = "https://github.com/SMMH1987/CallVault/releases"
 
 /**
  * Dismissable confirmation shown once after an update lands ("CallVault updated to X.Y.Z"). Uses a

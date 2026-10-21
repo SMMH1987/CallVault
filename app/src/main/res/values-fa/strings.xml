@@ -825,4 +825,5 @@
     <string name="tile_recording_stopped">متوقف</string>
     <string name="home_hero_pill_starting">در حال شروع…</string>
     <string name="audio_source_voice_call_dual_description">صدای شما در کانال چپ و صدای طرف مقابل در کانال راست ضبط می‌شود تا در متن معلوم باشد چه کسی چه گفته. اگر گوشی اجازه ندهد، به «Voice call» برمی‌گردد.</string>
+    <string name="on_device_ai_unavailable">تبدیل گفتار به متن و خلاصه‌سازی روی گوشی در این نسخه وجود ندارد. ضبط‌ها روی سرور پردازش می‌شوند.</string>
 </resources>

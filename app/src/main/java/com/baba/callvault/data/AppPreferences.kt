@@ -16,6 +16,7 @@ import com.baba.callvault.integrations.scrcpy.ScrcpyAudioCodec
 import com.baba.callvault.integrations.scrcpy.ScrcpyAudioSource
 import com.baba.callvault.data.StorageTarget
 import com.baba.callvault.data.SyncScheduleMode
+import com.baba.callvault.server.DualTrackRecorderSession
 import com.baba.callvault.transcription.TranscriptionEstimate
 import com.baba.callvault.transcription.TranscriptionLanguageChoice
 import com.baba.callvault.transcription.model.TranscriptionModel
@@ -225,7 +226,8 @@ class AppPreferences(context: Context) {
         // upgrades, and the calls it would take are exactly the ones nobody would notice going.
         // Off. It puts a second file in the user's folder for every call — a visible change to
         // something they look at — and it only earns its keep for someone using a tool that reads it.
-        const val WRITE_METADATA_FILE = false
+        // On: the details file carries the number, contact and near_channel the server needs.
+        const val WRITE_METADATA_FILE = true
         const val WRITE_TRANSCRIPT_SIDECAR = false
 
         const val MIN_DURATION_SECONDS = 0
@@ -250,7 +252,8 @@ class AppPreferences(context: Context) {
         // --- In-app updates ---
         // Check for new GitHub releases (a tiny daily JSON query). ON by default; a found update
         // surfaces as a Home banner + notification and installs only on an explicit user tap.
-        const val UPDATE_CHECK_ENABLED = true
+        // Off until this fork publishes signed releases of its own (see GitHubReleases).
+        const val UPDATE_CHECK_ENABLED = false
 
         // --- Persistent recorder server (CallVault Plan 5) ---
         // OFF by default: when false the existing local recording path runs unchanged. When true the
@@ -274,10 +277,13 @@ class AppPreferences(context: Context) {
         const val VOIP_AUTO_START = true
 
         // --- Audio/Scrcpy Quality ---
-        val AUDIO_SOURCE = ScrcpyAudioSource.VOICE_CALL.cliKey
-        val AUDIO_CODEC = ScrcpyAudioCodec.OPUS.cliKey
+        // This fork records each side of a call on its own channel and sends the file to a server, so
+        // the defaults are dual-track AAC (.m4a, which every transcription service reads) at the bit
+        // rate DualTrackRecorderSession uses anyway for stereo.
+        val AUDIO_SOURCE = ScrcpyAudioSource.VOICE_CALL_DUAL.cliKey
+        val AUDIO_CODEC = ScrcpyAudioCodec.AAC.cliKey
 
-        val AUDIO_BITRATE = ScrcpyAudioCodec.OPUS.defaultBitRate
+        val AUDIO_BITRATE = DualTrackRecorderSession.MIN_STEREO_BIT_RATE
 
         // --- File Naming ---
         const val FILE_NAME_TEMPLATE = "{date}_{direction}_{contact_name}"

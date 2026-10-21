@@ -17,6 +17,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
+import com.baba.callvault.BuildConfig
 import com.baba.callvault.data.AppPreferences
 import com.baba.callvault.data.TranscriptionMode
 import com.baba.callvault.utils.AppLogger
@@ -54,6 +55,12 @@ object TranscriptionScheduler {
         val prefs = AppPreferences(context)
         val mode = prefs.getTranscriptionMode()
         val workManager = WorkManager.getInstance(context)
+
+        if (!BuildConfig.ON_DEVICE_AI) {
+            workManager.cancelUniqueWork(WORK_NAME)
+            AppLogger.i(TAG, "Periodic transcription cancelled: this build has no on-device transcription.")
+            return
+        }
 
         // Manual and per-call both mean "no sweep": per-call keeps up with new calls and deliberately
         // never touches the back catalogue.
@@ -107,6 +114,11 @@ object TranscriptionScheduler {
          */
         userRequested: Boolean = false,
     ) {
+        if (!BuildConfig.ON_DEVICE_AI) {
+            OnDeviceAi.explainUnavailable(context)
+            AppLogger.i(TAG, "Transcription not run (${displayName ?: "whole queue"}): this build has no on-device transcription.")
+            return
+        }
         val request = OneTimeWorkRequestBuilder<TranscriptionWorker>()
             .apply {
                 if (displayName != null) {
@@ -175,6 +187,7 @@ object TranscriptionScheduler {
     fun transcribeAfterCallIfEnabled(context: Context, displayName: String) {
         val prefs = AppPreferences(context)
         val mode = prefs.getTranscriptionMode()
+        if (!BuildConfig.ON_DEVICE_AI) return
         if (!mode.transcribesOnCallEnd) {
             // The silent branch of the pair. Queueing already says why it happened; not queueing said
             // nothing at all, so "my call was never transcribed" and "transcription is set to nightly"

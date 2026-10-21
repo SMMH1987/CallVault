@@ -938,4 +938,5 @@
     <string name="update_popup_text">A new version is ready to install. Updating keeps recording reliable and brings the latest fixes.</string>
     <string name="update_popup_update_now">Update now</string>
     <string name="update_popup_later">Later</string>
+    <string name="on_device_ai_unavailable">On-device transcription and summaries are not part of this build. Recordings are processed on the server.</string>
 </resources>

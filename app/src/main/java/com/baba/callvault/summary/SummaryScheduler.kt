@@ -14,6 +14,8 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
+import com.baba.callvault.BuildConfig
+import com.baba.callvault.transcription.OnDeviceAi
 import com.baba.callvault.utils.AppLogger
 
 /**
@@ -47,6 +49,11 @@ object SummaryScheduler {
      * mutex, and two models will not fit in memory together.
      */
     fun runNow(context: Context, displayName: String, model: SummaryModel = SummaryModel.DEFAULT) {
+        if (!BuildConfig.ON_DEVICE_AI) {
+            OnDeviceAi.explainUnavailable(context)
+            AppLogger.i(TAG, "Summary not run: this build has no on-device summarisation.")
+            return
+        }
         val request = OneTimeWorkRequestBuilder<SummaryWorker>()
             .setInputData(
                 workDataOf(

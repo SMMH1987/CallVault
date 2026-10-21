@@ -772,4 +772,5 @@
     <string name="tile_recording_stopped">متوقّف</string>
     <string name="home_hero_pill_starting">جارٍ التشغيل…</string>
     <string name="audio_source_voice_call_dual_description">يسجّلك على القناة اليسرى والطرف الآخر على القناة اليمنى، ليعرف النص من قال ماذا. يعود إلى Voice call إذا رفض الهاتف.</string>
+    <string name="on_device_ai_unavailable">التفريغ النصي والملخصات على الجهاز غير متوفرة في هذا الإصدار. تتم معالجة التسجيلات على الخادم.</string>
 </resources>

@@ -735,4 +735,5 @@
     <string name="tile_recording_stopped">Interrompido</string>
     <string name="home_hero_pill_starting">Iniciando…</string>
     <string name="audio_source_voice_call_dual_description">Grava você no canal esquerdo e a outra pessoa no direito, para que a transcrição saiba quem disse o quê. Volta para Voice call se o telefone recusar.</string>
+    <string name="on_device_ai_unavailable">A transcrição e os resumos no dispositivo não fazem parte desta versão. As gravações são processadas no servidor.</string>
 </resources>
