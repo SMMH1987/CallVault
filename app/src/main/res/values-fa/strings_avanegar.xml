@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="avanegar_section_title">سرور آوانگار</string>
+    <string name="avanegar_upload_label">ارسال ضبط‌ها به آوانگار</string>
+    <string name="avanegar_upload_description">هر تماس بعد از پایان، همراه فایل جزئیاتش برای تبدیل به متن و خلاصه به سرور فرستاده می‌شود. اگر الان ارسال نشود، روی گوشی منتظر می‌ماند.</string>
+    <string name="avanegar_needs_setup">اول نشانی سرور و کلید این گوشی را وارد کنید.</string>
+    <string name="avanegar_server_url_label">نشانی سرور</string>
+    <string name="avanegar_device_key_label">کلید گوشی</string>
+    <string name="avanegar_device_key_set">وارد شده (پایانش %1$s)</string>
+    <string name="avanegar_device_key_hint">کلید مخصوص همین گوشی، از مدیر سیستم. هرگز کلید اصلی حساب نیست.</string>
+    <string name="avanegar_device_name_label">نام گوشی</string>
+    <string name="avanegar_sims_label">شماره سیم‌کارت‌های شرکت</string>
+    <string name="avanegar_sims_hint">شماره سیم‌کارت‌های شرکتی داخل این گوشی، با ویرگول جدا شوند.</string>
+    <string name="avanegar_wifi_only_label">فقط با وای‌فای</string>
+    <string name="avanegar_wifi_only_description">ضبط‌ها به‌جای اینترنت همراه، منتظر وای‌فای می‌مانند.</string>
+    <string name="avanegar_check_label">بررسی اتصال و موجودی</string>
+    <string name="avanegar_check_value">برای بررسی بزنید</string>
+    <string name="avanegar_check_running">در حال بررسی…</string>
+    <string name="avanegar_check_ok">متصل است. موجودی: %1$s (حدود %2$s دقیقه)</string>
+    <string name="avanegar_check_failed">اتصال برقرار نشد: %1$s</string>
+    <string name="avanegar_not_set">وارد نشده</string>
+</resources>

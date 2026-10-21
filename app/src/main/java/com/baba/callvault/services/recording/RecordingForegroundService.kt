@@ -27,6 +27,7 @@ import com.baba.callvault.data.health.SetupFingerprint
 import com.baba.callvault.data.health.SetupHealthStore
 import com.baba.callvault.data.health.record
 import com.baba.callvault.integrations.adb.AdbShell
+import com.baba.callvault.integrations.avanegar.AvanegarUploadWorker
 import com.baba.callvault.server.RecorderBackend
 import com.baba.callvault.R
 import com.baba.callvault.data.recordings.RecordingCatalog
@@ -779,6 +780,8 @@ class RecordingForegroundService : Service() {
             // sit beside nothing and be invisible to every tool that looks for it. After the turns
             // above, so the `callvault` block can carry them.
             writeMetadataSidecar(name, lastModified, "com.android.phone")
+            // After the details file, which the upload carries along with the audio.
+            AvanegarUploadWorker.enqueue(applicationContext, name, uri, mimeType)
             // Route the .json details to Drive too (issue #49). Must be here, after the write above,
             // because the audio's StorageRouter.route runs synchronously below while this coroutine is
             // still going — routing the sidecar from there could fire before the file exists. In

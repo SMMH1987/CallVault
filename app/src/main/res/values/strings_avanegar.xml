@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings for this fork's upload to the Avanegar server. Shipped in English and Persian only: the
+     fork is for a Persian-speaking company, so other locales fall back to English on purpose. -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="avanegar_section_title">Avanegar server</string>
+    <string name="avanegar_upload_label">Send recordings to Avanegar</string>
+    <string name="avanegar_upload_description">Each finished call is sent with its details file, to be transcribed and summarised on the server. A call that cannot be sent yet waits on the phone.</string>
+    <string name="avanegar_needs_setup">Enter the server address and this phone\'s device key first.</string>
+    <string name="avanegar_server_url_label">Server address</string>
+    <string name="avanegar_device_key_label">Device key</string>
+    <string name="avanegar_device_key_set">Set (ends in %1$s)</string>
+    <string name="avanegar_device_key_hint">This phone\'s own key, from the administrator. Never the account\'s main key.</string>
+    <string name="avanegar_device_name_label">Phone name</string>
+    <string name="avanegar_sims_label">Company SIM numbers</string>
+    <string name="avanegar_sims_hint">The numbers of the company SIMs in this phone, separated by commas.</string>
+    <string name="avanegar_wifi_only_label">Only over Wi-Fi</string>
+    <string name="avanegar_wifi_only_description">Recordings wait for Wi-Fi instead of using mobile data.</string>
+    <string name="avanegar_check_label">Check connection and balance</string>
+    <string name="avanegar_check_value">Tap to check</string>
+    <string name="avanegar_check_running">Checking…</string>
+    <string name="avanegar_check_ok">Connected. Balance: %1$s (about %2$s minutes)</string>
+    <string name="avanegar_check_failed">Could not connect: %1$s</string>
+    <string name="avanegar_not_set">Not set</string>
+</resources>

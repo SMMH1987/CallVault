@@ -23,6 +23,7 @@ import com.baba.callvault.data.health.SetupFingerprint
 import com.baba.callvault.data.health.SetupHealthStore
 import com.baba.callvault.data.transcripts.SpeakerTurnsRepository
 import com.baba.callvault.data.health.record
+import com.baba.callvault.integrations.avanegar.AvanegarUploadWorker
 import com.baba.callvault.integrations.scrcpy.ScrcpyAudioCodec
 import com.baba.callvault.server.IRecorderService
 import com.baba.callvault.server.RecorderConnection
@@ -747,6 +748,7 @@ object VoipRecordingCoordinator {
                         }.onFailure { AppLogger.w(TAG, "Could not record setup health for '$name': ${it.message}") }
                     }
                     AppLogger.i(TAG, "VoIP recording catalogued: $name ($size bytes)")
+                    AvanegarUploadWorker.enqueue(context, name, safUri, codecMime)
                     StorageRouter.route(context, safUri, name, codecMime)
                     // Route the .json details to Drive too (issue #49). The sidecar was written
                     // earlier in this block, so it exists by now. IMMEDIATE only; the sweep handles

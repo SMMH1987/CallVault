@@ -559,6 +559,13 @@ fun SettingsContent(
                 )
             }
             item {
+                AvanegarSection(
+                    preferences = preferences,
+                    expanded = openSection == SECTION_AVANEGAR,
+                    onToggle = { onToggleSection(SECTION_AVANEGAR) },
+                )
+            }
+            item {
                 StorageSection(
                     preferences = preferences,
                     updateTrigger = updateTrigger,
@@ -716,6 +723,7 @@ fun SettingsContent(
 // [SECTION_RECORDING] is the one open when Settings is first entered.
 private const val SECTION_RECORDING = "recording"
 private const val SECTION_STORAGE = "storage"
+private const val SECTION_AVANEGAR = "avanegar"
 private const val SECTION_RETENTION = "retention"
 private const val SECTION_AUDIO = "audio"
 private const val SECTION_TRANSCRIPTION = "transcription"
