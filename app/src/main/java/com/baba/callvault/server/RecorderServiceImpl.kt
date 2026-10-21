@@ -449,6 +449,21 @@ open class RecorderServiceImpl(private val apkPath: String) : IRecorderService.S
         bitRate: Int,
         outFd: ParcelFileDescriptor,
     ): RecordingSession {
+        var source = source
+        if (source == ScrcpyAudioSource.VOICE_CALL_DUAL) {
+            if (DualTrackRecorderSession.supports(codec)) {
+                val dual = DualTrackRecorderSession(codec, bitRate, outFd)
+                if (runCatching { dual.start() }
+                        .onFailure { AppLogger.w(TAG, "Dual-track capture unavailable, falling back to voice-call: ${it.message}") }
+                        .isSuccess
+                ) {
+                    AppLogger.i(TAG, "Recording via DUAL-TRACK AudioRecord (L=uplink, R=downlink) codec=${codec.cliKey}")
+                    return dual
+                }
+            }
+            // scrcpy has no notion of the dual key, so every later path records the mixed call.
+            source = ScrcpyAudioSource.VOICE_CALL
+        }
         if (DirectAudioRecorderSession.supports(source, codec)) {
             val direct = DirectAudioRecorderSession(source, codec, bitRate, outFd)
             if (runCatching { direct.start() }

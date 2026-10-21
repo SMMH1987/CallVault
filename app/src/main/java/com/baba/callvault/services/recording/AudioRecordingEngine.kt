@@ -55,6 +55,13 @@ class AudioRecordingEngine {
     companion object {
         private const val TAG = "CV:AudioRecordingEngine"
 
+        /**
+         * Whether the recording that ended last was captured dual-track (L = near, R = far). Read by the
+         * details-file writer, which runs after release and has no other way to know which path ran.
+         */
+        @Volatile var lastRecordingDualTrack: Boolean = false
+            private set
+
         /** How often the daemon-mode liveness watch re-checks that the daemon's binder is alive. */
         private const val DAEMON_LIVENESS_POLL_MS = 2000L
 
@@ -339,6 +346,7 @@ class AudioRecordingEngine {
         // an AudioRecord into RECORDING state, and unlike the daemon's own capture the handoff has no
         // fallback: the app would hold a record that never produces a frame and write an empty file
         // while reporting success.
+        lastRecordingDualTrack = false
         if (HandoffPolicy.isUsable(
                 enabled = preferences.isHandoffPersistEnabled(),
                 sourceSupported = HandoffSource.supportsHandoff(audioSourceEnum.cliKey),
@@ -371,7 +379,13 @@ class AudioRecordingEngine {
         scrcpyAudioMuxer = ScrcpyAudioMuxer(outputPfd!!.fileDescriptor, safResult.displayName)
 
         val launcher = try {
-            ScrcpyLauncher.start(context, audioSourceEnum, codecEnum, bitRate)
+            // scrcpy only knows real Android sources; the dual-track key exists only in the daemon.
+            val scrcpySource = if (audioSourceEnum == ScrcpyAudioSource.VOICE_CALL_DUAL) {
+                ScrcpyAudioSource.VOICE_CALL
+            } else {
+                audioSourceEnum
+            }
+            ScrcpyLauncher.start(context, scrcpySource, codecEnum, bitRate)
         } catch (e: Exception) {
             throw PipelineInitializationException(
                 userFriendlyMessage = e.localizedMessage ?: context.getString(R.string.recording_error_start_failed),
@@ -644,8 +658,10 @@ class AudioRecordingEngine {
                 // daemon's own log reaches a report only via logcat, which exists only if debug
                 // logging was already on when the call happened (issue #28b). An older daemon has no
                 // such method, hence the guard; empty is the normal, healthy answer.
-                runCatching { daemon.captureDiagnostics() }
-                    .getOrNull()
+                val diagnostics = runCatching { daemon.captureDiagnostics() }.getOrNull()
+                lastRecordingDualTrack =
+                    diagnostics?.startsWith(com.baba.callvault.server.DualTrackRecorderSession.DUAL_TRACK_MARKER) == true
+                diagnostics
                     ?.takeIf { it.isNotBlank() }
                     ?.let { AppLogger.w(TAG, "Capture health for the recording just ended: $it") }
             }

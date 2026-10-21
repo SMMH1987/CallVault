@@ -730,4 +730,5 @@
     <string name="tile_recording_on">录音已开启</string>
     <string name="tile_recording_stopped">已停止</string>
     <string name="home_hero_pill_starting">正在启动…</string>
+    <string name="audio_source_voice_call_dual_description">将你的声音录在左声道、对方录在右声道，以便转写时分清谁说了什么。如果手机拒绝，则回退到 Voice call。</string>
 </resources>

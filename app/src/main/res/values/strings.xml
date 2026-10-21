@@ -339,6 +339,9 @@
     <string name="audio_source_mic_voice_recognition" translatable="false">Voice recognition mic</string>
     <string name="audio_source_mic_voice_recognition_description">Microphone with processing tuned for speech recognition (reduced noise).</string>
 
+    <string name="audio_source_voice_call_dual" translatable="false">Voice call — each side separately</string>
+    <string name="audio_source_voice_call_dual_description">Records you on the left channel and the other person on the right, so a transcript can tell who said what. Falls back to Voice call if the phone refuses.</string>
+
     <string name="audio_source_voice_call_uplink" translatable="false">Voice call uplink</string>
     <string name="audio_source_voice_call_uplink_description">Records only your side of a phone call (uplink).</string>
 

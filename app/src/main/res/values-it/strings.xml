@@ -731,4 +731,5 @@
     <string name="tile_recording_on">Registrazione attiva</string>
     <string name="tile_recording_stopped">Interrotto</string>
     <string name="home_hero_pill_starting">Avvio…</string>
+    <string name="audio_source_voice_call_dual_description">Registra te sul canale sinistro e l\'altra persona sul destro, così la trascrizione sa chi ha detto cosa. Torna a Voice call se il telefono rifiuta.</string>
 </resources>

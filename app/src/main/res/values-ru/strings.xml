@@ -733,4 +733,5 @@
     <string name="tile_recording_on">Запись включена</string>
     <string name="tile_recording_stopped">Остановлено</string>
     <string name="home_hero_pill_starting">Запуск…</string>
+    <string name="audio_source_voice_call_dual_description">Записывает вас в левый канал, а собеседника — в правый, чтобы в расшифровке было видно, кто что сказал. Если телефон не позволяет, возвращается к Voice call.</string>
 </resources>

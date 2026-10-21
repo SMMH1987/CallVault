@@ -76,6 +76,22 @@ enum class ScrcpyAudioSource(
     ),
 
     /**
+     * Both directions of a phone call, each on its own channel: LEFT = uplink (you), RIGHT = downlink
+     * (the other person). Captured as two separate `VOICE_UPLINK` + `VOICE_DOWNLINK` records rather than
+     * one stereo `VOICE_CALL`, because many HALs (Samsung among them) return the same mix on both
+     * `VOICE_CALL` channels. Direct path only — see [com.baba.callvault.server.DualTrackRecorderSession];
+     * anything that cannot open both records falls back to [VOICE_CALL].
+     */
+    VOICE_CALL_DUAL(
+        cliKey            = "voice-call-dual",
+        titleResId        = R.string.audio_source_voice_call_dual,
+        descriptionResId  = R.string.audio_source_voice_call_dual_description,
+        minApi            = 4,
+        maxApi            = null,
+        isDebugOnly       = false
+    ),
+
+    /**
      * VOICE_CALL_UPLINK, captures only the local (microphone) side of a phone call.
      * Requires API 4+ (Android 1.6)
      */
