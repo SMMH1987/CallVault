@@ -28,7 +28,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import com.baba.callvault.R
@@ -48,7 +47,6 @@ private enum class AvanegarField { URL, KEY, NAME, SIMS }
  */
 @Composable
 internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onToggle: () -> Unit) {
-    val context = LocalContext.current
     val scope = rememberCoroutineScope()
     // Local re-read trigger: these rows write straight to preferences, not through SettingsActions.
     var version by remember { mutableIntStateOf(0) }
@@ -109,6 +107,9 @@ internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onT
             icon = Icons.Filled.Wifi,
         )
         val checking = stringResource(R.string.avanegar_check_running)
+        // Read here, as composition does, rather than from the context inside the coroutine.
+        val okFormat = stringResource(R.string.avanegar_check_ok)
+        val failedFormat = stringResource(R.string.avanegar_check_failed)
         NavigationRow(
             icon = Icons.Filled.Info,
             label = stringResource(R.string.avanegar_check_label),
@@ -121,13 +122,13 @@ internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onT
                         checkStatus = withContext(Dispatchers.IO) {
                             runCatching { AvanegarClient(url, key).usage() }.fold(
                                 onSuccess = { usage ->
-                                    context.getString(
-                                        R.string.avanegar_check_ok,
+                                    String.format(
+                                        okFormat,
                                         usage.balanceCredits?.let { String.format(Locale.getDefault(), "%,d", it) } ?: "?",
                                         usage.balanceMinutes?.let { String.format(Locale.getDefault(), "%.0f", it) } ?: "?",
                                     )
                                 },
-                                onFailure = { context.getString(R.string.avanegar_check_failed, it.message.orEmpty()) },
+                                onFailure = { String.format(failedFormat, it.message.orEmpty()) },
                             )
                         }
                     }
