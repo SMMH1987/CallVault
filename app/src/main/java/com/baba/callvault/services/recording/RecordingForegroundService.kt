@@ -680,7 +680,9 @@ class RecordingForegroundService : Service() {
             durationSecsEncoded = null,
             // Carrier capture mixes the two directions onto channels whose order is an OEM detail, so
             // name the near side only when the learned mapping is trusted; null otherwise (issue #50).
-            nearChannel = SpeakerTurnsRepository.trustedMap(applicationContext).nearChannelKey()
+            // A dual-track capture puts the near side on L by construction, so it needs no learned map.
+            nearChannel = if (AudioRecordingEngine.lastRecordingDualTrack) "A"
+            else SpeakerTurnsRepository.trustedMap(applicationContext).nearChannelKey()
         )
     }
 

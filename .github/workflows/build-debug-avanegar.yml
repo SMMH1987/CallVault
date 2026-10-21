@@ -1,0 +1,91 @@
+# Builds an debug APK of the Avanegar fork on every push to an avanegar/** branch,
+# so a test build exists without the release signing secrets. Download it from the run's Artifacts.
+name: Build debug APK (avanegar fork)
+
+on:
+  push:
+    branches:
+      - 'avanegar/**'
+  workflow_dispatch:
+
+concurrency:
+  group: debug-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build debug APK
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+          fetch-depth: 0   # the lint report compares against main
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          validate-wrappers: true
+          cache-provider: basic
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug -PversionCode=${{ github.run_number }} -PciBuildNumber=${{ github.run_id }} --no-daemon --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v6
+        with:
+          name: callvault-avanegar-debug
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 30
+          if-no-files-found: error
+
+      # After the upload, so a lint finding never withholds a test APK. Upstream's own CI never runs
+      # lintDebug and its code has errors of its own, so lint itself does not fail the job: the next
+      # step fails it only for an error in a file this fork changed. Findings become annotations,
+      # which can be read back without downloading the log.
+      - name: Lint
+        continue-on-error: true
+        run: ./gradlew lintDebug --no-daemon
+
+      - name: Report lint findings
+        run: |
+          git fetch --no-tags origin main
+          git diff -U0 origin/main...HEAD > changed.diff
+          python3 - <<'PY'
+          import glob, os, re, sys, xml.etree.ElementTree as ET
+          # Lines this fork added, per file: a finding is ours only when it sits on one of them, so an
+          # old error in a file we merely appended to (a strings.xml) stays upstream's.
+          changed, current = {}, None
+          for l in open('changed.diff', encoding='utf-8', errors='replace'):
+              if l.startswith('+++ '):
+                  current = l[6:].strip() if l.startswith('+++ b/') else None
+              elif l.startswith('@@') and current:
+                  m = re.search(r'\+(\d+)(?:,(\d+))?', l)
+                  start, count = int(m.group(1)), int(m.group(2) or 1)
+                  changed.setdefault(current, set()).update(range(start, start + count))
+          ours = 0
+          for f in glob.glob('app/build/reports/lint-results*.xml'):
+              for i in ET.parse(f).getroot().iter('issue'):
+                  if i.get('severity') not in ('Error', 'Fatal'):
+                      continue
+                  loc = i.find('location')
+                  path = loc.get('file', '') if loc is not None else ''
+                  path = os.path.relpath(path, os.environ['GITHUB_WORKSPACE']) if path else ''
+                  line = loc.get('line', '1') if loc is not None else '1'
+                  msg = (i.get('id') + ': ' + i.get('message', '')).replace('\n', ' ')
+                  if int(line) in changed.get(path, ()):
+                      ours += 1
+                      print(f"::error file={path},line={line}::{msg}")
+                  else:
+                      print(f"::warning file={path},line={line}::upstream: {msg}")
+          sys.exit(1 if ours else 0)
+          PY

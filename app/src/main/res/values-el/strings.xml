@@ -885,4 +885,5 @@
     <string name="tile_recording_on">Εγγραφή ενεργή</string>
     <string name="tile_recording_stopped">Διακόπηκε</string>
     <string name="home_hero_pill_starting">Εκκίνηση…</string>
+    <string name="audio_source_voice_call_dual_description">Καταγράφει εσάς στο αριστερό κανάλι και τον άλλο στο δεξί, ώστε η απομαγνητοφώνηση να ξέρει ποιος είπε τι. Επιστρέφει στο Voice call αν το τηλέφωνο αρνηθεί.</string>
 </resources>

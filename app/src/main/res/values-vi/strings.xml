@@ -730,4 +730,5 @@
     <string name="tile_recording_on">Đang ghi âm</string>
     <string name="tile_recording_stopped">Đã dừng</string>
     <string name="home_hero_pill_starting">Đang khởi động…</string>
+    <string name="audio_source_voice_call_dual_description">Ghi giọng bạn ở kênh trái và người kia ở kênh phải để bản chép lời biết ai nói gì. Quay về Voice call nếu điện thoại từ chối.</string>
 </resources>

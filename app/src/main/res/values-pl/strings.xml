@@ -733,4 +733,5 @@
     <string name="tile_recording_on">Nagrywanie włączone</string>
     <string name="tile_recording_stopped">Zatrzymane</string>
     <string name="home_hero_pill_starting">Uruchamianie…</string>
+    <string name="audio_source_voice_call_dual_description">Nagrywa ciebie na lewym kanale, a rozmówcę na prawym, aby transkrypcja wiedziała, kto co powiedział. Wraca do Voice call, jeśli telefon odmówi.</string>
 </resources>
