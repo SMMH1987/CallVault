@@ -101,7 +101,8 @@ object SummaryEngine {
     /** Asks a run in progress to stop, from any thread. Safe to call when nothing is running. */
     fun requestAbort() {
         aborted.set(true)
-        LlamaNative.requestAbort()
+        // Without the native library (an ON_DEVICE_AI=false build) touching LlamaNative throws.
+        runCatching { LlamaNative.requestAbort() }
     }
 
     /** A loaded model, valid only inside [withModel]. */

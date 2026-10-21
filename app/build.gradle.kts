@@ -127,6 +127,10 @@ val extractLibphonenumberMetadata = tasks.register<ExtractMetadataTask>("extract
 val ciVersionCode = providers.gradleProperty("versionCode").map { it.toIntOrNull() }.orElse(20461)
 val ciVersionName = providers.gradleProperty("versionName").orElse("2.4.6")
 val ciBuildNumber = providers.gradleProperty("ciBuildNumber").orElse("Local")
+// On-device transcription (whisper.cpp) and summarisation (llama.cpp). Off in this fork: recordings
+// are transcribed and summarised on the server, and building both engines is most of the build time
+// and much of the APK. Pass -PonDeviceAi=true to bring them back.
+val onDeviceAi = providers.gradleProperty("onDeviceAi").map { it.toBoolean() }.orElse(false).get()
 
 // -PisolateTestApp builds the debug variant under its own applicationId so instrumented tests can be
 // run on a device that is already carrying a working release build. Off by default: it must not
@@ -163,6 +167,13 @@ android {
         manifestPlaceholders["recorderAuthority"] = "com.baba.callvault.recorder"
 
         buildConfigField("String", "CI_BUILD_NUMBER", "\"${ciBuildNumber.get()}\"")
+        buildConfigField("boolean", "ON_DEVICE_AI", onDeviceAi.toString())
+
+        externalNativeBuild {
+            cmake {
+                arguments += "-DCALLVAULT_ON_DEVICE_AI=${if (onDeviceAi) "ON" else "OFF"}"
+            }
+        }
 
         buildConfigField("String", "SCRCPY_VERSION", "\"$scrcpyVersion\"")
         buildConfigField("String", "SCRCPY_SERVER_SHA256", "\"$scrcpyServerSha256\"")

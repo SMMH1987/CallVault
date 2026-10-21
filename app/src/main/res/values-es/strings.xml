@@ -732,4 +732,5 @@
     <string name="tile_recording_stopped">Detenido</string>
     <string name="home_hero_pill_starting">Iniciando…</string>
     <string name="audio_source_voice_call_dual_description">Graba tu voz en el canal izquierdo y la de la otra persona en el derecho, para que la transcripción sepa quién dijo qué. Vuelve a Voice call si el teléfono lo rechaza.</string>
+    <string name="on_device_ai_unavailable">La transcripción y los resúmenes en el dispositivo no forman parte de esta versión. Las grabaciones se procesan en el servidor.</string>
 </resources>

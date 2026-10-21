@@ -9,6 +9,13 @@ find_library(log-lib log)
 
 target_link_libraries(audiohandoff ${log-lib})
 
+# Everything below is the on-device AI (whisper.cpp + llama.cpp). It is off unless the Gradle build
+# passes -DCALLVAULT_ON_DEVICE_AI=ON (see onDeviceAi in app/build.gradle.kts).
+option(CALLVAULT_ON_DEVICE_AI "Build on-device transcription and summarisation" OFF)
+if (NOT CALLVAULT_ON_DEVICE_AI)
+    return()
+endif()
+
 # --- On-device transcription (whisper.cpp) ---
 #
 # Built from the tag-pinned third_party/whisper.cpp submodule. Nothing here is forked: only our own
