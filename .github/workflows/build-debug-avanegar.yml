@@ -37,6 +37,17 @@ jobs:
           validate-wrappers: true
           cache-provider: basic
 
+      # One fixed debug key for every build, so a new APK installs over the previous one and keeps the
+      # phone's setup. Without the secret, Gradle makes a fresh key per run and each install must
+      # first remove the old app.
+      - name: Install fixed debug keystore
+        env:
+          DEBUG_KEYSTORE_B64: ${{ secrets.DEBUG_KEYSTORE_B64 }}
+        run: |
+          if [ -z "$DEBUG_KEYSTORE_B64" ]; then echo "No DEBUG_KEYSTORE_B64 secret; using a fresh debug key"; exit 0; fi
+          mkdir -p ~/.android
+          echo "$DEBUG_KEYSTORE_B64" | base64 -d > ~/.android/debug.keystore
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug -PversionCode=${{ github.run_number }} -PciBuildNumber=${{ github.run_id }} --no-daemon --stacktrace
 
