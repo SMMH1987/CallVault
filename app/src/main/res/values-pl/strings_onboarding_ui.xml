@@ -21,7 +21,7 @@
     <string name="permissions_status_adb_connected">Połączono</string>
     <string name="permissions_status_adb_not_connected">Brak połączenia</string>
     <string name="permissions_ui_eyebrow">Konfiguracja</string>
-    <string name="permissions_ui_hero_subtitle">Kilka uprawnień, aby CallVault mógł nagrywać i oznaczać Twoje rozmowy. Zatwierdź każdą pozycję poniżej.</string>
+    <string name="permissions_ui_hero_subtitle">Kilka uprawnień, aby Hamdabir mógł nagrywać i oznaczać Twoje rozmowy. Zatwierdź każdą pozycję poniżej.</string>
     <string name="permissions_ui_hero_title">Skonfigurujmy aplikację</string>
     <string name="permissions_ui_section_label">Uprawnienia</string>
 </resources>

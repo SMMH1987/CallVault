@@ -11,11 +11,11 @@
     <string name="notif_pairing_remote_input_label">Codice di associazione</string>
     <string name="notif_pairing_searching_text">Apra la finestra \"Associa dispositivo tramite codice di associazione\" del telefono.</string>
     <string name="notif_pairing_searching_title">Ricerca del servizio di associazione…</string>
-    <string name="notif_pairing_success_text">Debug wireless associato. Tocchi per completare la configurazione di CallVault.</string>
+    <string name="notif_pairing_success_text">Debug wireless associato. Tocchi per completare la configurazione di Hamdabir.</string>
     <string name="notif_pairing_success_title">Associato ✓</string>
     <string name="notif_pairing_waiting_wd_text">Attivi il Debug wireless per avviare l\'associazione.</string>
     <string name="notif_pairing_waiting_wd_title">In attesa del Debug wireless…</string>
-    <string name="notif_pairing_working_text">Configurazione di CallVault in corso. Richiede qualche secondo.</string>
+    <string name="notif_pairing_working_text">Configurazione di Hamdabir in corso. Richiede qualche secondo.</string>
     <string name="notif_pairing_working_title">Associazione in corso…</string>
     <string name="notif_readiness_channel">Stato del registratore di chiamate</string>
     <string name="notif_readiness_ready_text">Il registratore è connesso.</string>
@@ -28,7 +28,7 @@
     <string name="notif_usb_check_unavailable">Se non termina, imposta «USB allo sblocco» su Solo ricarica in Impostazioni ▸ Sperimentale: su alcuni telefoni una modalità USB dati impedisce al registratore di connettersi.</string>
     <string name="notif_usb_lock_warning">Bloccare lo schermo durante una chiamata può interrompere la registrazione. In Impostazioni ▸ Sperimentale, imposta «USB allo sblocco» su Solo ricarica.</string>
     <string name="update_notif_available_text">Apri l\'app e tocca Aggiorna per installarlo.</string>
-    <string name="update_notif_available_title">CallVault %1$s è disponibile</string>
+    <string name="update_notif_available_title">Hamdabir %1$s è disponibile</string>
     <string name="update_notif_channel">Aggiornamenti dell\'app</string>
     <string name="update_notif_downloading_title">Download dell\'aggiornamento…</string>
     <string name="update_notif_failure_download_text">Impossibile scaricare l\'aggiornamento. Tocca per scaricarlo da GitHub.</string>
@@ -36,14 +36,14 @@
     <string name="update_notif_failure_title">Aggiornamento non riuscito</string>
     <string name="update_notif_failure_verify_text">L\'aggiornamento scaricato non ha superato il controllo di sicurezza ed è stato eliminato. Tocca per scaricarlo da GitHub.</string>
     <string name="update_notif_installing_title">Installazione dell\'aggiornamento…</string>
-    <string name="update_notif_success_text">CallVault è ora alla versione %1$s.</string>
+    <string name="update_notif_success_text">Hamdabir è ora alla versione %1$s.</string>
     <string name="update_notif_success_title">Aggiornamento installato</string>
     <string name="notif_readiness_down_title">Le chiamate non vengono registrate</string>
     <string name="notif_readiness_no_debugging_text">Il debug USB e il debug wireless sono entrambi disattivati. Riattivane uno nelle Opzioni sviluppatore.</string>
     <string name="notif_readiness_needs_wifi_text">Il debug USB è disattivato e non c\'è Wi-Fi. Connettiti a una rete Wi-Fi o attiva il debug USB.</string>
-    <string name="notif_readiness_stuck_text">Il registratore non riesce ad avviarsi. Apri CallVault per vedere il motivo.</string>
+    <string name="notif_readiness_stuck_text">Il registratore non riesce ad avviarsi. Apri Hamdabir per vedere il motivo.</string>
     <string name="notif_readiness_needs_wifi_restart_text">Il registratore si è fermato e ha bisogno del Wi-Fi per ripartire. Attiva la registrazione offline mentre sei in Wi-Fi per evitarlo.</string>
-    <string name="notif_readiness_wd_off_by_user_text">Hai disattivato il debug wireless e CallVault non ha altri modi per riavviare il registratore. Riattivalo, oppure attiva il debug USB.</string>
+    <string name="notif_readiness_wd_off_by_user_text">Hai disattivato il debug wireless e Hamdabir non ha altri modi per riavviare il registratore. Riattivalo, oppure attiva il debug USB.</string>
     <string name="notif_readiness_offline_paused_text">La registrazione senza Wi-Fi è in pausa: richiede il debug USB. Le chiamate in Wi-Fi vengono ancora registrate.</string>
     <string name="notif_action_turn_wd_on">Attiva il debug wireless</string>
 

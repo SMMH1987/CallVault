@@ -21,7 +21,7 @@
     <string name="permissions_status_adb_connected">Connesso</string>
     <string name="permissions_status_adb_not_connected">Non connesso</string>
     <string name="permissions_ui_eyebrow">Configurazione</string>
-    <string name="permissions_ui_hero_subtitle">Alcune autorizzazioni servono a CallVault per registrare ed etichettare le Sue chiamate. Approvi ogni elemento qui sotto.</string>
+    <string name="permissions_ui_hero_subtitle">Alcune autorizzazioni servono a Hamdabir per registrare ed etichettare le Sue chiamate. Approvi ogni elemento qui sotto.</string>
     <string name="permissions_ui_hero_title">Iniziamo la configurazione</string>
     <string name="permissions_ui_section_label">Autorizzazioni</string>
 </resources>

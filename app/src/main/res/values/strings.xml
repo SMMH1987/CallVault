@@ -10,7 +10,7 @@
     <!-- ========================================== -->
     <!-- GENERAL MESSAGES & APP LEVEL               -->
     <!-- ========================================== -->
-    <string name="app_name" translatable="false">CallVault</string>
+    <string name="app_name" translatable="false">همدبیر</string>
     <string name="general_close">Close</string>
     <string name="voicemail_contact_label">Voicemail</string>
     <string name="general_recommended">Recommended</string>
@@ -27,14 +27,14 @@
     <string name="general_outgoing">outgoing</string>
     <string name="general_reset">Reset</string>
     <string name="general_system_limitation">System Limitation</string>
-    <string name="general_system_limitation_message">CallVault will not work on this device as your shell application does not have the required permissions:\n\n%1$s\n\nThere is nothing you can do about this, the app cannot function and will now close.</string>
+    <string name="general_system_limitation_message">Hamdabir will not work on this device as your shell application does not have the required permissions:\n\n%1$s\n\nThere is nothing you can do about this, the app cannot function and will now close.</string>
 
     <!-- ========================================== -->
     <!-- UI SECTIONS                                -->
     <!-- ========================================== -->
 
     <!-- Disclaimer Screen -->
-    <string name="disclaimer_title">Welcome to CallVault</string>
+    <string name="disclaimer_title">Welcome to Hamdabir</string>
     <string name="disclaimer_introduction">Please read the disclaimer below carefully before continuing.</string>
     <string name="disclaimer_body" translatable="false">
         By using this application, you confirm that you have read this disclaimer and acknowledge that this software is licensed under the GNU General Public License v3.0 with additional clauses under Section 7.\n\n
@@ -89,7 +89,7 @@
     <string name="permission_call_log_description">Required so we receive the unredacted phone number on phone state events.</string>
 
     <string name="permission_usb_debugging_label">USB debugging</string>
-    <string name="permission_usb_debugging_description">Recommended. Keeps recording working away from Wi-Fi, and lets CallVault switch Wireless debugging off after setup. No cable needed.</string>
+    <string name="permission_usb_debugging_description">Recommended. Keeps recording working away from Wi-Fi, and lets Hamdabir switch Wireless debugging off after setup. No cable needed.</string>
     <string name="permission_battery_label">Battery Optimization</string>
     <string name="permission_battery_description">Keeps the app alive when it needs and allow to bypass possible background startup limitations. On some phones (e.g. OnePlus/OxygenOS) also set this app\'s battery mode to \"Allow background activity\".</string>
     <string name="permission_battery_oem_hint">Battery exemption set. Now on this App info page, tap \"Battery\", then choose \"Allow background activity\" (Unrestricted) — required so recording survives in the background on OnePlus/OxygenOS.</string>
@@ -125,44 +125,44 @@
     <string name="retention_confirm_enable">Enable</string>
     <string name="settings_section_recording_storage">Recording &amp; storage</string>
     <string name="permissions_shizuku_offer_title">Shizuku is running on this phone</string>
-    <string name="permissions_shizuku_offer_body">CallVault can use it instead, and skip pairing entirely. Or set CallVault up on its own, so it needs nothing else running.</string>
-    <string name="permissions_shizuku_needs_permission">Allow CallVault in Shizuku to finish. Nothing records until you do.</string>
+    <string name="permissions_shizuku_offer_body">Hamdabir can use it instead, and skip pairing entirely. Or set Hamdabir up on its own, so it needs nothing else running.</string>
+    <string name="permissions_shizuku_needs_permission">Allow Hamdabir in Shizuku to finish. Nothing records until you do.</string>
     <string name="permissions_shizuku_active">Using Shizuku. There is nothing to pair — setup is done.</string>
     <string name="permissions_shizuku_use">Use Shizuku</string>
-    <string name="permissions_shizuku_use_callvault">Use CallVault</string>
+    <string name="permissions_shizuku_use_callvault">Use Hamdabir</string>
     <string name="permissions_shizuku_offer_title_stopped">Shizuku is not running</string>
-    <string name="permissions_shizuku_offer_stopped">Start it from the Shizuku app and come back, and CallVault can use it instead of pairing. Or set CallVault up on its own — it needs nothing else running.</string>
+    <string name="permissions_shizuku_offer_stopped">Start it from the Shizuku app and come back, and Hamdabir can use it instead of pairing. Or set Hamdabir up on its own — it needs nothing else running.</string>
     <string name="home_hero_pill_shizuku">Shizuku stopped</string>
     <string name="home_status_shizuku_title">Shizuku is not ready</string>
-    <string name="home_status_shizuku_suggestion">Open Shizuku and start it. It stops whenever the phone restarts, and CallVault cannot record until it is running.</string>
+    <string name="home_status_shizuku_suggestion">Open Shizuku and start it. It stops whenever the phone restarts, and Hamdabir cannot record until it is running.</string>
     <string name="home_health_missed_shizuku">%1$s was not recorded — Shizuku was not running</string>
     <string name="home_health_missed_shizuku_unnamed">A call was not recorded — Shizuku was not running</string>
-    <string name="settings_unavailable_in_shizuku">Not available in Shizuku mode — this needs CallVault\'s own recorder.</string>
+    <string name="settings_unavailable_in_shizuku">Not available in Shizuku mode — this needs Hamdabir\'s own recorder.</string>
     <string name="mode_switch_to_shizuku">Switching to Shizuku…</string>
-    <string name="mode_switch_to_standalone">Switching to CallVault…</string>
+    <string name="mode_switch_to_standalone">Switching to Hamdabir…</string>
     <string name="mode_switch_working">Stopping the old recorder and starting the new one. This takes a few seconds.</string>
     <string name="mode_switch_done_title">Ready to record</string>
     <string name="mode_switch_problem_title">Not ready yet</string>
     <string name="mode_switch_done_shizuku">Ready — using Shizuku</string>
-    <string name="mode_switch_done_standalone">Ready — using CallVault</string>
-    <string name="mode_switch_ready_shizuku">CallVault is recording through Shizuku. VoIP calls and resilient recording are not available in this mode.</string>
-    <string name="mode_switch_ready_standalone">CallVault is recording with its own recorder. Everything is available, including VoIP calls and speaker names.</string>
+    <string name="mode_switch_done_standalone">Ready — using Hamdabir</string>
+    <string name="mode_switch_ready_shizuku">Hamdabir is recording through Shizuku. VoIP calls and resilient recording are not available in this mode.</string>
+    <string name="mode_switch_ready_standalone">Hamdabir is recording with its own recorder. Everything is available, including VoIP calls and speaker names.</string>
     <string name="mode_switch_ready">The recorder is running. Calls will be recorded.</string>
     <string name="mode_switch_shizuku_not_installed">Shizuku is not installed, so there is nothing to switch to.</string>
     <string name="mode_switch_shizuku_not_running">Shizuku is not running. Open Shizuku and start it, then try again — it stops whenever the phone restarts.</string>
-    <string name="mode_switch_shizuku_not_permitted">Shizuku has not allowed CallVault to use it yet. Open Shizuku and allow it, then try again.</string>
-    <string name="mode_switch_voip_not_armed">Switched, but app-call recording could not be armed. Phone calls will record; app calls may not until you reopen CallVault.</string>
+    <string name="mode_switch_shizuku_not_permitted">Shizuku has not allowed Hamdabir to use it yet. Open Shizuku and allow it, then try again.</string>
+    <string name="mode_switch_voip_not_armed">Switched, but app-call recording could not be armed. Phone calls will record; app calls may not until you reopen Hamdabir.</string>
     <string name="mode_switch_recorder_failed">The recorder did not start. Nothing will be recorded until it does.</string>
     <string name="home_hero_pill_with_mode">%1$s · %2$s</string>
-    <string name="home_mode_badge_standalone">CallVault</string>
+    <string name="home_mode_badge_standalone">Hamdabir</string>
     <string name="home_mode_badge_shizuku">Shizuku</string>
-    <string name="settings_subsection_privileges">How CallVault gets permission</string>
+    <string name="settings_subsection_privileges">How Hamdabir gets permission</string>
     <string name="settings_shizuku_mode">Shizuku mode</string>
-    <string name="settings_shizuku_not_installed">Shizuku is not installed. CallVault does not need it — this is only for people who already use it.</string>
+    <string name="settings_shizuku_not_installed">Shizuku is not installed. Hamdabir does not need it — this is only for people who already use it.</string>
     <string name="settings_shizuku_not_running">Shizuku is installed but not running. It has to be started again after every restart of the phone.</string>
-    <string name="settings_shizuku_no_permission">Shizuku is running, but has not allowed CallVault to use it yet.</string>
-    <string name="settings_shizuku_ready">Shizuku is running and ready. With this on, CallVault does not need its own pairing.</string>
-    <string name="settings_shizuku_grant">Allow CallVault in Shizuku</string>
+    <string name="settings_shizuku_no_permission">Shizuku is running, but has not allowed Hamdabir to use it yet.</string>
+    <string name="settings_shizuku_ready">Shizuku is running and ready. With this on, Hamdabir does not need its own pairing.</string>
+    <string name="settings_shizuku_grant">Allow Hamdabir in Shizuku</string>
     <string name="settings_shizuku_grant_description">Opens Shizuku so you can allow it. Nothing records until you do.</string>
     <string name="settings_section_general">General</string>
     <string name="settings_section_visual">Visual settings</string>
@@ -176,7 +176,7 @@
     <string name="settings_voip_recording_label">Record VoIP calls</string>
     <string name="settings_voip_recording_description">Also record calls made in apps like WhatsApp, Signal and Telegram. Experimental — some apps block recording, and this cannot be known until a call is under way.</string>
     <string name="settings_voip_auto_start_label">Start automatically</string>
-    <string name="settings_voip_auto_start_description">Off means CallVault asks first: a notification with a Record button appears when an app call starts.</string>
+    <string name="settings_voip_auto_start_description">Off means Hamdabir asks first: a notification with a Record button appears when an app call starts.</string>
     <string name="voip_prompt_title">App call in progress</string>
     <string name="voip_prompt_text">Tap Record to record this call.</string>
     <string name="voip_prompt_text_named">%1$s call. Tap Record to record it.</string>
@@ -185,8 +185,8 @@
     <string name="voip_recording_warning_continue">I understand, turn it on</string>
     <string name="voip_recording_arming">Preparing VoIP recording…</string>
     <string name="notif_voip_recording_title">Recording VoIP call</string>
-    <string name="notif_voip_recording_text">CallVault is recording an app call.</string>
-    <string name="voip_missed_not_ready">An app call was not recorded — CallVault was not ready in time. This can happen for a short while after a phone call ends. The next call should record normally.</string>
+    <string name="notif_voip_recording_text">Hamdabir is recording an app call.</string>
+    <string name="voip_missed_not_ready">An app call was not recorded — Hamdabir was not ready in time. This can happen for a short while after a phone call ends. The next call should record normally.</string>
     <string name="voip_missed_no_folder">An app call was not recorded — the recordings folder is missing or cannot be written to. Choose it again in Settings.</string>
     <string name="voip_missed_label">App call</string>
     <string name="voip_one_sided_warning">Only your side of that app call was recorded — the other app does not allow its call audio to be captured.</string>
@@ -194,13 +194,13 @@
     <string name="voip_recording_unavailable">Couldn\'t enable on this device — VoIP recording isn\'t available here.</string>
     <string name="voip_recording_names_hint">Contact names come from the calling app\'s own call notification. If notifications are turned off for that app, its recordings are saved without a name.</string>
     <string name="settings_usb_debugging_label">USB debugging</string>
-    <string name="settings_usb_debugging_description">Recommended. Keeps recording working when you leave Wi-Fi, and lets CallVault switch Wireless debugging off. No cable needed.</string>
+    <string name="settings_usb_debugging_description">Recommended. Keeps recording working when you leave Wi-Fi, and lets Hamdabir switch Wireless debugging off. No cable needed.</string>
     <string name="settings_usb_debugging_recommended">Without this, recording only works on Wi-Fi, and Wireless debugging has to stay on.</string>
-    <string name="settings_usb_debugging_on_hint">CallVault can keep Wireless debugging off. If you turn this off, recording stops for a few seconds while CallVault restarts it over Wi-Fi — and away from Wi-Fi it can\'t restart.</string>
-    <string name="settings_usb_debugging_shizuku_hint">Leave USB debugging on while you use Shizuku. Shizuku\'s service is started over Android\'s debugging service and stops when it does — CallVault does not need this switch in Shizuku mode.</string>
-    <string name="settings_usb_debugging_failed">Couldn\'t change it — CallVault needs the permission it gets during setup.</string>
-    <string name="notif_info_channel">CallVault notices</string>
-    <string name="notif_wd_required">Wireless debugging has to stay on because USB debugging is off. Turn on USB debugging in Settings ▸ Experimental and CallVault will switch Wireless debugging off again.</string>
+    <string name="settings_usb_debugging_on_hint">Hamdabir can keep Wireless debugging off. If you turn this off, recording stops for a few seconds while Hamdabir restarts it over Wi-Fi — and away from Wi-Fi it can\'t restart.</string>
+    <string name="settings_usb_debugging_shizuku_hint">Leave USB debugging on while you use Shizuku. Shizuku\'s service is started over Android\'s debugging service and stops when it does — Hamdabir does not need this switch in Shizuku mode.</string>
+    <string name="settings_usb_debugging_failed">Couldn\'t change it — Hamdabir needs the permission it gets during setup.</string>
+    <string name="notif_info_channel">Hamdabir notices</string>
+    <string name="notif_wd_required">Wireless debugging has to stay on because USB debugging is off. Turn on USB debugging in Settings ▸ Experimental and Hamdabir will switch Wireless debugging off again.</string>
     <string name="settings_section_debug">Debug</string>
     <string name="settings_section_security">Security</string>
     <string name="settings_section_recorder_server">Recorder service</string>
@@ -247,7 +247,7 @@
     <string name="usb_mode_midi">MIDI</string>
     <string name="offline_recording_warning_title">Enable offline recording?</string>
     <string name="offline_recording_warning_message">This opens a local debugging port on your phone so calls can record with no Wi-Fi. It is protected by your device\'s key, but it is a small security tradeoff. Only enable it if you need to record calls without Wi-Fi.</string>
-    <string name="offline_recording_warning_shizuku">Shizuku is running. Turning this on restarts Android\'s debugging service, which stops Shizuku — CallVault will start it again straight afterwards, and tell you if it cannot.</string>
+    <string name="offline_recording_warning_shizuku">Shizuku is running. Turning this on restarts Android\'s debugging service, which stops Shizuku — Hamdabir will start it again straight afterwards, and tell you if it cannot.</string>
     <string name="offline_recording_warning_continue">Continue anyway</string>
 
     <string name="settings_file_name_template">File Name Template</string>
@@ -364,13 +364,13 @@
     <!-- Persistent reminder that debug logging is enabled -->
     <string name="debug_notification_channel_name">Debug logging</string>
     <string name="debug_notification_title">Debug logging is on</string>
-    <string name="debug_notification_text">Tap to open CallVault and turn it off when you\'re done.</string>
+    <string name="debug_notification_text">Tap to open Hamdabir and turn it off when you\'re done.</string>
 
     <!-- Settings Screen: About/Server Section -->
     <string name="settings_copy_version">Copy Version</string>
     <string name="settings_view_licenses">View Licenses</string>
     <string name="settings_scrcpy_server" translatable="false">Scrcpy-Server: %1$s</string>
-    <string name="settings_fork_attribution" translatable="false">CallVault is a fork of ShizuCallRecorder</string>
+    <string name="settings_fork_attribution" translatable="false">Hamdabir is a fork of ShizuCallRecorder</string>
     <string name="settings_fork_attribution_supporting" translatable="false">github.com/kitsumed/ShizuCallRecorder</string>
     <string name="settings_support_label">Support development</string>
     <string name="settings_support_value">Buy me a coffee on Ko-fi</string>
@@ -413,7 +413,7 @@
     <string name="recording_unexpected_error">An unexpected error occurred during recording. Please report this with the steps to reproduce and the apps logs.</string>
 
     <!-- Setup Wizard -->
-    <string name="wizard_title">Set up CallVault</string>
+    <string name="wizard_title">Set up Hamdabir</string>
     <string name="wizard_step_of">Step %1$d of %2$d</string>
     <string name="wizard_back">Back</string>
     <string name="wizard_next">Next</string>
@@ -444,12 +444,12 @@
     <!-- Wizard: Auto-record step -->
     <string name="wizard_auto_record_title">Automatic recording</string>
     <string name="wizard_auto_record_subtitle">Choose which calls are recorded automatically. You can fine-tune this later in Settings.</string>
-    <string name="wizard_auto_record_nothing_warning">With both phone calls and app calls off, CallVault will not record anything. Turn at least one on unless that is what you want.</string>
+    <string name="wizard_auto_record_nothing_warning">With both phone calls and app calls off, Hamdabir will not record anything. Turn at least one on unless that is what you want.</string>
     <!-- Wizard: Audio step -->
     <string name="wizard_experimental_title">Optional extras</string>
     <string name="wizard_experimental_subtitle">A feature still being proven. It is off by default — you can turn it on later in Settings.</string>
     <string name="wizard_updates_title">Staying up to date</string>
-    <string name="wizard_updates_subtitle">CallVault is not on an app store, so it checks GitHub for new versions itself.</string>
+    <string name="wizard_updates_subtitle">Hamdabir is not on an app store, so it checks GitHub for new versions itself.</string>
     <string name="wizard_reliability_title">Reliable recording</string>
     <string name="wizard_reliability_subtitle">Two optional settings that keep recording working in tricky conditions. You can skip these and change them later in Settings.</string>
     <string name="wizard_reliability_usb_title">Keep recording when the screen locks</string>
@@ -472,7 +472,7 @@
       step also asks about summaries and models, but it is not untrue, so a locale still showing it
       until the next translation pass says less rather than something wrong.
     -->
-    <string name="wizard_transcription_subtitle">CallVault can turn a recording into text on the phone itself, and write a short summary from it — nothing is sent anywhere. Choose when that happens, which language your calls are in, and download what it needs.</string>
+    <string name="wizard_transcription_subtitle">Hamdabir can turn a recording into text on the phone itself, and write a short summary from it — nothing is sent anywhere. Choose when that happens, which language your calls are in, and download what it needs.</string>
     <string name="wizard_transcription_language_note">Set to the language this phone is set to. Naming it is far more reliable than letting the app guess, and you can still pick a different one per call later.</string>
     <!--
       Dead as of the third model tier, and kept only until the translation pass retires it. It is NOT
@@ -494,7 +494,7 @@
     <!-- Joins the list above. A resource because the comma is not the right separator everywhere. -->
     <string name="list_separator">", "</string>
     <string name="wizard_transcription_summary_heading">Summaries</string>
-    <string name="wizard_transcription_summary_body">Once a call has a transcript, CallVault can also write a short summary of it — on the phone, like everything else here.</string>
+    <string name="wizard_transcription_summary_body">Once a call has a transcript, Hamdabir can also write a short summary of it — on the phone, like everything else here.</string>
     <string name="wizard_transcription_background_note">Both downloads only run over Wi-Fi, and they keep going in the background. You can carry on and finish setup now — Settings ▸ Transcription &amp; summaries shows the same progress afterwards.</string>
 
     <string name="wizard_audio_title">Audio quality</string>
@@ -503,7 +503,7 @@
     <string name="wizard_filename_subtitle">Choose how saved recordings are named.</string>
 
     <!-- Home -->
-    <string name="home_all_set_message">You\'re all set. CallVault is ready to record your calls.</string>
+    <string name="home_all_set_message">You\'re all set. Hamdabir is ready to record your calls.</string>
     <string name="home_open_settings">Settings</string>
 
     <!-- Home: status card -->
@@ -512,13 +512,13 @@
     <string name="home_status_not_paired_title">Setup not complete</string>
     <string name="home_status_not_paired_suggestion">Finish Wireless Debugging pairing in setup.</string>
     <string name="home_status_dev_options_off_title">Developer options is off</string>
-    <string name="home_status_dev_options_off_suggestion">CallVault records through Wireless debugging, which needs Developer options. Recording cannot work until you re-enable Developer options (and Wireless debugging) in system settings.</string>
+    <string name="home_status_dev_options_off_suggestion">Hamdabir records through Wireless debugging, which needs Developer options. Recording cannot work until you re-enable Developer options (and Wireless debugging) in system settings.</string>
     <string name="home_status_update_regrant_title">Reconnect to keep recording</string>
-    <string name="home_status_update_regrant_suggestion">An update removed a permission CallVault needs to restart recording. It may still work for now — tap here, then turn Wireless debugging on once to restore it. No reinstall needed.</string>
+    <string name="home_status_update_regrant_suggestion">An update removed a permission Hamdabir needs to restart recording. It may still work for now — tap here, then turn Wireless debugging on once to restore it. No reinstall needed.</string>
     <string name="home_status_ready_title">Ready to record</string>
-    <string name="home_status_ready_suggestion">CallVault records calls automatically per your settings.</string>
+    <string name="home_status_ready_suggestion">Hamdabir records calls automatically per your settings.</string>
     <string name="home_status_stopped_title">Recording stopped</string>
-    <string name="home_status_stopped_suggestion">CallVault is turned off, calls will not be recorded.</string>
+    <string name="home_status_stopped_suggestion">Hamdabir is turned off, calls will not be recorded.</string>
     <string name="home_hero_pill_stopped">Stopped</string>
     <string name="home_hero_pill_starting">Starting…</string>
     <string name="home_recording_stop">Stop</string>
@@ -552,7 +552,7 @@
     <string name="settings_update_check_label">Check for updates</string>
     <string name="settings_update_check_description">Once a day, look for a new version on GitHub.</string>
     <string name="support_appeal_title">Made by one person 👋</string>
-    <string name="support_appeal_body">I build CallVault on my own, in my free time — free, open source, no ads, no tracking. ☕ If it\'s useful to you, a small tip keeps me going. Either way, thanks! 🙏</string>
+    <string name="support_appeal_body">I build Hamdabir on my own, in my free time — free, open source, no ads, no tracking. ☕ If it\'s useful to you, a small tip keeps me going. Either way, thanks! 🙏</string>
     <string name="support_kofi" translatable="false">Ko-fi</string>
     <string name="support_paypal" translatable="false">PayPal</string>
     <string name="support_not_now">Not now</string>
@@ -656,7 +656,7 @@
     <string name="summary_model_failed">The download did not finish. Try again.</string>
     <string name="summary_requirements_title">What this needs</string>
     <string name="summary_requirements_body">Summaries are written on your phone — nothing is sent anywhere. That costs a %1$.1f GB download and about %2$.1f GB of memory while it runs, so it needs a recent phone with room to spare. A short call takes a minute or two.</string>
-    <string name="summary_model_licence">The summariser is Google\'s Gemma 4, used under the Apache 2.0 licence. It is downloaded separately rather than included in CallVault.</string>
+    <string name="summary_model_licence">The summariser is Google\'s Gemma 4, used under the Apache 2.0 licence. It is downloaded separately rather than included in Hamdabir.</string>
 
     <!--
       The summary card on the playback screen. "Generated from the transcript" is not decoration:
@@ -771,7 +771,7 @@
     <string name="transcript_note_add">Add a note</string>
     <string name="transcript_note_hint">What it was about, or what to do about it…</string>
     <string name="transcript_too_long_title">Too long to transcribe</string>
-    <string name="transcript_too_long_message">This call is about %1$d minutes long. CallVault can only transcribe recordings up to %2$d minutes on the device for now — longer ones would run out of memory partway through. The recording itself is safe.</string>
+    <string name="transcript_too_long_message">This call is about %1$d minutes long. Hamdabir can only transcribe recordings up to %2$d minutes on the device for now — longer ones would run out of memory partway through. The recording itself is safe.</string>
     <string name="transcript_no_model_title">No speech model yet</string>
     <string name="transcript_no_model_message">Transcribing happens on this phone, so it needs a speech model downloaded first. You can choose and download one in Settings.</string>
     <string name="transcript_no_model_open_settings">Open settings</string>
@@ -787,9 +787,9 @@
     <string name="transcript_delete_confirm_title">Delete this transcript?</string>
     <string name="transcript_delete_confirm_message">The transcript of %1$s will be deleted. The recording itself is kept, and you can transcribe it again later.</string>
     <string name="home_status_recovery_stuck_title">Recording is down</string>
-    <string name="home_status_recovery_stuck_suggestion">CallVault keeps failing to restart its recorder, so calls are not being recorded. Reopening the app usually clears it.</string>
+    <string name="home_status_recovery_stuck_suggestion">Hamdabir keeps failing to restart its recorder, so calls are not being recorded. Reopening the app usually clears it.</string>
     <string name="home_hero_pill_recovery_stuck">Not recording</string>
-    <string name="app_lock_prompt_title">Unlock CallVault</string>
+    <string name="app_lock_prompt_title">Unlock Hamdabir</string>
     <string name="app_lock_locked">Locked</string>
     <string name="app_lock_unlock">Unlock</string>
     <string name="settings_section_privacy">Privacy</string>
@@ -797,7 +797,7 @@
     <string name="settings_app_lock_description">Ask for your screen lock before showing recordings and transcripts. Also keeps them out of screenshots and the app switcher.</string>
     <string name="settings_app_lock_unavailable">Set a screen lock on your phone to use this.</string>
     <string name="settings_allow_screenshots_title">Allow screenshots</string>
-    <string name="settings_allow_screenshots_description">Let you take screenshots of CallVault. This also shows its content in the app switcher. Off keeps everything hidden.</string>
+    <string name="settings_allow_screenshots_description">Let you take screenshots of Hamdabir. This also shows its content in the app switcher. Off keeps everything hidden.</string>
     <string name="playback_tags_title">Tags</string>
     <string name="playback_tags_add">Add tag</string>
     <string name="playback_tags_remove">Remove tag</string>
@@ -821,18 +821,18 @@
     <string name="storage_cap_caption">Once your recordings pass this, the daily clean-up deletes the oldest from this phone until they fit. Starred recordings are never deleted, even if that means going over. A recording kept in Drive as well only loses its copy here. Audio you imported is never deleted by the limit either: it has no copy in Drive, so this phone holds the only one.</string>
     <string name="storage_cap_confirm_message">Recordings will be deleted from this phone whenever they exceed the limit, oldest first. Starred recordings are never taken. This cannot be undone.</string>
     <string name="notif_health_channel">Problems that need you</string>
-    <string name="notif_health_recorder_title">CallVault cannot record right now</string>
+    <string name="notif_health_recorder_title">Hamdabir cannot record right now</string>
     <string name="notif_health_shizuku_stopped_title">Shizuku was stopped</string>
-    <string name="notif_health_shizuku_stopped_text">CallVault had to restart Android\'s debugging service, and that stops Shizuku. Open Shizuku and start it again if you use it with other apps.</string>
+    <string name="notif_health_shizuku_stopped_text">Hamdabir had to restart Android\'s debugging service, and that stops Shizuku. Open Shizuku and start it again if you use it with other apps.</string>
     <string name="notif_health_shizuku_restarted_title">Shizuku was started again</string>
-    <string name="notif_health_shizuku_restarted_text">CallVault had to restart Android\'s debugging service, which stops Shizuku, so it started Shizuku again for you. There is nothing to do.</string>
+    <string name="notif_health_shizuku_restarted_text">Hamdabir had to restart Android\'s debugging service, which stops Shizuku, so it started Shizuku again for you. There is nothing to do.</string>
     <string name="notif_health_shizuku_restart_failed_title">Shizuku was stopped</string>
-    <string name="notif_health_shizuku_restart_failed_text">CallVault had to restart Android\'s debugging service, and that stops Shizuku. It tried to start Shizuku again and could not — open Shizuku and start it yourself.</string>
+    <string name="notif_health_shizuku_restart_failed_text">Hamdabir had to restart Android\'s debugging service, and that stops Shizuku. It tried to start Shizuku again and could not — open Shizuku and start it yourself.</string>
     <string name="notif_health_recorder_text">Calls will not be recorded until this phone joins a Wi-Fi network once. Any network will do and it does not need internet — a few seconds is enough, then it keeps working even off Wi-Fi.</string>
     <string name="notif_health_sync_title">Recordings are not reaching Drive</string>
-    <string name="notif_health_sync_text">Copying to Google Drive stopped some time ago. Nothing is lost — the recordings are still on this phone — but they are not backed up. Open CallVault to check your storage settings.</string>
+    <string name="notif_health_sync_text">Copying to Google Drive stopped some time ago. Nothing is lost — the recordings are still on this phone — but they are not backed up. Open Hamdabir to check your storage settings.</string>
     <string name="notif_health_recorder_text_shizuku">Calls will not be recorded until Shizuku is running again. A reboot stops it, so it has to be started once after the phone restarts.</string>
-    <string name="settings_offline_recording_reboot_note">After a restart this stops working until the phone joins a Wi-Fi network once. Any network will do and it does not need internet — a few seconds is enough. CallVault will tell you when that is needed.</string>
+    <string name="settings_offline_recording_reboot_note">After a restart this stops working until the phone joins a Wi-Fi network once. Any network will do and it does not need internet — a few seconds is enough. Hamdabir will tell you when that is needed.</string>
     <string name="general_stop">Stop</string>
     <string name="settings_metadata_file_label">Write a details file</string>
     <string name="settings_metadata_file_desc">Save a small .json beside each recording</string>
@@ -875,16 +875,16 @@
     <string name="settings_bugreport_save_failed">Could not save the report</string>
     <string name="settings_debug_log_wrap">Wrap lines</string>
     <string name="usb_debugging_off_warn_title">Turn off USB debugging?</string>
-    <string name="usb_debugging_off_warn_no_way_in">You\'re not on Wi-Fi, so CallVault will have no way to reach the recorder. Calls won\'t be recorded until you connect to Wi-Fi or turn this back on.</string>
+    <string name="usb_debugging_off_warn_no_way_in">You\'re not on Wi-Fi, so Hamdabir will have no way to reach the recorder. Calls won\'t be recorded until you connect to Wi-Fi or turn this back on.</string>
     <string name="usb_debugging_off_warn_offline">Off-Wi-Fi recording needs USB debugging. With it off, calls made away from Wi-Fi won\'t be recorded.</string>
     <string name="usb_debugging_off_confirm">Turn off anyway</string>
     <string name="usb_debugging_off_keep">Keep it on</string>
     <string name="settings_wd_enforce_label">Keep Wireless debugging on for recording</string>
-    <string name="settings_wd_enforce_description">If you switch Wireless debugging off while nothing else lets CallVault in, it turns it back on so calls keep recording. When this is off, your switch stays off and the notification says recording is paused.</string>
+    <string name="settings_wd_enforce_description">If you switch Wireless debugging off while nothing else lets Hamdabir in, it turns it back on so calls keep recording. When this is off, your switch stays off and the notification says recording is paused.</string>
     <string name="oem_gate_title">Your phone is blocking this step</string>
     <string name="oem_gate_body_oppo">OnePlus, OPPO and realme phones refuse to give apps this permission until you turn on \"Disable system optimization\" in Developer options — near the bottom, under Apps. Older versions call it \"Disable permission monitoring\". Turn it on and try again. If you cannot find it, switch the phone to English, turn it on, then switch back.</string>
     <string name="oem_gate_body_xiaomi">Xiaomi, Redmi and POCO phones refuse to give apps this permission until you turn on \"USB debugging (Security settings)\" in Developer options. It is separate from USB debugging, and needs you to be signed in to a Mi account. Turn it on and try again.</string>
-    <string name="oem_gate_body_other">This phone refuses to give CallVault the permission it needs. In Developer options, look for a switch about permission monitoring or system optimisation, turn it on, and try again.</string>
+    <string name="oem_gate_body_other">This phone refuses to give Hamdabir the permission it needs. In Developer options, look for a switch about permission monitoring or system optimisation, turn it on, and try again.</string>
     <string name="oem_gate_open_dev_options">Open Developer options</string>
     <string name="oem_gate_continue_hint">You can carry on for now, but calls will not be recorded until this is done.</string>
     <string name="home_hub_community_eyebrow">JOIN</string>
@@ -923,18 +923,18 @@
     <string name="note_saved">Saved</string>
     <string name="note_saving">Saving…</string>
     <string name="home_status_pairing_lost_title">Pairing expired</string>
-    <string name="home_status_pairing_lost_suggestion">Android forgot CallVault\'s Wireless debugging pairing, so the recorder can\'t restart. Tap here to pair again — your recordings and settings stay as they are.</string>
+    <string name="home_status_pairing_lost_suggestion">Android forgot Hamdabir\'s Wireless debugging pairing, so the recorder can\'t restart. Tap here to pair again — your recordings and settings stay as they are.</string>
     <string name="settings_pair_again_label">Pair again</string>
-    <string name="settings_pair_again_value">Pair CallVault with Wireless debugging</string>
-    <string name="settings_pair_again_hint">Use this if Android forgot CallVault\'s pairing. Your recordings and settings stay as they are. Turning on Offline recording keeps the pairing from expiring.</string>
-    <string name="notif_readiness_pairing_lost_text">Android forgot CallVault\'s pairing, so calls can\'t be recorded. Open CallVault and tap the status card to pair again.</string>
+    <string name="settings_pair_again_value">Pair Hamdabir with Wireless debugging</string>
+    <string name="settings_pair_again_hint">Use this if Android forgot Hamdabir\'s pairing. Your recordings and settings stay as they are. Turning on Offline recording keeps the pairing from expiring.</string>
+    <string name="notif_readiness_pairing_lost_text">Android forgot Hamdabir\'s pairing, so calls can\'t be recorded. Open Hamdabir and tap the status card to pair again.</string>
     <string name="notif_cut_off_saved_title">A call was cut off</string>
-    <string name="notif_cut_off_saved_text">Your phone closed CallVault during a call. What was recorded before that was saved as %1$s.</string>
-    <string name="home_health_failed_cut_off">Your last call was cut off when the phone closed CallVault — the part recorded before that was saved.</string>
+    <string name="notif_cut_off_saved_text">Your phone closed Hamdabir during a call. What was recorded before that was saved as %1$s.</string>
+    <string name="home_health_failed_cut_off">Your last call was cut off when the phone closed Hamdabir — the part recorded before that was saved.</string>
     <string name="settings_needs_newer_android">Needs Android %1$s or newer — this phone runs Android %2$s.</string>
     <string name="notif_turned_off_for_android_title">Some settings were turned off</string>
     <string name="notif_turned_off_for_android_text">%1$s: this needs a newer Android version than the one on this phone (Android %2$s), so it was switched off. Phone calls still record.</string>
-    <string name="update_popup_title">CallVault %1$s is available</string>
+    <string name="update_popup_title">Hamdabir %1$s is available</string>
     <string name="update_popup_text">A new version is ready to install. Updating keeps recording reliable and brings the latest fixes.</string>
     <string name="update_popup_update_now">Update now</string>
     <string name="update_popup_later">Later</string>

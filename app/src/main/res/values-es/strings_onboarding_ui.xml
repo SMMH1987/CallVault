@@ -21,7 +21,7 @@
     <string name="permissions_status_adb_connected">Conectado</string>
     <string name="permissions_status_adb_not_connected">Sin conexión</string>
     <string name="permissions_ui_eyebrow">Configuración</string>
-    <string name="permissions_ui_hero_subtitle">Algunos permisos para que CallVault pueda capturar y etiquetar sus llamadas. Apruebe cada elemento a continuación.</string>
+    <string name="permissions_ui_hero_subtitle">Algunos permisos para que Hamdabir pueda capturar y etiquetar sus llamadas. Apruebe cada elemento a continuación.</string>
     <string name="permissions_ui_hero_title">Vamos a configurarlo</string>
     <string name="permissions_ui_section_label">Permisos</string>
 </resources>

@@ -21,7 +21,7 @@
     <string name="permissions_status_adb_connected">Verbunden</string>
     <string name="permissions_status_adb_not_connected">Nicht verbunden</string>
     <string name="permissions_ui_eyebrow">Einrichtung</string>
-    <string name="permissions_ui_hero_subtitle">Ein paar Berechtigungen, damit CallVault Ihre Anrufe aufzeichnen und beschriften kann. Bestätigen Sie jeden Punkt unten.</string>
+    <string name="permissions_ui_hero_subtitle">Ein paar Berechtigungen, damit Hamdabir Ihre Anrufe aufzeichnen und beschriften kann. Bestätigen Sie jeden Punkt unten.</string>
     <string name="permissions_ui_hero_title">Los geht\'s mit der Einrichtung</string>
     <string name="permissions_ui_section_label">Berechtigungen</string>
 </resources>

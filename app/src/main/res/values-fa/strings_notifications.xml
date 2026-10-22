@@ -16,9 +16,9 @@
     <string name="notif_pairing_found_title">سرویس مرتبط‌سازی پیدا شد</string>
     <string name="notif_pairing_found_text">کد ۶ رقمی مرتبط‌سازی را وارد کنید.</string>
     <string name="notif_pairing_working_title">در حال مرتبط‌سازی…</string>
-    <string name="notif_pairing_working_text">در حال راه‌اندازی CallVault. چند ثانیه طول می‌کشد.</string>
+    <string name="notif_pairing_working_text">در حال راه‌اندازی همدبیر. چند ثانیه طول می‌کشد.</string>
     <string name="notif_pairing_success_title">مرتبط شد ✓</string>
-    <string name="notif_pairing_success_text">اشکال‌زدایی بی‌سیم مرتبط شد. برای تکمیل راه‌اندازی CallVault ضربه بزنید.</string>
+    <string name="notif_pairing_success_text">اشکال‌زدایی بی‌سیم مرتبط شد. برای تکمیل راه‌اندازی همدبیر ضربه بزنید.</string>
     <string name="notif_pairing_failed_title">مرتبط‌سازی ناموفق بود</string>
     <string name="notif_pairing_action_stop">توقف</string>
     <string name="notif_pairing_action_enter_code">وارد کردن کد مرتبط‌سازی</string>
@@ -28,10 +28,10 @@
     <string name="notif_startup_channel">راه‌اندازی</string>
     <string name="notif_startup_preparing">در حال آماده‌سازی ضبط‌کنندهٔ تماس…</string>
     <string name="update_notif_channel">به‌روزرسانی‌های برنامه</string>
-    <string name="update_notif_available_title">CallVault %1$s در دسترس است</string>
+    <string name="update_notif_available_title">همدبیر %1$s در دسترس است</string>
     <string name="update_notif_available_text">برنامه را باز کنید و برای نصب، روی به‌روزرسانی ضربه بزنید.</string>
     <string name="update_notif_success_title">به‌روزرسانی نصب شد</string>
-    <string name="update_notif_success_text">نسخهٔ CallVault اکنون %1$s است.</string>
+    <string name="update_notif_success_text">نسخهٔ همدبیر اکنون %1$s است.</string>
     <string name="update_notif_failure_title">به‌روزرسانی ناموفق بود</string>
     <string name="update_notif_failure_download_text">دانلود به‌روزرسانی ممکن نشد. برای دریافت از GitHub ضربه بزنید.</string>
     <string name="update_notif_failure_verify_text">به‌روزرسانی دانلودشده از بررسی امنیتی عبور نکرد و کنار گذاشته شد. برای دریافت از GitHub ضربه بزنید.</string>
@@ -41,9 +41,9 @@
     <string name="notif_readiness_down_title">تماس‌ها ضبط نمی‌شوند</string>
     <string name="notif_readiness_no_debugging_text">اشکال‌زدایی USB و اشکال‌زدایی بی‌سیم هر دو خاموش هستند. یکی را در گزینه‌های توسعه‌دهنده دوباره روشن کنید.</string>
     <string name="notif_readiness_needs_wifi_text">اشکال‌زدایی USB خاموش است و Wi-Fi هم وجود ندارد. به Wi-Fi وصل شوید یا اشکال‌زدایی USB را روشن کنید.</string>
-    <string name="notif_readiness_stuck_text">ضبط‌کننده مدام در راه‌اندازی ناموفق است. برای دیدن علت، CallVault را باز کنید.</string>
+    <string name="notif_readiness_stuck_text">ضبط‌کننده مدام در راه‌اندازی ناموفق است. برای دیدن علت، همدبیر را باز کنید.</string>
     <string name="notif_readiness_needs_wifi_restart_text">ضبط‌کننده متوقف شد و برای راه‌اندازی دوباره به Wi-Fi نیاز دارد. روشن کردن ضبط آفلاین در زمان اتصال به Wi-Fi از این مشکل جلوگیری می‌کند.</string>
-    <string name="notif_readiness_wd_off_by_user_text">شما اشکال‌زدایی بی‌سیم را خاموش کرده‌اید و راه دیگری برای راه‌اندازی مجدد ضبط‌کننده توسط CallVault وجود ندارد. آن را دوباره روشن کنید یا اشکال‌زدایی USB را روشن کنید.</string>
+    <string name="notif_readiness_wd_off_by_user_text">شما اشکال‌زدایی بی‌سیم را خاموش کرده‌اید و راه دیگری برای راه‌اندازی مجدد ضبط‌کننده توسط همدبیر وجود ندارد. آن را دوباره روشن کنید یا اشکال‌زدایی USB را روشن کنید.</string>
     <string name="notif_readiness_offline_paused_text">ضبط بدون Wi-Fi متوقف شده است: به اشکال‌زدایی USB نیاز دارد. تماس‌ها در حالت اتصال به Wi-Fi همچنان ضبط می‌شوند.</string>
     <string name="notif_action_turn_wd_on">روشن کردن اشکال‌زدایی بی‌سیم</string>
 

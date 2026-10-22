@@ -21,7 +21,7 @@
     <string name="permissions_status_adb_connected">已连接</string>
     <string name="permissions_status_adb_not_connected">未连接</string>
     <string name="permissions_ui_eyebrow">设置</string>
-    <string name="permissions_ui_hero_subtitle">授予几项权限，CallVault 才能录制并标记你的通话。请逐项批准下方内容。</string>
+    <string name="permissions_ui_hero_subtitle">授予几项权限，Hamdabir 才能录制并标记你的通话。请逐项批准下方内容。</string>
     <string name="permissions_ui_hero_title">开始设置</string>
     <string name="permissions_ui_section_label">权限</string>
 </resources>

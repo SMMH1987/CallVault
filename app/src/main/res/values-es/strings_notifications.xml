@@ -11,11 +11,11 @@
     <string name="notif_pairing_remote_input_label">Código de vinculación</string>
     <string name="notif_pairing_searching_text">Abra el cuadro de diálogo «Vincular dispositivo mediante código de vinculación» del teléfono.</string>
     <string name="notif_pairing_searching_title">Buscando el servicio de vinculación…</string>
-    <string name="notif_pairing_success_text">Depuración inalámbrica vinculada. Toque para terminar de configurar CallVault.</string>
+    <string name="notif_pairing_success_text">Depuración inalámbrica vinculada. Toque para terminar de configurar Hamdabir.</string>
     <string name="notif_pairing_success_title">Vinculado ✓</string>
     <string name="notif_pairing_waiting_wd_text">Active la depuración inalámbrica para iniciar la vinculación.</string>
     <string name="notif_pairing_waiting_wd_title">Esperando la depuración inalámbrica…</string>
-    <string name="notif_pairing_working_text">Configurando CallVault. Esto tarda unos segundos.</string>
+    <string name="notif_pairing_working_text">Configurando Hamdabir. Esto tarda unos segundos.</string>
     <string name="notif_pairing_working_title">Vinculando…</string>
     <string name="notif_readiness_channel">Preparación de la grabadora de llamadas</string>
     <string name="notif_readiness_ready_text">La grabadora está conectada.</string>
@@ -28,7 +28,7 @@
     <string name="notif_usb_check_unavailable">Si esto no termina, pon «USB al desbloquear» en Solo carga en Ajustes ▸ Experimental: en algunos teléfonos un modo USB de datos impide que la grabadora se conecte.</string>
     <string name="notif_usb_lock_warning">Bloquear la pantalla durante una llamada puede detener la grabación. En Ajustes ▸ Experimental, pon «USB al desbloquear» en Solo carga.</string>
     <string name="update_notif_available_text">Abre la aplicación y toca Actualizar para instalarla.</string>
-    <string name="update_notif_available_title">CallVault %1$s está disponible</string>
+    <string name="update_notif_available_title">Hamdabir %1$s está disponible</string>
     <string name="update_notif_channel">Actualizaciones de la aplicación</string>
     <string name="update_notif_downloading_title">Descargando actualización…</string>
     <string name="update_notif_failure_download_text">No se pudo descargar la actualización. Toca para obtenerla desde GitHub.</string>
@@ -36,14 +36,14 @@
     <string name="update_notif_failure_title">Error al actualizar</string>
     <string name="update_notif_failure_verify_text">La actualización descargada no superó la comprobación de seguridad y se descartó. Toca para obtenerla desde GitHub.</string>
     <string name="update_notif_installing_title">Instalando actualización…</string>
-    <string name="update_notif_success_text">CallVault ahora es la versión %1$s.</string>
+    <string name="update_notif_success_text">Hamdabir ahora es la versión %1$s.</string>
     <string name="update_notif_success_title">Actualización instalada</string>
     <string name="notif_readiness_down_title">No se están grabando las llamadas</string>
     <string name="notif_readiness_no_debugging_text">La depuración USB y la depuración inalámbrica están desactivadas. Vuelve a activar una en Opciones de desarrollador.</string>
     <string name="notif_readiness_needs_wifi_text">La depuración USB está desactivada y no hay Wi-Fi. Conéctate a una red Wi-Fi o activa la depuración USB.</string>
-    <string name="notif_readiness_stuck_text">La grabadora no consigue iniciarse. Abre CallVault para ver el motivo.</string>
+    <string name="notif_readiness_stuck_text">La grabadora no consigue iniciarse. Abre Hamdabir para ver el motivo.</string>
     <string name="notif_readiness_needs_wifi_restart_text">La grabadora se detuvo y necesita Wi-Fi para volver a iniciarse. Activa la grabación sin conexión mientras estás en Wi-Fi para evitarlo.</string>
-    <string name="notif_readiness_wd_off_by_user_text">Desactivaste la depuración inalámbrica y CallVault no tiene otra forma de reiniciar la grabadora. Vuelve a activarla o activa la depuración USB.</string>
+    <string name="notif_readiness_wd_off_by_user_text">Desactivaste la depuración inalámbrica y Hamdabir no tiene otra forma de reiniciar la grabadora. Vuelve a activarla o activa la depuración USB.</string>
     <string name="notif_readiness_offline_paused_text">La grabación sin Wi-Fi está en pausa: necesita la depuración USB. Las llamadas con Wi-Fi se siguen grabando.</string>
     <string name="notif_action_turn_wd_on">Activar la depuración inalámbrica</string>
 

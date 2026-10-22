@@ -14,7 +14,7 @@
 
     <string name="permissions_ui_eyebrow">راه‌اندازی</string>
     <string name="permissions_ui_hero_title">بیایید شروع کنیم</string>
-    <string name="permissions_ui_hero_subtitle">چند مجوز لازم است تا CallVault بتواند تماس‌های شما را ضبط و برچسب‌گذاری کند. هر مورد زیر را تأیید کنید.</string>
+    <string name="permissions_ui_hero_subtitle">چند مجوز لازم است تا همدبیر بتواند تماس‌های شما را ضبط و برچسب‌گذاری کند. هر مورد زیر را تأیید کنید.</string>
     <string name="permissions_ui_section_label">مجوزها</string>
     <string name="permission_adb_hint">روی «مجاز کردن» ضربه بزنید و سپس کد مرتبط‌سازی را از اعلان وارد کنید.</string>
     <string name="permission_adb_desc_short">برای راه‌اندازی ضبط‌کننده لازم است. به Wi-Fi نیاز دارد.</string>

@@ -18,7 +18,7 @@
     <!-- Permissions screen. -->
     <string name="permissions_ui_eyebrow">Setup</string>
     <string name="permissions_ui_hero_title">Let’s get set up</string>
-    <string name="permissions_ui_hero_subtitle">A few permissions so CallVault can capture and label your calls. Approve each item below.</string>
+    <string name="permissions_ui_hero_subtitle">A few permissions so Hamdabir can capture and label your calls. Approve each item below.</string>
     <string name="permissions_ui_section_label">Permissions</string>
     <string name="permission_adb_hint">Tap Authorize, then enter the pairing code from the notification.</string>
     <string name="permission_adb_desc_short">Required to set up the recorder. Needs Wi-Fi.</string>

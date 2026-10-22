@@ -12,7 +12,7 @@
     <string name="disclaimer_ui_scroll_hint">انتقل إلى النهاية لتمكين مربع الاختيار.</string>
     <string name="permissions_ui_eyebrow">إعداد</string>
     <string name="permissions_ui_hero_title">لنبدأ الإعداد</string>
-    <string name="permissions_ui_hero_subtitle">بعض الأذونات حتى يتمكن CallVault من التقاط مكالماتك وتسميتها. وافق على كل عنصر أدناه.</string>
+    <string name="permissions_ui_hero_subtitle">بعض الأذونات حتى يتمكن همدبير من التقاط مكالماتك وتسميتها. وافق على كل عنصر أدناه.</string>
     <string name="permissions_ui_section_label">الأذونات</string>
     <string name="permission_adb_hint">انقر على "تخويل"، ثم أدخل رمز الاقتران من الإشعار.</string>
     <string name="permission_adb_desc_short">مطلوب لإعداد المسجل. يحتاج إلى Wi-Fi.</string>
