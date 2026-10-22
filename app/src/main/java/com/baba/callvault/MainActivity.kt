@@ -22,7 +22,9 @@ import androidx.core.content.ContextCompat
 import com.baba.callvault.data.AppPreferences
 import com.baba.callvault.services.recording.DaemonKeepAliveService
 import com.baba.callvault.system.AppLock
+import com.baba.callvault.system.remoteconfig.RemoteConfigWorker
 import com.baba.callvault.ui.navigation.NotificationDestination
+import com.baba.callvault.ui.screens.RemoteConfigGate
 import com.baba.callvault.ui.navigation.OpenRecordingRequest
 import com.baba.callvault.ui.navigation.OpenTranscriptRequest
 import com.baba.callvault.ui.screens.AppLockScreen
@@ -109,16 +111,18 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContent {
             when (appLockUi(AppLock.isEnabled(this), isUnlocked, promptDismissed)) {
-                AppLockUi.APP -> AppNavigationScreen(
-                    notificationDestination = notificationDestination,
-                    onNotificationDestinationHandled = {
-                        notificationDestination = NotificationDestination.None
-                    },
-                    openRecording = openRecording,
-                    onOpenRecordingHandled = { openRecording = null },
-                    openTranscript = openTranscript,
-                    onOpenTranscriptHandled = { openTranscript = null }
-                )
+                AppLockUi.APP -> RemoteConfigGate {
+                    AppNavigationScreen(
+                        notificationDestination = notificationDestination,
+                        onNotificationDestinationHandled = {
+                            notificationDestination = NotificationDestination.None
+                        },
+                        openRecording = openRecording,
+                        onOpenRecordingHandled = { openRecording = null },
+                        openTranscript = openTranscript,
+                        onOpenTranscriptHandled = { openTranscript = null }
+                    )
+                }
                 // Background only. The prompt is coming or already up, so there is nothing to act on
                 // — drawing the door here is what flashed an "Unlock" card on every open.
                 AppLockUi.WAITING -> AppLockScreen(onUnlock = ::promptForUnlock, showDoor = false)
@@ -194,6 +198,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        // Coming back to the app is when a blocked version or a new message should show; throttled.
+        runCatching { RemoteConfigWorker.fetchNow(applicationContext) }
         // Anchor the recorder daemon whenever the app is opened. Modern Android requires a foreground
         // context to (re)start a foreground service, so we do it here rather than from Application.onCreate.
         // Idempotent — no-op if the keep-alive service is already running.

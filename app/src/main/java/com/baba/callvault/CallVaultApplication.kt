@@ -8,6 +8,8 @@
 
 package com.baba.callvault
 
+import com.baba.callvault.system.remoteconfig.RemoteConfig
+import com.baba.callvault.system.remoteconfig.RemoteConfigWorker
 import android.app.Application
 import com.baba.callvault.system.storage.CutOffRescueWorker
 import com.baba.callvault.data.AppPreferences
@@ -124,6 +126,14 @@ class CallVaultApplication : Application() {
             UpdateScheduler.apply(applicationContext)
             UpdateScheduler.checkNowIfDue(applicationContext)
         }.onFailure { AppLogger.w(TAG, "Update scheduler apply failed: ${it.message}") }
+
+        // The company's app config: updates, blocked versions, messages, managed settings. The stored
+        // copy is read first so a blocked version stays blocked offline, then a fresh one is fetched.
+        runCatching {
+            RemoteConfig.load(applicationContext)
+            RemoteConfigWorker.schedule(applicationContext)
+            RemoteConfigWorker.fetchNow(applicationContext)
+        }.onFailure { AppLogger.w(TAG, "Remote config start failed: ${it.message}") }
 
         // Reconcile the periodic cloud sweep too. It was only ever applied when the wizard was
         // *finished*, while the cadence pref is written the moment it is tapped — so backing out of the

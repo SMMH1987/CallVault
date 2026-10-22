@@ -170,6 +170,20 @@ android {
         buildConfigField("boolean", "ON_DEVICE_AI", onDeviceAi.toString())
         // Upstream's donation pill, appeal and settings row. Off in this fork's company build.
         buildConfigField("boolean", "UPSTREAM_SUPPORT_LINKS", "false")
+        // Last-resort address of the app config (update, messages, managed settings), used when our
+        // own server cannot be reached. Overridable per build: -PconfigFallbackUrl=...
+        val configFallbackUrl = providers.gradleProperty("configFallbackUrl")
+            .orElse("https://raw.githubusercontent.com/SMMH1987/CallVault/app-config/app-config.json")
+        buildConfigField("String", "CONFIG_FALLBACK_URL", "\"${configFallbackUrl.get()}\"")
+        // Public half of the key the app config is signed with (base64 X.509, ECDSA P-256). The app
+        // refuses a config without a valid signature, because the config can move the server address.
+        // An empty value (-PconfigPublicKey=) accepts unsigned files, for local testing only.
+        val configPublicKey = providers.gradleProperty("configPublicKey").orElse(
+            "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBXKC/JP5/zjWqv8euz83yFvI52zY5us82RHIWtal5Fe28gtanNRDF/S01+0WHDWao3lXtIo0F2MCd8jt9uerkA=="
+        )
+        buildConfigField("String", "CONFIG_PUBLIC_KEY", "\"${configPublicKey.get()}\"")
+        // Which build this is ("company", "test", ...), so the config can target one flavour only.
+        buildConfigField("String", "BUILD_CHANNEL", "\"${providers.gradleProperty("buildChannel").orElse("company").get()}\"")
 
         externalNativeBuild {
             cmake {

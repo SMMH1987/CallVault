@@ -12,6 +12,7 @@ import android.content.Context
 import com.baba.callvault.BuildConfig
 import com.baba.callvault.R
 import com.baba.callvault.data.AppPreferences
+import com.baba.callvault.system.remoteconfig.RemoteConfig
 import com.baba.callvault.utils.AppLogger
 import java.io.File
 
@@ -64,6 +65,30 @@ object UpdateManager {
         val preferences = AppPreferences(context)
         if (reconcile) reconcilePendingState(context, preferences)
 
+        // The app config is this fork's update source. It compares version codes, which the build
+        // raises every release; the upstream GitHub check still runs when the user turned it on.
+        val config = RemoteConfig.load(context)
+        val configured = config?.update
+        if (configured != null) {
+            // A staged release reaches only its share of phones, except one that is blocked anyway.
+            val offered = config.isBlocked() || RemoteConfig.isOfferedHere(context, configured)
+            if (configured.versionCode <= BuildConfig.VERSION_CODE.toLong() || !offered) {
+                preferences.setAvailableUpdateTag(null)
+                return null
+            }
+            val release = GitHubReleases.ReleaseInfo(
+                tag = "v${configured.versionName}",
+                apkUrl = configured.apkUrl,
+                apkSizeBytes = configured.apkSizeBytes,
+                apkSha256 = configured.apkSha256,
+                critical = configured.critical
+            )
+            AppLogger.i(TAG, "Update available from config: ${release.tag} (${configured.versionCode})")
+            preferences.setAvailableUpdateTag(release.tag)
+            return release
+        }
+        if (!preferences.isUpdateCheckEnabled()) return null
+
         val release = GitHubReleases.fetchLatestRelease(preferences.getUpdateSourceOverrideUrl()) ?: return null
         if (!UpdateVersion.isNewer(release.tag, BuildConfig.VERSION_NAME)) {
             // Up to date (or ahead, e.g. a local test build): clear any stale banner state.
@@ -112,7 +137,10 @@ object UpdateManager {
             }
             return false
         }
-        if (!ApkVerifier.isValidUpdate(context, apk)) {
+        val hashMatches = release.apkSha256 == null ||
+            runCatching { ApkVerifier.sha256Hex(apk) }.getOrNull() == release.apkSha256
+        if (!hashMatches) AppLogger.e(TAG, "Downloaded APK does not match the published SHA-256")
+        if (!hashMatches || !ApkVerifier.isValidUpdate(context, apk)) {
             cleanupDownloadCache(context)
             UpdateNotifications.showUpdateFailure(
                 context, context.getString(R.string.update_notif_failure_verify_text)

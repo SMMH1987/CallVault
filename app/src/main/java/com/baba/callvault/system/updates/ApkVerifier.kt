@@ -18,7 +18,7 @@ import java.security.MessageDigest
  * Verifies a downloaded update APK BEFORE it is handed to any installer:
  *  1. it is a readable APK for OUR package name,
  *  2. its versionCode is strictly higher than the running app's,
- *  3. its signing certificate matches the pinned release certificate.
+ *  3. it is signed with the same key as the installed app.
  *
  * Android itself refuses mismatched-cert updates, but verifying first fails cleanly (with a clear
  * log + user-facing error) instead of a confusing system installer failure — and protects the
@@ -29,11 +29,17 @@ object ApkVerifier {
     private const val TAG = "CV:ApkVerifier"
 
     /**
-     * SHA-256 digest of the CallVault release signing certificate — the same cert every published
-     * release (v1.1.0+) is signed with. An update APK signed with anything else is rejected.
+     * This fork is signed with its own key, not upstream's, so the expected certificate is the one
+     * the installed app carries: an update must come from the same signer as the build it replaces.
+     * Android enforces the same rule; checking first keeps the silent shell install from running on
+     * anything else, and keeps the user's settings, which only survive a same-key update.
      */
-    private const val PINNED_CERT_SHA256 =
-        "c875ffd0122aa6baceca1826eeb6c6ecbabe023ed551f0be856e8b7a80f285ea"
+    private fun installedCertSha256(context: Context): Set<String> = runCatching {
+        val info = context.packageManager.getPackageInfo(context.packageName, PackageManager.GET_SIGNING_CERTIFICATES)
+        val signing = info.signingInfo ?: return emptySet()
+        val certs = if (signing.hasMultipleSigners()) signing.apkContentsSigners else signing.signingCertificateHistory
+        certs.orEmpty().map { sha256Hex(it.toByteArray()) }.toSet()
+    }.getOrDefault(emptySet())
 
     /** True when [apkFile] is a genuine CallVault update: right package, newer, right signature. */
     fun isValidUpdate(context: Context, apkFile: File): Boolean {
@@ -70,17 +76,30 @@ object ApkVerifier {
             AppLogger.w(TAG, "Update APK has no readable signature")
             return false
         }
-        // Require EXACTLY the pinned cert as the sole signer. A genuine CallVault release is
-        // single-signed with the pinned key; anything multiply-signed is not ours.
+        // Require exactly one signer, and it must be this install's key; anything multiply-signed is not ours.
         if (signingInfo.hasMultipleSigners() || signers.size != 1) {
             AppLogger.e(TAG, "Update APK has an unexpected signer set — refusing to install")
             return false
         }
-        val matches = sha256Hex(signers[0].toByteArray()) == PINNED_CERT_SHA256
+        val matches = sha256Hex(signers[0].toByteArray()) in installedCertSha256(context)
         if (!matches) {
-            AppLogger.e(TAG, "Update APK signing certificate does NOT match the pinned release cert — refusing to install")
+            AppLogger.e(TAG, "Update APK is signed with a different key than this install — refusing to install")
         }
         return matches
+    }
+
+    /** Lowercase hex SHA-256 of [file]'s contents. */
+    fun sha256Hex(file: File): String {
+        val digest = MessageDigest.getInstance("SHA-256")
+        file.inputStream().use { input ->
+            val buffer = ByteArray(64 * 1024)
+            while (true) {
+                val read = input.read(buffer)
+                if (read < 0) break
+                digest.update(buffer, 0, read)
+            }
+        }
+        return digest.digest().joinToString("") { "%02x".format(it) }
     }
 
     /** Lowercase hex SHA-256 of [bytes]. */

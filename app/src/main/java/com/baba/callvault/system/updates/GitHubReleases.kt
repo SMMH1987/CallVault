@@ -42,8 +42,16 @@ object GitHubReleases {
      * @param tag          The release tag, e.g. "v1.2.4".
      * @param apkUrl       Direct download URL of the [APK_ASSET_NAME] asset.
      * @param apkSizeBytes Advertised asset size, used as a sanity check after download.
+     * @param apkSha256    Expected SHA-256 of the file, when the source publishes one (the app config does).
+     * @param critical     Marked as an essential update by the app config.
      */
-    data class ReleaseInfo(val tag: String, val apkUrl: String, val apkSizeBytes: Long)
+    data class ReleaseInfo(
+        val tag: String,
+        val apkUrl: String,
+        val apkSizeBytes: Long,
+        val apkSha256: String? = null,
+        val critical: Boolean = false
+    )
 
     /**
      * Fetches and parses the latest release. Blocking network I/O — call from a worker thread.

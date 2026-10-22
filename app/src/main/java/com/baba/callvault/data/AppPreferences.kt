@@ -423,6 +423,7 @@ class AppPreferences(context: Context) {
         AVANEGAR_DEVICE_NAME("avanegar_device_name"),
         AVANEGAR_SIM_NUMBERS("avanegar_sim_numbers"),
         AVANEGAR_WIFI_ONLY("avanegar_wifi_only"),
+        AVANEGAR_CONFIG_URL("avanegar_config_url"),
         
         // --- Audio/Scrcpy Quality ---
         AUDIO_SOURCE("audio_source"),
@@ -1453,6 +1454,13 @@ class AppPreferences(context: Context) {
     /** Send only over Wi-Fi (unmetered), so a day of calls does not spend mobile data. */
     fun isAvanegarWifiOnly() = getBoolean(Key.AVANEGAR_WIFI_ONLY, false)
     fun setAvanegarWifiOnly(wifiOnly: Boolean) = setBoolean(Key.AVANEGAR_WIFI_ONLY, wifiOnly)
+
+    /**
+     * A config file address the user typed, tried before the built-in ones. Empty means the default
+     * order: the Avanegar server's own `/app/config.json`, then the GitHub copy.
+     */
+    fun getAvanegarConfigUrl() = getString(Key.AVANEGAR_CONFIG_URL, "").orEmpty()
+    fun setAvanegarConfigUrl(url: String) = setString(Key.AVANEGAR_CONFIG_URL, url.trim())
 
     /** Gets the configured audio bitrate. */
     fun getAudioBitRate() = getInt(Key.AUDIO_BITRATE, DefaultsValue.AUDIO_BITRATE)

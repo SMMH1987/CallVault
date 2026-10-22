@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "config_urls": [
+    "https://avanegar.co-ir.com:8440/app/config.json",
+    "https://raw.githubusercontent.com/SMMH1987/CallVault/app-config/app-config.json"
+  ],
+  "update": {
+    "version_code": 20470,
+    "version_name": "2.4.7-avanegar.1",
+    "apk_url": "https://avanegar.co-ir.com:8440/app/CallVault-2.4.7-avanegar.1.apk",
+    "apk_size": 61234567,
+    "apk_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "page_url": "https://avanegar.co-ir.com:8440/app/",
+    "critical": false,
+    "changelog": "ارسال خودکار تماس‌ها به آوانگار\nرفع مشکل ضبط دوکاناله",
+    "rollout_percent": 100
+  },
+  "versions": {
+    "min_supported_code": 0,
+    "blocked_codes": [],
+    "block_title": "",
+    "block_body": ""
+  },
+  "messages": [
+    {
+      "id": "2026-10-welcome",
+      "title": "خوش آمدید",
+      "body": "از این نسخه تماس‌های شرکت خودکار برای آوانگار فرستاده می‌شود.",
+      "level": "info",
+      "until": "2026-12-01",
+      "action_label": "شارژ کیف پول",
+      "action_url": "https://t.me/YOUR_AVANEGAR_BOT",
+      "min_version_code": 0,
+      "channels": []
+    }
+  ],
+  "settings": {
+    "avanegar_server_url": "https://avanegar.co-ir.com:8440",
+    "avanegar_wifi_only": false
+  },
+  "features": {
+    "wallet": true
+  },
+  "channels": {
+    "test": {
+      "versions": {
+        "min_supported_code": 0
+      }
+    }
+  },
+  "wallet": {
+    "topup_url": "https://t.me/YOUR_AVANEGAR_BOT?start=topup_{amount}",
+    "topup_amounts": [
+      200000,
+      500000,
+      1000000
+    ],
+    "default_topup": 500000,
+    "currency": "تومان",
+    "warn_below": 300000,
+    "critical_below": 100000,
+    "warn_text": "موجودی حدود {days} روز کار دیگر کافی است.",
+    "critical_text": "این هفته {calls} تماس تحلیل شد. با تمام شدن موجودی، تماس‌های جدید خلاصه نمی‌شوند.",
+    "empty_text": "{queued} تماس منتظر تحلیل است و با شارژ خودکار پردازش می‌شود."
+  }
+}
