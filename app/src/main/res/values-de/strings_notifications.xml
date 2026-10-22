@@ -11,11 +11,11 @@
     <string name="notif_pairing_remote_input_label">Kopplungscode</string>
     <string name="notif_pairing_searching_text">Öffnen Sie auf dem Telefon den Dialog „Gerät über Kopplungscode koppeln“.</string>
     <string name="notif_pairing_searching_title">Kopplungsdienst wird gesucht…</string>
-    <string name="notif_pairing_success_text">Drahtloses Debugging gekoppelt. Tippen Sie, um die Einrichtung von CallVault abzuschließen.</string>
+    <string name="notif_pairing_success_text">Drahtloses Debugging gekoppelt. Tippen Sie, um die Einrichtung von Hamdabir abzuschließen.</string>
     <string name="notif_pairing_success_title">Gekoppelt ✓</string>
     <string name="notif_pairing_waiting_wd_text">Aktivieren Sie Drahtloses Debugging, um die Kopplung zu starten.</string>
     <string name="notif_pairing_waiting_wd_title">Warten auf Drahtloses Debugging…</string>
-    <string name="notif_pairing_working_text">CallVault wird eingerichtet. Dies dauert einige Sekunden.</string>
+    <string name="notif_pairing_working_text">Hamdabir wird eingerichtet. Dies dauert einige Sekunden.</string>
     <string name="notif_pairing_working_title">Kopplung läuft…</string>
     <string name="notif_readiness_channel">Bereitschaft des Anrufrekorders</string>
     <string name="notif_readiness_ready_text">Der Rekorder ist verbunden.</string>
@@ -28,7 +28,7 @@
     <string name="notif_usb_check_unavailable">Falls dies nicht abgeschlossen wird, stelle „USB beim Entsperren“ unter Einstellungen ▸ Experimentell auf Nur Laden – auf manchen Handys verhindert ein USB-Datenmodus, dass sich der Rekorder verbindet.</string>
     <string name="notif_usb_lock_warning">Das Sperren des Bildschirms während eines Anrufs kann die Aufnahme beenden. Stelle unter Einstellungen ▸ Experimentell „USB beim Entsperren“ auf Nur Laden.</string>
     <string name="update_notif_available_text">Öffnen Sie die App und tippen Sie auf Aktualisieren, um es zu installieren.</string>
-    <string name="update_notif_available_title">CallVault %1$s ist verfügbar</string>
+    <string name="update_notif_available_title">Hamdabir %1$s ist verfügbar</string>
     <string name="update_notif_channel">App-Updates</string>
     <string name="update_notif_downloading_title">Update wird heruntergeladen…</string>
     <string name="update_notif_failure_download_text">Das Update konnte nicht heruntergeladen werden. Tippen Sie, um es von GitHub zu holen.</string>
@@ -36,14 +36,14 @@
     <string name="update_notif_failure_title">Update fehlgeschlagen</string>
     <string name="update_notif_failure_verify_text">Das heruntergeladene Update hat die Sicherheitsprüfung nicht bestanden und wurde verworfen. Tippen Sie, um es von GitHub zu holen.</string>
     <string name="update_notif_installing_title">Update wird installiert…</string>
-    <string name="update_notif_success_text">CallVault ist jetzt Version %1$s.</string>
+    <string name="update_notif_success_text">Hamdabir ist jetzt Version %1$s.</string>
     <string name="update_notif_success_title">Update installiert</string>
     <string name="notif_readiness_down_title">Anrufe werden nicht aufgenommen</string>
     <string name="notif_readiness_no_debugging_text">USB-Debugging und WLAN-Debugging sind beide aus. Schalte eines davon in den Entwickleroptionen wieder ein.</string>
     <string name="notif_readiness_needs_wifi_text">USB-Debugging ist aus und es gibt kein WLAN. Verbinde dich mit einem WLAN oder schalte USB-Debugging ein.</string>
-    <string name="notif_readiness_stuck_text">Der Rekorder startet wiederholt nicht. Öffne CallVault, um den Grund zu sehen.</string>
+    <string name="notif_readiness_stuck_text">Der Rekorder startet wiederholt nicht. Öffne Hamdabir, um den Grund zu sehen.</string>
     <string name="notif_readiness_needs_wifi_restart_text">Der Rekorder wurde beendet und braucht WLAN, um neu zu starten. Schalte die Aufnahme ohne WLAN ein, während du im WLAN bist, um das zu vermeiden.</string>
-    <string name="notif_readiness_wd_off_by_user_text">Du hast WLAN-Debugging ausgeschaltet, und CallVault kann den Rekorder sonst nicht neu starten. Schalte es wieder ein oder schalte USB-Debugging ein.</string>
+    <string name="notif_readiness_wd_off_by_user_text">Du hast WLAN-Debugging ausgeschaltet, und Hamdabir kann den Rekorder sonst nicht neu starten. Schalte es wieder ein oder schalte USB-Debugging ein.</string>
     <string name="notif_readiness_offline_paused_text">Die Aufnahme ohne WLAN ist pausiert: Sie benötigt USB-Debugging. Anrufe im WLAN werden weiter aufgenommen.</string>
     <string name="notif_action_turn_wd_on">WLAN-Debugging einschalten</string>
 

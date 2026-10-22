@@ -16,8 +16,8 @@
     <string name="home_health_missed_developer_options_unnamed">Una llamada no se grabó: las opciones de desarrollador estaban desactivadas en ese momento.</string>
     <string name="home_health_missed_recording_folder">Una llamada no se grabó: no había ninguna carpeta de grabación configurada en ese momento, %1$s.</string>
     <string name="home_health_missed_recording_folder_unnamed">Una llamada no se grabó: no había ninguna carpeta de grabación configurada en ese momento.</string>
-    <string name="home_health_missed_secure_settings">Una llamada no se grabó: CallVault había perdido el permiso para iniciar la grabación, %1$s.</string>
-    <string name="home_health_missed_secure_settings_unnamed">Una llamada no se grabó: CallVault había perdido el permiso para iniciar la grabación.</string>
+    <string name="home_health_missed_secure_settings">Una llamada no se grabó: Hamdabir había perdido el permiso para iniciar la grabación, %1$s.</string>
+    <string name="home_health_missed_secure_settings_unnamed">Una llamada no se grabó: Hamdabir había perdido el permiso para iniciar la grabación.</string>
     <string name="home_health_setup_changed">La configuración cambió desde tu última llamada: la próxima confirmará si sigue funcionando.</string>
     <string name="home_health_unverified">Tu próxima llamada confirmará que la grabación funciona.</string>
     <string name="home_health_verified">Verificado por última vez %1$s.</string>
@@ -30,7 +30,7 @@
     <string name="home_hero_status_label">Estado</string>
     <string name="home_play_recording">Reproducir grabación</string>
     <string name="home_recordings_count">%1$d guardadas</string>
-    <string name="home_recordings_empty_hint">Cuando CallVault grabe una llamada, aparecerá aquí. Haga o reciba una llamada para empezar.</string>
+    <string name="home_recordings_empty_hint">Cuando Hamdabir grabe una llamada, aparecerá aquí. Haga o reciba una llamada para empezar.</string>
     <string name="home_recordings_empty_title">Aún no hay grabaciones</string>
     <string name="home_support_pill">Apoyar</string>
     <string name="home_update_banner_button">Actualizar</string>
@@ -38,7 +38,7 @@
     <string name="home_update_banner_installing">Instalando…</string>
     <string name="home_update_banner_text">Hay una nueva versión lista para descargar desde GitHub.</string>
     <string name="home_update_banner_title">Actualización disponible: %1$s</string>
-    <string name="home_updated_banner_text">CallVault se actualizó a %1$s</string>
+    <string name="home_updated_banner_text">Hamdabir se actualizó a %1$s</string>
     <string name="home_usb_advisory_fix">Corregir</string>
     <string name="home_usb_advisory_text">USB está en un modo de datos. Toca para ponerlo en Solo carga.</string>
     <string name="home_usb_advisory_title">La grabación puede detenerse al bloquear</string>
@@ -46,31 +46,31 @@
     <string name="home_whatsnew_offline_cta">Activar grabación sin Wi-Fi</string>
     <string name="home_whatsnew_offline_enabled">Grabación sin conexión activada.</string>
     <string name="home_whatsnew_offline_enabling">Activando la grabación sin Wi-Fi…</string>
-    <string name="offline_failed_needs_wd">No se pudo activar — la depuración inalámbrica está desactivada y CallVault no pudo activarla. Actívala en Opciones de desarrollo e inténtalo de nuevo.</string>
-    <string name="offline_failed_no_service">No se pudo activar — CallVault no pudo comunicarse con el servicio de depuración del teléfono. Comprueba el Wi-Fi y la depuración inalámbrica e inténtalo de nuevo.</string>
+    <string name="offline_failed_needs_wd">No se pudo activar — la depuración inalámbrica está desactivada y Hamdabir no pudo activarla. Actívala en Opciones de desarrollo e inténtalo de nuevo.</string>
+    <string name="offline_failed_no_service">No se pudo activar — Hamdabir no pudo comunicarse con el servicio de depuración del teléfono. Comprueba el Wi-Fi y la depuración inalámbrica e inténtalo de nuevo.</string>
     <string name="offline_failed_port">No se pudo activar — el puerto local no volvió a abrirse. Inténtalo de nuevo en un momento.</string>
-    <string name="home_whatsnew_resilient_body">Hace que la grabación de llamadas sea más resistente a las interrupciones.\n\nAndroid puede detener el proceso en segundo plano de CallVault en cualquier momento. Con esto activado, una grabación ya en curso no se ve afectada cuando eso ocurre.\n\nDesactivado por defecto: también puedes activarlo más tarde en Ajustes ▸ Fiabilidad.</string>
+    <string name="home_whatsnew_resilient_body">Hace que la grabación de llamadas sea más resistente a las interrupciones.\n\nAndroid puede detener el proceso en segundo plano de Hamdabir en cualquier momento. Con esto activado, una grabación ya en curso no se ve afectada cuando eso ocurre.\n\nDesactivado por defecto: también puedes activarlo más tarde en Ajustes ▸ Fiabilidad.</string>
     <string name="home_whatsnew_resilient_cta">Activar</string>
-    <string name="home_whatsnew_resilient_enabled">La grabación resistente está activada. Una grabación ya en curso no se ve afectada si Android detiene el proceso en segundo plano de CallVault.</string>
+    <string name="home_whatsnew_resilient_enabled">La grabación resistente está activada. Una grabación ya en curso no se ve afectada si Android detiene el proceso en segundo plano de Hamdabir.</string>
     <string name="home_whatsnew_resilient_title">Novedad: Grabación resistente</string>
     <string name="home_whatsnew_settings_cta">Abrir Ajustes</string>
     <string name="home_whatsnew_title">Novedades</string>
     <string name="offline_recording_disabling">Desactivando la grabación sin Wi-Fi…</string>
     <string name="offline_recording_on">La grabación sin Wi-Fi está activada.</string>
-    <string name="whatsnew_145_body">En muchos teléfonos, bloquear la pantalla durante una llamada detenía la grabación a mitad de la conversación. Eso está corregido, y ahora CallVault te avisa si el ajuste USB de tu teléfono es la causa.</string>
+    <string name="whatsnew_145_body">En muchos teléfonos, bloquear la pantalla durante una llamada detenía la grabación a mitad de la conversación. Eso está corregido, y ahora Hamdabir te avisa si el ajuste USB de tu teléfono es la causa.</string>
     <string name="whatsnew_145_title">Sigue grabando cuando se bloquea la pantalla</string>
-    <string name="whatsnew_146_body">Android puede detener el servicio auxiliar de CallVault en cualquier momento, lo que antes cortaba la grabación y te dejaba con media llamada. Con esto activado, una grabación ya en curso continúa hasta el final de todos modos.</string>
+    <string name="whatsnew_146_body">Android puede detener el servicio auxiliar de Hamdabir en cualquier momento, lo que antes cortaba la grabación y te dejaba con media llamada. Con esto activado, una grabación ya en curso continúa hasta el final de todos modos.</string>
     <string name="whatsnew_146_title">Grabación resistente</string>
     <string name="whatsnew_146_where">Ajustes ▸ Experimental ▸ Resistencia</string>
-    <string name="whatsnew_147_body">CallVault ya puede grabar llamadas hechas dentro de apps como WhatsApp, Signal y Telegram: ambos lados de la conversación, no solo tu voz. Las grabaciones indican en qué app se hizo la llamada, y el nombre del contacto cuando la app lo proporciona.\n\nExperimental: funciona con unas apps y con otras no, y una app puede bloquear la grabación en cualquier momento con una actualización.</string>
+    <string name="whatsnew_147_body">Hamdabir ya puede grabar llamadas hechas dentro de apps como WhatsApp, Signal y Telegram: ambos lados de la conversación, no solo tu voz. Las grabaciones indican en qué app se hizo la llamada, y el nombre del contacto cuando la app lo proporciona.\n\nExperimental: funciona con unas apps y con otras no, y una app puede bloquear la grabación en cualquier momento con una actualización.</string>
     <string name="whatsnew_147_title">Graba llamadas de apps (VoIP)</string>
     <string name="whatsnew_147_where">Ajustes ▸ Experimental ▸ Llamadas VoIP</string>
-    <string name="whatsnew_148_body">En algunos teléfonos, CallVault activaba y desactivaba la depuración inalámbrica una y otra vez sin llegar nunca a estar listo para grabar. Eso está corregido. Donde la depuración inalámbrica es la única vía de acceso, CallVault ahora la deja activada y te indica qué ajuste permitiría volver a desactivarla.\n\nTambién corregido: una llamada de app podía informar de un fallo aunque se hubiera grabado bien, y podía atribuirse a la app equivocada.</string>
+    <string name="whatsnew_148_body">En algunos teléfonos, Hamdabir activaba y desactivaba la depuración inalámbrica una y otra vez sin llegar nunca a estar listo para grabar. Eso está corregido. Donde la depuración inalámbrica es la única vía de acceso, Hamdabir ahora la deja activada y te indica qué ajuste permitiría volver a desactivarla.\n\nTambién corregido: una llamada de app podía informar de un fallo aunque se hubiera grabado bien, y podía atribuirse a la app equivocada.</string>
     <string name="whatsnew_148_title">Un arranque más fiable</string>
-    <string name="whatsnew_150_body">Activar la depuración por USB permite que CallVault desactive la depuración inalámbrica y la mantenga desactivada. No hace falta cable y, a diferencia de la depuración inalámbrica, no abre ningún puerto de red, así que es la más segura de las dos para dejar activada. Opcional: la grabación funciona de cualquier manera.\n\nTambién corregido: desactivar la depuración por USB podía dejar a CallVault sin poder grabar, sin avisar.</string>
+    <string name="whatsnew_150_body">Activar la depuración por USB permite que Hamdabir desactive la depuración inalámbrica y la mantenga desactivada. No hace falta cable y, a diferencia de la depuración inalámbrica, no abre ningún puerto de red, así que es la más segura de las dos para dejar activada. Opcional: la grabación funciona de cualquier manera.\n\nTambién corregido: desactivar la depuración por USB podía dejar a Hamdabir sin poder grabar, sin avisar.</string>
     <string name="whatsnew_150_title">Desactiva la depuración inalámbrica</string>
     <string name="whatsnew_150_where">Ajustes ▸ Experimental ▸ Depuración por USB</string>
-    <string name="whatsnew_153_body">La tarjeta de estado ahora te dice si la grabación funcionó de verdad, según tus llamadas reales y no según una luz verde que solo significa que la app se inició. Si una llamada no se grabó, lo dice y explica por qué: una carpeta que nunca se configuró, las opciones de desarrollador desactivadas, un permiso perdido en una actualización.\n\nAdemás: CallVault ya habla portugués de Brasil, y el resto de idiomas se han puesto al día.</string>
+    <string name="whatsnew_153_body">La tarjeta de estado ahora te dice si la grabación funcionó de verdad, según tus llamadas reales y no según una luz verde que solo significa que la app se inició. Si una llamada no se grabó, lo dice y explica por qué: una carpeta que nunca se configuró, las opciones de desarrollador desactivadas, un permiso perdido en una actualización.\n\nAdemás: Hamdabir ya habla portugués de Brasil, y el resto de idiomas se han puesto al día.</string>
     <string name="whatsnew_153_title">Tu configuración, comprobada por tus propias llamadas</string>
     <string name="whatsnew_154_body">Un fallo poco frecuente en la conexión con el grabador podía dejar la grabación desactivada en silencio hasta reiniciar la aplicación, sin ningún aviso en pantalla. Ahora se agota el tiempo de espera y se recupera por sí sola.\n\nTambién puedes elegir cuándo se suben las grabaciones a Drive: al momento, a diario o cada semana. Está en Ajustes ▸ Almacenamiento, junto con la Retención, que se ha trasladado a la misma sección.</string>
     <string name="whatsnew_154_title">Grabación que se recupera sola</string>
@@ -79,7 +79,7 @@
     <string name="whatsnew_156_body">Las llamadas telefónicas y las de apps pueden grabarse automáticamente, preguntar primero o ignorarse por completo, así que «solo llamadas de apps» ya es un ajuste real y no una combinación que había que deducir.\n\nLas grabaciones se pueden compartir, y manteniéndolas pulsadas puedes seleccionar varias para compartir o eliminar. Al eliminar una grabación guardada en el dispositivo y en Drive se te pregunta qué copias quitar.</string>
     <string name="whatsnew_156_title">Decide qué se graba y ordena tus grabaciones</string>
     <string name="whatsnew_156_where">Ajustes ▸ Grabación ▸ Llamadas telefónicas</string>
-    <string name="whatsnew_157_body">Si configuraste el borrado automático, algunas grabaciones se conservaban para siempre sin avisar: la comprobación solo veía las grabaciones de las que CallVault seguía teniendo registro, y las demás no se eliminaban por antiguas que fueran. En un teléfono configurado para conservar una semana, 131 archivos habían superado ese plazo.\n\nLa comprobación diaria ahora también lee tus carpetas de grabación, así que decide solo la antigüedad. Únicamente se tocan los archivos nombrados por CallVault, y los que no se pueden fechar se dejan intactos.\n\nCambiar la hora de la comprobación también surte efecto de inmediato en lugar de esperar un día.</string>
+    <string name="whatsnew_157_body">Si configuraste el borrado automático, algunas grabaciones se conservaban para siempre sin avisar: la comprobación solo veía las grabaciones de las que Hamdabir seguía teniendo registro, y las demás no se eliminaban por antiguas que fueran. En un teléfono configurado para conservar una semana, 131 archivos habían superado ese plazo.\n\nLa comprobación diaria ahora también lee tus carpetas de grabación, así que decide solo la antigüedad. Únicamente se tocan los archivos nombrados por Hamdabir, y los que no se pueden fechar se dejan intactos.\n\nCambiar la hora de la comprobación también surte efecto de inmediato en lugar de esperar un día.</string>
     <string name="whatsnew_157_title">El borrado automático ya elimina todo lo que debe</string>
     <string name="whatsnew_157_where">Ajustes ▸ Almacenamiento ▸ Retención</string>
     <string name="whatsnew_200_body">Dos grandes añadidos, ambos funcionando por completo en tu teléfono. No se sube nada y los dos funcionan sin red alguna.\n\nLa transcripción convierte una grabación en texto que puedes leer y buscar, en catorce idiomas. Toca una línea para saltar a ese momento de la llamada.\n\nLos resúmenes van más allá: de qué trató la llamada, qué se decidió y qué dijo cada uno que haría, con la hora junto a los puntos que la tienen, de modo que al tocarla saltas justo ahí.\n\nCada uno necesita descargar antes un modelo por Wi-Fi; la app te dice lo que cuesta cada uno antes de empezar.</string>
@@ -138,7 +138,7 @@
     <string name="whatsnew_244_title">Grabación más fiable, reemparejamiento fácil y avisos de actualización</string>
     <string name="whatsnew_244_where">Ajustes ▸ Fiabilidad ▸ Volver a emparejar</string>
     <string-array name="whatsnew_244_items">
-        <item>Nuevo — Si tu teléfono cierra CallVault durante una llamada, se guarda la parte grabada hasta entonces y se te avisa</item>
+        <item>Nuevo — Si tu teléfono cierra Hamdabir durante una llamada, se guarda la parte grabada hasta entonces y se te avisa</item>
         <item>Nuevo — Vuelve a emparejar desde Ajustes si se pierde la conexión con la grabadora, sin reinstalar</item>
         <item>Nuevo — Un aviso emergente y comprobaciones más frecuentes te avisan en cuanto hay una versión nueva</item>
         <item>Cambiado — Los ajustes que tu versión de Android no admite aparecen atenuados, con el motivo</item>
@@ -170,13 +170,13 @@
     <string name="whatsnew_240_title">Las grabaciones, transcripciones y resúmenes tienen cada uno su sitio</string>
     <string-array name="whatsnew_240_items">
         <item>Nuevo — Una pantalla de inicio con Grabaciones, Transcripciones y Resúmenes, que abre donde lo dejaste</item>
-        <item>Nuevo — Importa un archivo de audio o compártelo con CallVault desde otra aplicación</item>
+        <item>Nuevo — Importa un archivo de audio o compártelo con Hamdabir desde otra aplicación</item>
         <item>Nuevo — Importa solo por el texto: el audio se borra cuando la transcripción está lista</item>
         <item>Nuevo — Lee una transcripción en su propia página y añádele una nota</item>
         <item>Nuevo — Elige varias transcripciones o resúmenes a la vez para borrar, compartir o guardar</item>
         <item>Nuevo — Un aviso cuando termina una transcripción</item>
         <item>Corregido — Reiniciar el teléfono ya no lo deja sin grabar</item>
-        <item>Corregido — Shizuku se vuelve a iniciar cuando CallVault tiene que detenerlo</item>
+        <item>Corregido — Shizuku se vuelve a iniciar cuando Hamdabir tiene que detenerlo</item>
         <item>Corregido — La configuración inicial funciona en Android 17</item>
     </string-array>
     <string name="whatsnew_240_where">Inicio ▸ Transcripciones ▸ Importar audio</string>
@@ -214,10 +214,10 @@
     <string name="unmerge_progress_working">Separando las llamadas</string>
     <string name="merge_progress_downloading">Descargando de Drive</string>
     <string name="merge_progress_cleaning_up">Limpiando</string>
-    <string name="whatsnew_220_body">Marca un momento mientras aún hablas. Un botón en la notificación de llamada deja un marcador justo donde lo pulsas, y la grabación los muestra como fichas que reproducen desde ahí, tanto en llamadas telefónicas como de aplicaciones. Las llamadas de aplicaciones ya tienen controles: pausar, reanudar, detener y marcar, cuando antes solo podían empezar y terminar.\n\nEncontrar una llamada es más fácil: destaca las que merece la pena guardar, etiquétalas con tus propias palabras y busca también en los resúmenes y en tus notas, no solo en lo que se dijo. Las transcripciones se exportan como texto, Markdown, SRT, VTT o JSON.\n\nCallVault también avisa cuando ha dejado de funcionar en silencio: si la grabación no arranca tras reiniciar, o si las grabaciones dejan de llegar a Drive. Antes ambas cosas pasaban desapercibidas. La nueva limpieza puede limitar el espacio que ocupan las grabaciones o descartar las muy cortas. Todo está desactivado por defecto, y una grabación destacada nunca se borra automáticamente.</string>
+    <string name="whatsnew_220_body">Marca un momento mientras aún hablas. Un botón en la notificación de llamada deja un marcador justo donde lo pulsas, y la grabación los muestra como fichas que reproducen desde ahí, tanto en llamadas telefónicas como de aplicaciones. Las llamadas de aplicaciones ya tienen controles: pausar, reanudar, detener y marcar, cuando antes solo podían empezar y terminar.\n\nEncontrar una llamada es más fácil: destaca las que merece la pena guardar, etiquétalas con tus propias palabras y busca también en los resúmenes y en tus notas, no solo en lo que se dijo. Las transcripciones se exportan como texto, Markdown, SRT, VTT o JSON.\n\nHamdabir también avisa cuando ha dejado de funcionar en silencio: si la grabación no arranca tras reiniciar, o si las grabaciones dejan de llegar a Drive. Antes ambas cosas pasaban desapercibidas. La nueva limpieza puede limitar el espacio que ocupan las grabaciones o descartar las muy cortas. Todo está desactivado por defecto, y una grabación destacada nunca se borra automáticamente.</string>
     <string name="whatsnew_220_title">Encuentra una llamada de nuevo y contrólala mientras ocurre</string>
     <string name="whatsnew_220_where">Ajustes ▸ Almacenamiento ▸ Retención para las opciones de limpieza</string>
-    <string name="whatsnew_221_body">CallVault vuelve a abrirse rápido, y sigue siendo rápida por muchas llamadas que guarde. La versión 2.2.0 releía la duración de cada grabación cada vez que se dibujaba la lista, de modo que con unas pocas docenas de llamadas la lista tardaba lo suficiente como para que una llamada grabada minutos antes pareciera no haberse grabado nunca.\n\nEl aviso de que las grabaciones habían dejado de llegar a Google Drive ya no aparece cuando no es cierto. A dos personas se les dijo que su copia de seguridad había fallado mientras todas sus grabaciones llegaban perfectamente.\n\nLos encabezados dentro de una transcripción exportada, el número de aplicaciones seleccionadas y el botón de volver siguen ahora el idioma que haya elegido, en lugar de quedarse en inglés. El informe de depuración también puede decir qué aplicación está ocupando el micrófono, para un problema que está resultando difícil de capturar.</string>
+    <string name="whatsnew_221_body">Hamdabir vuelve a abrirse rápido, y sigue siendo rápida por muchas llamadas que guarde. La versión 2.2.0 releía la duración de cada grabación cada vez que se dibujaba la lista, de modo que con unas pocas docenas de llamadas la lista tardaba lo suficiente como para que una llamada grabada minutos antes pareciera no haberse grabado nunca.\n\nEl aviso de que las grabaciones habían dejado de llegar a Google Drive ya no aparece cuando no es cierto. A dos personas se les dijo que su copia de seguridad había fallado mientras todas sus grabaciones llegaban perfectamente.\n\nLos encabezados dentro de una transcripción exportada, el número de aplicaciones seleccionadas y el botón de volver siguen ahora el idioma que haya elegido, en lugar de quedarse en inglés. El informe de depuración también puede decir qué aplicación está ocupando el micrófono, para un problema que está resultando difícil de capturar.</string>
     <string name="whatsnew_221_title">Más rápida al abrirse, y más callada ante problemas que no existen</string>
     <string name="offline_failed_no_wifi">No se pudo activar: no estás conectado a Wi-Fi. Conéctate una vez a cualquier red Wi-Fi y vuelve a intentarlo.</string>
     <string name="offline_failed_wd_refused">No se pudo activar: Android no permitió la depuración inalámbrica en esta red. Actívala una vez en Opciones de desarrollador, acepta el aviso y vuelve a intentarlo.</string>
@@ -225,7 +225,7 @@
 
     <!-- Home: the hub of cards, and the two sections its cards open -->
     <string name="home_hub_library_title">Biblioteca</string>
-    <string name="home_hub_recordings_body">Todas las llamadas que CallVault ha grabado.</string>
+    <string name="home_hub_recordings_body">Todas las llamadas que Hamdabir ha grabado.</string>
     <string name="home_hub_transcripts_body">Tus llamadas en palabras, y cualquier audio que traigas.</string>
     <string name="home_hub_summaries_body">Resúmenes con IA, hechos en tu teléfono.</string>
     <string name="home_transcripts_title">Transcripciones</string>
@@ -251,7 +251,7 @@
     <string name="transcripts_import_working">Importando…</string>
     <string name="transcripts_import_body">Transcribe una nota de voz o cualquier otro archivo de audio que ya tengas en el teléfono.</string>
     <string name="import_failed_title">No se pudo importar el archivo</string>
-    <string name="import_failed_not_audio">CallVault no puede leer ese tipo de archivo. Prueba con una grabación .opus, .ogg, .m4a, .mp3 o .wav.</string>
+    <string name="import_failed_not_audio">Hamdabir no puede leer ese tipo de archivo. Prueba con una grabación .opus, .ogg, .m4a, .mp3 o .wav.</string>
     <string name="import_failed_empty">Ese archivo está vacío, así que no habría nada que transcribir.</string>
     <string name="import_failed_no_folder">No hay ninguna carpeta de grabaciones donde guardarlo. Elige una en Ajustes y vuelve a intentarlo.</string>
     <string name="import_failed_copy">No se pudo escribir el archivo en tu carpeta de grabaciones. Comprueba que haya espacio en el teléfono y que la carpeta siga disponible.</string>
@@ -262,14 +262,14 @@
     <string name="share_import_label">Importar audio</string>
     <string name="share_import_working_body">Copiándolo y comprobando que este teléfono puede leerlo.</string>
     <string name="share_import_done_title">Añadido a tus grabaciones</string>
-    <string name="share_import_done_body">Ya está en CallVault. Ábrelo para escucharlo o para pedir una transcripción.</string>
+    <string name="share_import_done_body">Ya está en Hamdabir. Ábrelo para escucharlo o para pedir una transcripción.</string>
     <string name="share_import_open">Abrir</string>
-    <string name="share_import_open_app">Abrir CallVault</string>
+    <string name="share_import_open_app">Abrir Hamdabir</string>
     <string name="share_import_close">Cerrar</string>
     <string name="share_import_nothing">Con eso no llegó ningún archivo. Prueba a compartir el archivo de audio en sí, y no el mensaje que lo contiene.</string>
-    <string name="share_import_not_set_up_title">Termina antes de configurar CallVault</string>
-    <string name="share_import_not_set_up_body">CallVault aún no ha terminado su configuración inicial, así que todavía no hay dónde guardar este archivo. Ábrelo, termina la configuración y vuelve a compartirlo.</string>
-    <string name="share_import_choice_title">¿Qué debe hacer CallVault con esto?</string>
+    <string name="share_import_not_set_up_title">Termina antes de configurar Hamdabir</string>
+    <string name="share_import_not_set_up_body">Hamdabir aún no ha terminado su configuración inicial, así que todavía no hay dónde guardar este archivo. Ábrelo, termina la configuración y vuelve a compartirlo.</string>
+    <string name="share_import_choice_title">¿Qué debe hacer Hamdabir con esto?</string>
     <string name="share_import_choice_unnamed">El audio compartido</string>
     <string name="import_choice_keep">Importar y transcribir</string>
     <string name="import_choice_keep_hint">Guarda el audio en tus grabaciones y lo transcribe.</string>
@@ -282,6 +282,6 @@
     <string name="share_import_kept_title">Guardado, pero sin transcribir</string>
     <string name="share_import_kept_body">Está en tus grabaciones. Puedes iniciar la transcripción desde ahí cuando quieras.</string>
     <string name="share_import_kept_only_body">Está esperando en Transcripciones. Inícialo ahí cuando quieras, o bórralo desde el mismo sitio.</string>
-    <string name="share_import_too_long">Ese audio dura %1$d minutos y CallVault solo puede transcribir hasta %2$d minutos de una vez. El archivo se guardó, así que todavía puedes escucharlo.</string>
-    <string name="share_import_no_model">Aún no hay ningún modelo de transcripción instalado, así que CallVault no puede leer esto. El audio se guardó: instala un modelo en Ajustes y luego inícialo desde Transcripciones.</string>
+    <string name="share_import_too_long">Ese audio dura %1$d minutos y Hamdabir solo puede transcribir hasta %2$d minutos de una vez. El archivo se guardó, así que todavía puedes escucharlo.</string>
+    <string name="share_import_no_model">Aún no hay ningún modelo de transcripción instalado, así que Hamdabir no puede leer esto. El audio se guardó: instala un modelo en Ajustes y luego inícialo desde Transcripciones.</string>
 </resources>

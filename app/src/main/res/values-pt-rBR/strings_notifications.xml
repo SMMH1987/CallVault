@@ -11,11 +11,11 @@
     <string name="notif_pairing_remote_input_label">Código de pareamento</string>
     <string name="notif_pairing_searching_text">Abra a caixa de diálogo \'Parear dispositivo com código de pareamento\' do celular.</string>
     <string name="notif_pairing_searching_title">Procurando o serviço de pareamento…</string>
-    <string name="notif_pairing_success_text">Depuração sem fio pareada. Toque para terminar de configurar o CallVault.</string>
+    <string name="notif_pairing_success_text">Depuração sem fio pareada. Toque para terminar de configurar o Hamdabir.</string>
     <string name="notif_pairing_success_title">Pareado ✓</string>
     <string name="notif_pairing_waiting_wd_text">Ative a Depuração sem fio para iniciar o pareamento.</string>
     <string name="notif_pairing_waiting_wd_title">Aguardando a Depuração sem fio…</string>
-    <string name="notif_pairing_working_text">Configurando o CallVault. Isso leva alguns segundos.</string>
+    <string name="notif_pairing_working_text">Configurando o Hamdabir. Isso leva alguns segundos.</string>
     <string name="notif_pairing_working_title">Pareando…</string>
     <string name="notif_readiness_channel">Prontidão do gravador de chamadas</string>
     <string name="notif_readiness_ready_text">O gravador está conectado.</string>
@@ -28,7 +28,7 @@
     <string name="notif_usb_check_unavailable">Se isto não terminar, defina “USB ao desbloquear a tela” como Somente carregamento em Configurações ▸ Experimental — em alguns celulares, um modo USB de dados impede que o gravador se conecte.</string>
     <string name="notif_usb_lock_warning">Bloquear a tela durante uma chamada pode interromper a gravação. Em Configurações ▸ Experimental, defina “USB ao desbloquear a tela” como Somente carregamento.</string>
     <string name="update_notif_available_text">Abra o app e toque em Atualizar para instalar.</string>
-    <string name="update_notif_available_title">O CallVault %1$s está disponível</string>
+    <string name="update_notif_available_title">O Hamdabir %1$s está disponível</string>
     <string name="update_notif_channel">Atualizações do app</string>
     <string name="update_notif_downloading_title">Baixando a atualização…</string>
     <string name="update_notif_failure_download_text">Não foi possível baixar a atualização. Toque para obtê-la no GitHub.</string>
@@ -36,14 +36,14 @@
     <string name="update_notif_failure_title">Falha na atualização</string>
     <string name="update_notif_failure_verify_text">A atualização baixada não passou na verificação de segurança e foi descartada. Toque para obtê-la no GitHub.</string>
     <string name="update_notif_installing_title">Instalando a atualização…</string>
-    <string name="update_notif_success_text">O CallVault agora está na versão %1$s.</string>
+    <string name="update_notif_success_text">O Hamdabir agora está na versão %1$s.</string>
     <string name="update_notif_success_title">Atualização instalada</string>
     <string name="notif_readiness_down_title">As chamadas não estão sendo gravadas</string>
     <string name="notif_readiness_no_debugging_text">A depuração USB e a depuração por Wi-Fi estão desativadas. Ative uma delas de novo nas Opções do desenvolvedor.</string>
     <string name="notif_readiness_needs_wifi_text">A depuração USB está desativada e não há Wi-Fi. Conecte-se a uma rede Wi-Fi ou ative a depuração USB.</string>
-    <string name="notif_readiness_stuck_text">O gravador não está conseguindo iniciar. Abra o CallVault para ver o motivo.</string>
+    <string name="notif_readiness_stuck_text">O gravador não está conseguindo iniciar. Abra o Hamdabir para ver o motivo.</string>
     <string name="notif_readiness_needs_wifi_restart_text">O gravador parou e precisa de Wi-Fi para iniciar de novo. Ative a gravação offline enquanto estiver no Wi-Fi para evitar isso.</string>
-    <string name="notif_readiness_wd_off_by_user_text">Você desativou a depuração por Wi-Fi, e o CallVault não tem outro jeito de reiniciar o gravador. Ative-a de novo ou ative a depuração USB.</string>
+    <string name="notif_readiness_wd_off_by_user_text">Você desativou a depuração por Wi-Fi, e o Hamdabir não tem outro jeito de reiniciar o gravador. Ative-a de novo ou ative a depuração USB.</string>
     <string name="notif_readiness_offline_paused_text">A gravação sem Wi-Fi está pausada: ela precisa da depuração USB. Chamadas no Wi-Fi continuam sendo gravadas.</string>
     <string name="notif_action_turn_wd_on">Ativar a depuração por Wi-Fi</string>
 

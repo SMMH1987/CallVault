@@ -21,7 +21,7 @@
     <string name="permissions_status_adb_connected">Csatlakoztatva</string>
     <string name="permissions_status_adb_not_connected">Nincs csatlakoztatva</string>
     <string name="permissions_ui_eyebrow">Beállítás</string>
-    <string name="permissions_ui_hero_subtitle">Néhány engedély, hogy a CallVault rögzíthesse és felcímkézhesse a hívásait. Hagyja jóvá az alábbi elemeket.</string>
+    <string name="permissions_ui_hero_subtitle">Néhány engedély, hogy a Hamdabir rögzíthesse és felcímkézhesse a hívásait. Hagyja jóvá az alábbi elemeket.</string>
     <string name="permissions_ui_hero_title">Kezdjük a beállítást</string>
     <string name="permissions_ui_section_label">Engedélyek</string>
 </resources>

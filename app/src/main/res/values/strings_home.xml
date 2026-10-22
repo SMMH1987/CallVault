@@ -21,7 +21,7 @@
     <!-- Recordings section -->
     <string name="home_recordings_count">%1$d saved</string>
     <string name="home_recordings_empty_title">No recordings yet</string>
-    <string name="home_recordings_empty_hint">When CallVault records a call, it shows up here. Make or take a call to get started.</string>
+    <string name="home_recordings_empty_hint">When Hamdabir records a call, it shows up here. Make or take a call to get started.</string>
 
     <!-- Row content descriptions -->
     <string name="home_play_recording">Play recording</string>
@@ -30,19 +30,19 @@
     <string name="home_update_banner_button">Update</string>
     <string name="home_update_banner_downloading">Downloading… %1$d%%</string>
     <string name="home_update_banner_installing">Installing…</string>
-    <string name="home_updated_banner_text">CallVault updated to %1$s</string>
+    <string name="home_updated_banner_text">Hamdabir updated to %1$s</string>
     <string name="home_whatsnew_title">What\'s new</string>
     <string name="home_whatsnew_body">• Recording now recovers by itself if it ever gets stuck\n• Home tells you when recording is down, instead of staying quiet\n• A phone call is no longer mistaken for an app call</string>
     <string name="home_whatsnew_offline_cta">Turn on off-Wi-Fi recording</string>
     <string name="home_whatsnew_offline_enabled">Offline recording enabled.</string>
-    <string name="offline_failed_needs_wd">Couldn\'t enable — Wireless debugging is off and CallVault couldn\'t switch it on. Turn it on in Developer options, then try again.</string>
-    <string name="offline_failed_no_service">Couldn\'t enable — CallVault couldn\'t reach the phone\'s debugging service. Check you\'re on Wi-Fi with Wireless debugging on, then try again.</string>
+    <string name="offline_failed_needs_wd">Couldn\'t enable — Wireless debugging is off and Hamdabir couldn\'t switch it on. Turn it on in Developer options, then try again.</string>
+    <string name="offline_failed_no_service">Couldn\'t enable — Hamdabir couldn\'t reach the phone\'s debugging service. Check you\'re on Wi-Fi with Wireless debugging on, then try again.</string>
     <string name="offline_failed_port">Couldn\'t enable — the local port didn\'t come back up. Try again in a moment.</string>
     <string name="home_whatsnew_offline_enabling">Enabling off-Wi-Fi recording…</string>
     <string name="home_whatsnew_resilient_title">New: Resilient recording</string>
-    <string name="home_whatsnew_resilient_body">Makes call recording more resistant to interruptions.\n\nAndroid can stop CallVault\'s background helper at any time. With this on, a recording already in progress is no longer affected when that happens.\n\nOff by default — you can also turn it on later in Settings ▸ Reliability.</string>
+    <string name="home_whatsnew_resilient_body">Makes call recording more resistant to interruptions.\n\nAndroid can stop Hamdabir\'s background helper at any time. With this on, a recording already in progress is no longer affected when that happens.\n\nOff by default — you can also turn it on later in Settings ▸ Reliability.</string>
     <string name="home_whatsnew_resilient_cta">Turn it on</string>
-    <string name="home_whatsnew_resilient_enabled">Resilient recording is on. A recording already in progress is no longer affected if Android stops CallVault\'s background helper.</string>
+    <string name="home_whatsnew_resilient_enabled">Resilient recording is on. A recording already in progress is no longer affected if Android stops Hamdabir\'s background helper.</string>
 
     <!-- Post-update note: one entry per release, newest first. Keep in sync with CHANGELOG.md. -->
     <string name="home_whatsnew_settings_cta">Open Settings</string>
@@ -51,20 +51,20 @@
     <string name="whatsnew_155_body">Settings now slides in over the app instead of replacing it, grouped so each screen is a short list rather than everything at once. Recordings show when the call happened and how long it lasted.\n\nUnderneath: several ways a recording could be lost or spoiled have been fixed, including crackly audio with Resilient recording, and one side going missing from VoIP calls on Samsung phones.</string>
     <string name="whatsnew_154_title">Recording that recovers on its own</string>
     <string name="whatsnew_154_body">A rare stall in the connection to the recorder could leave recording silently switched off until the app was restarted — with nothing on screen to say so. It now times out and recovers by itself.\n\nYou can also choose when recordings upload to Drive: immediately, daily or weekly. Find it under Settings ▸ Storage, together with Retention, which has moved into the same section.</string>
-    <string name="whatsnew_153_body">The status card now tells you whether recording actually worked, based on your real calls rather than a green light that only means the app started. If a call was not recorded, it says so and why — a folder that was never set, Developer options switched off, a permission lost to an update.\n\nAlso: CallVault now speaks Brazilian Portuguese, and every other language has been brought up to date.</string>
+    <string name="whatsnew_153_body">The status card now tells you whether recording actually worked, based on your real calls rather than a green light that only means the app started. If a call was not recorded, it says so and why — a folder that was never set, Developer options switched off, a permission lost to an update.\n\nAlso: Hamdabir now speaks Brazilian Portuguese, and every other language has been brought up to date.</string>
     <string name="whatsnew_150_title">Switch Wireless debugging off</string>
-    <string name="whatsnew_150_body">Turning on USB debugging lets CallVault switch Wireless debugging off and keep it off. No cable is needed, and unlike Wireless debugging it opens no network port — so it is the safer of the two to leave on. Optional: recording works either way.\n\nAlso fixed: turning USB debugging off could leave CallVault unable to record, without saying so.</string>
+    <string name="whatsnew_150_body">Turning on USB debugging lets Hamdabir switch Wireless debugging off and keep it off. No cable is needed, and unlike Wireless debugging it opens no network port — so it is the safer of the two to leave on. Optional: recording works either way.\n\nAlso fixed: turning USB debugging off could leave Hamdabir unable to record, without saying so.</string>
     <string name="whatsnew_150_where">Settings ▸ Experimental ▸ USB debugging</string>
     <string name="whatsnew_148_title">More reliable start-up</string>
-    <string name="whatsnew_148_body">On some phones CallVault could keep switching Wireless debugging on and off without ever becoming ready to record. That is fixed. Where Wireless debugging is the only way in, CallVault now leaves it on and tells you which setting would let it be switched off again.\n\nAlso fixed: an app call could report a failure even though it recorded fine, and could be labelled with the wrong app.</string>
+    <string name="whatsnew_148_body">On some phones Hamdabir could keep switching Wireless debugging on and off without ever becoming ready to record. That is fixed. Where Wireless debugging is the only way in, Hamdabir now leaves it on and tells you which setting would let it be switched off again.\n\nAlso fixed: an app call could report a failure even though it recorded fine, and could be labelled with the wrong app.</string>
     <string name="whatsnew_147_title">Record app calls (VoIP)</string>
-    <string name="whatsnew_147_body">CallVault can now record calls made inside apps like WhatsApp, Signal and Telegram — both sides of the conversation, not just your own voice. Recordings show which app the call was made in, and the contact\'s name when the app provides it.\n\nExperimental: it works with some apps and not others, and an app can block recording at any time in an update.</string>
+    <string name="whatsnew_147_body">Hamdabir can now record calls made inside apps like WhatsApp, Signal and Telegram — both sides of the conversation, not just your own voice. Recordings show which app the call was made in, and the contact\'s name when the app provides it.\n\nExperimental: it works with some apps and not others, and an app can block recording at any time in an update.</string>
     <string name="whatsnew_147_where">Settings ▸ Experimental ▸ VoIP calls</string>
     <string name="whatsnew_146_title">Resilient recording</string>
-    <string name="whatsnew_146_body">Android can stop CallVault\'s background helper at any time, which used to cut a recording short and leave you with half a call. With this on, a recording already under way carries on to the end regardless.</string>
+    <string name="whatsnew_146_body">Android can stop Hamdabir\'s background helper at any time, which used to cut a recording short and leave you with half a call. With this on, a recording already under way carries on to the end regardless.</string>
     <string name="whatsnew_146_where">Settings ▸ Experimental ▸ Resilience</string>
     <string name="whatsnew_145_title">Keep recording when the screen locks</string>
-    <string name="whatsnew_145_body">On many phones, locking the screen during a call was stopping the recorder mid-call. That is fixed, and CallVault now warns you if your phone\'s USB setting is the one causing it.</string>
+    <string name="whatsnew_145_body">On many phones, locking the screen during a call was stopping the recorder mid-call. That is fixed, and Hamdabir now warns you if your phone\'s USB setting is the one causing it.</string>
     <string name="offline_recording_on">Off-Wi-Fi recording is on.</string>
     <string name="offline_recording_disabling">Turning off off-Wi-Fi recording…</string>
 
@@ -84,8 +84,8 @@
     <string name="home_health_missed_adb_pairing_unnamed">A call was not recorded — setup was not finished at the time.</string>
     <string name="home_health_missed_developer_options">A call was not recorded — Developer options were off at the time, %1$s.</string>
     <string name="home_health_missed_developer_options_unnamed">A call was not recorded — Developer options were off at the time.</string>
-    <string name="home_health_missed_secure_settings">A call was not recorded — CallVault had lost permission to start the recorder, %1$s.</string>
-    <string name="home_health_missed_secure_settings_unnamed">A call was not recorded — CallVault had lost permission to start the recorder.</string>
+    <string name="home_health_missed_secure_settings">A call was not recorded — Hamdabir had lost permission to start the recorder, %1$s.</string>
+    <string name="home_health_missed_secure_settings_unnamed">A call was not recorded — Hamdabir had lost permission to start the recorder.</string>
     <string name="home_health_failed_empty">Your last call produced an empty recording (0 bytes).</string>
     <string name="home_health_failed_no_audio">Your last call was saved but contains no audio.</string>
     <string name="home_health_failed_daemon">The recorder stopped during your last call.</string>
@@ -94,9 +94,9 @@
     <string name="home_date_today">Today</string>
     <string name="home_date_yesterday">Yesterday</string>
     <string name="whatsnew_221_title">Faster to open, and quieter about problems that are not there</string>
-    <string name="whatsnew_221_body">Opening CallVault is quick again, and stays quick however many calls you keep. 2.2.0 re-read the length of every recording each time the list was drawn, so once you had a few dozen calls the list was slow enough that a call recorded minutes earlier could look as though it had never been recorded at all.\n\nThe warning that recordings had stopped reaching Google Drive no longer appears when they have not stopped. Two people were told their backup had failed while every recording was arriving perfectly well.\n\nThe headings inside an exported transcript, the number of selected apps and the back button now follow the language you have chosen instead of staying in English. The debug report can also say which app is holding the microphone, for a problem that is proving hard to catch.</string>
+    <string name="whatsnew_221_body">Opening Hamdabir is quick again, and stays quick however many calls you keep. 2.2.0 re-read the length of every recording each time the list was drawn, so once you had a few dozen calls the list was slow enough that a call recorded minutes earlier could look as though it had never been recorded at all.\n\nThe warning that recordings had stopped reaching Google Drive no longer appears when they have not stopped. Two people were told their backup had failed while every recording was arriving perfectly well.\n\nThe headings inside an exported transcript, the number of selected apps and the back button now follow the language you have chosen instead of staying in English. The debug report can also say which app is holding the microphone, for a problem that is proving hard to catch.</string>
     <string name="whatsnew_220_title">Find a call again, and steer one while it happens</string>
-    <string name="whatsnew_220_body">Mark a moment while you are still talking. A button on the call notification drops a bookmark where you press it, and the recording shows them as chips that play from there — on phone calls and app calls alike. App calls have controls at all now: pause, resume, stop and mark, where before one could only be started and finished.\n\nFinding a call again is easier: star the ones worth keeping, label them with your own words, and search across summaries and your own notes rather than only the spoken words. Transcripts export as text, Markdown, SRT, VTT or JSON.\n\nCallVault also speaks up when it has quietly stopped working — if recording cannot start after a reboot, or recordings stop reaching Drive. Both used to be silent. New housekeeping can cap how much space recordings take or drop very short ones. It is all off by default, and a starred recording is never deleted automatically.</string>
+    <string name="whatsnew_220_body">Mark a moment while you are still talking. A button on the call notification drops a bookmark where you press it, and the recording shows them as chips that play from there — on phone calls and app calls alike. App calls have controls at all now: pause, resume, stop and mark, where before one could only be started and finished.\n\nFinding a call again is easier: star the ones worth keeping, label them with your own words, and search across summaries and your own notes rather than only the spoken words. Transcripts export as text, Markdown, SRT, VTT or JSON.\n\nHamdabir also speaks up when it has quietly stopped working — if recording cannot start after a reboot, or recordings stop reaching Drive. Both used to be silent. New housekeeping can cap how much space recordings take or drop very short ones. It is all off by default, and a starred recording is never deleted automatically.</string>
     <string name="whatsnew_220_where">Settings ▸ Storage ▸ Retention for the housekeeping options</string>
     <string name="whatsnew_211_title">Better transcripts, better summaries</string>
     <string name="whatsnew_211_body">Transcription now skips silence before the model reads a call, and weighs several possible transcriptions rather than taking the first word that comes to mind. It came out slightly faster than before despite doing more, and on a test call it recovered a whole sentence the previous version had dropped.\n\nSummaries no longer repeat themselves, which happened because the list of points had no real limit. They can also say more: items were capped at five and each one asked to be a single short line, and both of those were being followed at the expense of the content. A long summary in a language that needs more words is no longer thrown away for running out of room.\n\nRecordings were also being quietly degraded on the way in — reducing them to the rate the model expects was adding noise to the speech instead of filtering it out. Outgoing calls were worst affected, because they carry the most of your own voice.</string>
@@ -107,7 +107,7 @@
     <string name="whatsnew_200_body">Two big additions, both running entirely on your phone. Nothing is uploaded and both work with no network at all.\n\nTranscription turns a recording into text you can read and search, in fourteen languages. Tap a line to jump to that moment in the call.\n\nSummaries go a step further: what the call was about, what was decided, and what anyone said they would do — with times beside the points that have one, so tapping jumps you straight there.\n\nEach needs a model downloaded over Wi-Fi first; the app tells you what each costs before you start.</string>
     <string name="whatsnew_200_where">Settings ▸ Transcription and Settings ▸ Call summaries</string>
     <string name="whatsnew_157_title">Auto-delete now removes everything it should</string>
-    <string name="whatsnew_157_body">If you set recordings to auto-delete, some were quietly kept for ever — the check only looked at recordings CallVault still had a record of, and any it had lost track of were never removed however old they got. On one phone set to keep a week, 131 files had outlived that.\n\nThe daily check now reads your recording folders as well, so age alone decides. Only files CallVault named are ever touched, and anything it cannot date is left alone.\n\nChanging the time the check runs also takes effect straight away instead of waiting a day.</string>
+    <string name="whatsnew_157_body">If you set recordings to auto-delete, some were quietly kept for ever — the check only looked at recordings Hamdabir still had a record of, and any it had lost track of were never removed however old they got. On one phone set to keep a week, 131 files had outlived that.\n\nThe daily check now reads your recording folders as well, so age alone decides. Only files Hamdabir named are ever touched, and anything it cannot date is left alone.\n\nChanging the time the check runs also takes effect straight away instead of waiting a day.</string>
     <string name="whatsnew_157_where">Settings ▸ Storage ▸ Retention</string>
     <string name="whatsnew_156_title">Decide what gets recorded, and tidy up recordings</string>
     <string name="whatsnew_156_body">Phone calls and app calls can each record automatically, ask first, or be ignored completely — so \"app calls only\" is now a real setting rather than a combination you had to work out.\n\nRecordings can be shared, and held down to select several at once for sharing or deleting. Deleting a recording kept both on the device and in Drive now asks which copies to remove.</string>
@@ -160,7 +160,7 @@
     <string name="whatsnew_244_title">More reliable recording, easy re-pairing, and update alerts</string>
     <string name="whatsnew_244_where">Settings ▸ Reliability ▸ Pair again</string>
     <string-array name="whatsnew_244_items">
-        <item>New — If your phone closes CallVault mid-call, the part recorded before that is saved, and you\'re told</item>
+        <item>New — If your phone closes Hamdabir mid-call, the part recorded before that is saved, and you\'re told</item>
         <item>New — Pair again from Settings if the recorder connection is lost, with no reinstall</item>
         <item>New — A popup and faster checks tell you as soon as a new version is available</item>
         <item>Changed — Settings your Android version can\'t use are greyed out, with the reason</item>
@@ -192,13 +192,13 @@
     <string name="whatsnew_240_title">Recordings, transcripts and summaries each have a home</string>
     <string-array name="whatsnew_240_items">
         <item>New — A home screen with Recordings, Transcripts and Summaries, opening where you left off</item>
-        <item>New — Import an audio file, or share one to CallVault from another app</item>
+        <item>New — Import an audio file, or share one to Hamdabir from another app</item>
         <item>New — Import just for the words: the audio is deleted once the transcript is ready</item>
         <item>New — Read a transcript on a page of its own, and add a note to it</item>
         <item>New — Pick several transcripts or summaries at once to delete, share or save</item>
         <item>New — A notification when a transcription finishes</item>
         <item>Fixed — Restarting the phone no longer leaves it not recording</item>
-        <item>Fixed — Shizuku is started again when CallVault has to stop it</item>
+        <item>Fixed — Shizuku is started again when Hamdabir has to stop it</item>
         <item>Fixed — Setup works on Android 17</item>
     </string-array>
     <string name="whatsnew_240_where">Home ▸ Transcripts ▸ Import audio</string>
@@ -242,7 +242,7 @@
 
     <!-- Home: the hub of cards, and the two sections its cards open -->
     <string name="home_hub_library_title">Library</string>
-    <string name="home_hub_recordings_body">Every call CallVault has recorded.</string>
+    <string name="home_hub_recordings_body">Every call Hamdabir has recorded.</string>
     <string name="home_hub_transcripts_body">Your calls as words — and any audio you bring.</string>
     <string name="home_hub_summaries_body">AI summaries, written on your phone.</string>
     <string name="home_transcripts_title">Transcripts</string>
@@ -269,7 +269,7 @@
     <string name="transcripts_import_working">Importing…</string>
     <string name="transcripts_import_body">Transcribe a voice note or any other audio file already on your phone.</string>
     <string name="import_failed_title">Couldn\'t import that file</string>
-    <string name="import_failed_not_audio">CallVault can\'t read that kind of file. Try an .opus, .ogg, .m4a, .mp3 or .wav recording.</string>
+    <string name="import_failed_not_audio">Hamdabir can\'t read that kind of file. Try an .opus, .ogg, .m4a, .mp3 or .wav recording.</string>
     <string name="import_failed_empty">That file is empty, so there would be nothing to transcribe.</string>
     <string name="import_failed_no_folder">There\'s no recordings folder to keep it in. Choose one in Settings, then try again.</string>
     <string name="import_failed_copy">The file couldn\'t be written into your recordings folder. Check the phone has space and that the folder is still available.</string>
@@ -280,14 +280,14 @@
     <string name="share_import_label">Import audio</string>
     <string name="share_import_working_body">Copying it in and checking this phone can read it.</string>
     <string name="share_import_done_title">Added to your recordings</string>
-    <string name="share_import_done_body">It\'s in CallVault now. Open it to listen, or to ask for a transcript.</string>
+    <string name="share_import_done_body">It\'s in Hamdabir now. Open it to listen, or to ask for a transcript.</string>
     <string name="share_import_open">Open</string>
-    <string name="share_import_open_app">Open CallVault</string>
+    <string name="share_import_open_app">Open Hamdabir</string>
     <string name="share_import_close">Close</string>
     <string name="share_import_nothing">Nothing came through with that share. Try sharing the audio file itself rather than the message around it.</string>
-    <string name="share_import_not_set_up_title">Finish setting CallVault up first</string>
-    <string name="share_import_not_set_up_body">CallVault hasn\'t finished its one-time setup, so there\'s nowhere to keep this file yet. Open it, finish setting up, then share this again.</string>
-    <string name="share_import_choice_title">What should CallVault do with this?</string>
+    <string name="share_import_not_set_up_title">Finish setting Hamdabir up first</string>
+    <string name="share_import_not_set_up_body">Hamdabir hasn\'t finished its one-time setup, so there\'s nowhere to keep this file yet. Open it, finish setting up, then share this again.</string>
+    <string name="share_import_choice_title">What should Hamdabir do with this?</string>
     <string name="share_import_choice_unnamed">The shared audio</string>
     <string name="import_choice_keep">Import &amp; transcribe</string>
     <string name="import_choice_keep_hint">Keeps the audio in your recordings and transcribes it.</string>
@@ -300,6 +300,6 @@
     <string name="share_import_kept_title">Saved, but not transcribed</string>
     <string name="share_import_kept_body">It\'s in your recordings. You can start the transcript from there whenever you like.</string>
     <string name="share_import_kept_only_body">It\'s waiting under Transcripts. Start it there whenever you like, or delete it from the same place.</string>
-    <string name="share_import_too_long">That audio is %1$d minutes long, and CallVault can only transcribe up to %2$d minutes at once. The file was saved, so you can still listen to it.</string>
-    <string name="share_import_no_model">There\'s no transcription model installed yet, so CallVault can\'t read this. The audio was saved — install a model in Settings, then start it from Transcripts.</string>
+    <string name="share_import_too_long">That audio is %1$d minutes long, and Hamdabir can only transcribe up to %2$d minutes at once. The file was saved, so you can still listen to it.</string>
+    <string name="share_import_no_model">There\'s no transcription model installed yet, so Hamdabir can\'t read this. The audio was saved — install a model in Settings, then start it from Transcripts.</string>
 </resources>

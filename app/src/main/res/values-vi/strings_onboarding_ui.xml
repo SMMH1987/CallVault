@@ -21,7 +21,7 @@
     <string name="permissions_status_adb_connected">Đã kết nối</string>
     <string name="permissions_status_adb_not_connected">Chưa kết nối</string>
     <string name="permissions_ui_eyebrow">Thiết lập</string>
-    <string name="permissions_ui_hero_subtitle">Một vài quyền để CallVault có thể ghi âm và gắn nhãn cuộc gọi của bạn. Hãy chấp thuận từng mục bên dưới.</string>
+    <string name="permissions_ui_hero_subtitle">Một vài quyền để Hamdabir có thể ghi âm và gắn nhãn cuộc gọi của bạn. Hãy chấp thuận từng mục bên dưới.</string>
     <string name="permissions_ui_hero_title">Cùng thiết lập nào</string>
     <string name="permissions_ui_section_label">Quyền</string>
 </resources>

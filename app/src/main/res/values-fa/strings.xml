@@ -26,14 +26,14 @@
     <string name="general_outgoing">خروجی</string>
     <string name="general_reset">بازنشانی</string>
     <string name="general_system_limitation">محدودیت سیستم</string>
-    <string name="general_system_limitation_message">CallVault روی این دستگاه کار نمی‌کند چون برنامه شل شما مجوزهای لازم را ندارد:\n\n%1$s\n\nکاری از دست شما برنمی‌آید؛ برنامه نمی‌تواند کار کند و اکنون بسته می‌شود.</string>
+    <string name="general_system_limitation_message">همدبیر روی این دستگاه کار نمی‌کند چون برنامه شل شما مجوزهای لازم را ندارد:\n\n%1$s\n\nکاری از دست شما برنمی‌آید؛ برنامه نمی‌تواند کار کند و اکنون بسته می‌شود.</string>
 
     <!-- ========================================== -->
     <!-- UI SECTIONS                                -->
     <!-- ========================================== -->
 
     <!-- Disclaimer Screen -->
-    <string name="disclaimer_title">به CallVault خوش آمدید</string>
+    <string name="disclaimer_title">به همدبیر خوش آمدید</string>
     <string name="disclaimer_introduction">لطفاً پیش از ادامه، سلب مسئولیت زیر را با دقت بخوانید.</string>
     <string name="disclaimer_checkbox_label">سلب مسئولیت را خواندم و الزامات قانونی، مسئولیت‌ها و محدودیت‌های فنی این نرم‌افزار را درک می‌کنم.</string>
     <string name="disclaimer_must_read">باید سلب مسئولیت را بخوانید.</string>
@@ -58,7 +58,7 @@
     <string name="permission_call_log_description">لازم است تا در رویدادهای وضعیت تلفن، شماره تلفن بدون سانسور را دریافت کنیم.</string>
 
     <string name="permission_usb_debugging_label">اشکال‌زدایی USB</string>
-    <string name="permission_usb_debugging_description">توصیه می‌شود. ضبط را هنگام دور بودن از Wi-Fi فعال نگه می‌دارد و به CallVault اجازه می‌دهد پس از راه‌اندازی، اشکال‌زدایی بی‌سیم را خاموش کند. نیازی به کابل نیست.</string>
+    <string name="permission_usb_debugging_description">توصیه می‌شود. ضبط را هنگام دور بودن از Wi-Fi فعال نگه می‌دارد و به همدبیر اجازه می‌دهد پس از راه‌اندازی، اشکال‌زدایی بی‌سیم را خاموش کند. نیازی به کابل نیست.</string>
     <string name="permission_battery_label">بهینه‌سازی باتری</string>
     <string name="permission_battery_description">برنامه را در مواقع لازم زنده نگه می‌دارد و اجازه می‌دهد محدودیت‌های احتمالی اجرای پس‌زمینه دور زده شود. در برخی گوشی‌ها (مثلاً OnePlus/OxygenOS) حالت باتری این برنامه را نیز روی \"اجازه فعالیت در پس‌زمینه\" بگذارید.</string>
     <string name="permission_battery_oem_hint">معافیت باتری تنظیم شد. اکنون در همین صفحه اطلاعات برنامه، روی \"باتری\" بزنید، سپس \"اجازه فعالیت در پس‌زمینه\" (بدون محدودیت) را انتخاب کنید — این برای زنده ماندن ضبط در پس‌زمینه روی OnePlus/OxygenOS لازم است.</string>
@@ -93,44 +93,44 @@
     <string name="retention_confirm_enable">فعال کردن</string>
     <string name="settings_section_recording_storage">ضبط و فضای ذخیره‌سازی</string>
     <string name="permissions_shizuku_offer_title">Shizuku روی این گوشی در حال اجراست</string>
-    <string name="permissions_shizuku_offer_body">CallVault می‌تواند از آن استفاده کند و مرتبط‌سازی را کاملاً کنار بگذارد. یا CallVault را به‌تنهایی راه‌اندازی کنید تا به هیچ چیز دیگری در حال اجرا نیاز نداشته باشد.</string>
-    <string name="permissions_shizuku_needs_permission">برای تکمیل، به CallVault در Shizuku اجازه دهید. تا آن زمان چیزی ضبط نمی‌شود.</string>
+    <string name="permissions_shizuku_offer_body">همدبیر می‌تواند از آن استفاده کند و مرتبط‌سازی را کاملاً کنار بگذارد. یا همدبیر را به‌تنهایی راه‌اندازی کنید تا به هیچ چیز دیگری در حال اجرا نیاز نداشته باشد.</string>
+    <string name="permissions_shizuku_needs_permission">برای تکمیل، به همدبیر در Shizuku اجازه دهید. تا آن زمان چیزی ضبط نمی‌شود.</string>
     <string name="permissions_shizuku_active">در حال استفاده از Shizuku. چیزی برای مرتبط‌سازی نیست — راه‌اندازی انجام شد.</string>
     <string name="permissions_shizuku_use">استفاده از Shizuku</string>
-    <string name="permissions_shizuku_use_callvault">استفاده از CallVault</string>
+    <string name="permissions_shizuku_use_callvault">استفاده از همدبیر</string>
     <string name="permissions_shizuku_offer_title_stopped">Shizuku در حال اجرا نیست</string>
-    <string name="permissions_shizuku_offer_stopped">آن را از برنامه Shizuku اجرا کنید و برگردید تا CallVault بتواند به‌جای مرتبط‌سازی از آن استفاده کند. یا CallVault را به‌تنهایی راه‌اندازی کنید — به هیچ چیز دیگری در حال اجرا نیاز ندارد.</string>
+    <string name="permissions_shizuku_offer_stopped">آن را از برنامه Shizuku اجرا کنید و برگردید تا همدبیر بتواند به‌جای مرتبط‌سازی از آن استفاده کند. یا همدبیر را به‌تنهایی راه‌اندازی کنید — به هیچ چیز دیگری در حال اجرا نیاز ندارد.</string>
     <string name="home_hero_pill_shizuku">Shizuku متوقف شد</string>
     <string name="home_status_shizuku_title">Shizuku آماده نیست</string>
-    <string name="home_status_shizuku_suggestion">Shizuku را باز کنید و اجرایش کنید. هر بار که گوشی راه‌اندازی مجدد شود متوقف می‌شود و تا زمانی که در حال اجرا نباشد CallVault نمی‌تواند ضبط کند.</string>
+    <string name="home_status_shizuku_suggestion">Shizuku را باز کنید و اجرایش کنید. هر بار که گوشی راه‌اندازی مجدد شود متوقف می‌شود و تا زمانی که در حال اجرا نباشد همدبیر نمی‌تواند ضبط کند.</string>
     <string name="home_health_missed_shizuku">%1$s ضبط نشد — Shizuku در حال اجرا نبود</string>
     <string name="home_health_missed_shizuku_unnamed">یک تماس ضبط نشد — Shizuku در حال اجرا نبود</string>
-    <string name="settings_unavailable_in_shizuku">در حالت Shizuku در دسترس نیست — این به ضبط‌کننده اختصاصی CallVault نیاز دارد.</string>
+    <string name="settings_unavailable_in_shizuku">در حالت Shizuku در دسترس نیست — این به ضبط‌کننده اختصاصی همدبیر نیاز دارد.</string>
     <string name="mode_switch_to_shizuku">در حال تغییر به Shizuku…</string>
-    <string name="mode_switch_to_standalone">در حال تغییر به CallVault…</string>
+    <string name="mode_switch_to_standalone">در حال تغییر به همدبیر…</string>
     <string name="mode_switch_working">در حال متوقف کردن ضبط‌کننده قبلی و اجرای ضبط‌کننده جدید. این چند ثانیه طول می‌کشد.</string>
     <string name="mode_switch_done_title">آماده ضبط</string>
     <string name="mode_switch_problem_title">هنوز آماده نیست</string>
     <string name="mode_switch_done_shizuku">آماده — با استفاده از Shizuku</string>
-    <string name="mode_switch_done_standalone">آماده — با استفاده از CallVault</string>
-    <string name="mode_switch_ready_shizuku">CallVault از طریق Shizuku ضبط می‌کند. تماس‌های VoIP و ضبط تاب‌آور در این حالت در دسترس نیستند.</string>
-    <string name="mode_switch_ready_standalone">CallVault با ضبط‌کننده اختصاصی خودش ضبط می‌کند. همه‌چیز در دسترس است، از جمله تماس‌های VoIP و نام گویندگان.</string>
+    <string name="mode_switch_done_standalone">آماده — با استفاده از همدبیر</string>
+    <string name="mode_switch_ready_shizuku">همدبیر از طریق Shizuku ضبط می‌کند. تماس‌های VoIP و ضبط تاب‌آور در این حالت در دسترس نیستند.</string>
+    <string name="mode_switch_ready_standalone">همدبیر با ضبط‌کننده اختصاصی خودش ضبط می‌کند. همه‌چیز در دسترس است، از جمله تماس‌های VoIP و نام گویندگان.</string>
     <string name="mode_switch_ready">ضبط‌کننده در حال اجراست. تماس‌ها ضبط خواهند شد.</string>
     <string name="mode_switch_shizuku_not_installed">Shizuku نصب نیست، پس چیزی برای تغییر به آن وجود ندارد.</string>
     <string name="mode_switch_shizuku_not_running">Shizuku در حال اجرا نیست. Shizuku را باز کنید و اجرایش کنید، سپس دوباره تلاش کنید — هر بار که گوشی راه‌اندازی مجدد شود متوقف می‌شود.</string>
-    <string name="mode_switch_shizuku_not_permitted">Shizuku هنوز به CallVault اجازه استفاده نداده است. Shizuku را باز کنید و اجازه دهید، سپس دوباره تلاش کنید.</string>
-    <string name="mode_switch_voip_not_armed">تغییر انجام شد، اما ضبط تماس درون‌برنامه‌ای آماده نشد. تماس‌های تلفنی ضبط می‌شوند؛ تماس‌های درون‌برنامه‌ای شاید تا زمانی که CallVault را دوباره باز نکنید ضبط نشوند.</string>
+    <string name="mode_switch_shizuku_not_permitted">Shizuku هنوز به همدبیر اجازه استفاده نداده است. Shizuku را باز کنید و اجازه دهید، سپس دوباره تلاش کنید.</string>
+    <string name="mode_switch_voip_not_armed">تغییر انجام شد، اما ضبط تماس درون‌برنامه‌ای آماده نشد. تماس‌های تلفنی ضبط می‌شوند؛ تماس‌های درون‌برنامه‌ای شاید تا زمانی که همدبیر را دوباره باز نکنید ضبط نشوند.</string>
     <string name="mode_switch_recorder_failed">ضبط‌کننده اجرا نشد. تا زمانی که اجرا نشود چیزی ضبط نخواهد شد.</string>
     <string name="home_hero_pill_with_mode">%1$s · %2$s</string>
-    <string name="home_mode_badge_standalone">CallVault</string>
+    <string name="home_mode_badge_standalone">همدبیر</string>
     <string name="home_mode_badge_shizuku">Shizuku</string>
-    <string name="settings_subsection_privileges">چگونه CallVault مجوز می‌گیرد</string>
+    <string name="settings_subsection_privileges">چگونه همدبیر مجوز می‌گیرد</string>
     <string name="settings_shizuku_mode">حالت Shizuku</string>
-    <string name="settings_shizuku_not_installed">Shizuku نصب نیست. CallVault به آن نیازی ندارد — این فقط برای کسانی است که همین حالا از آن استفاده می‌کنند.</string>
+    <string name="settings_shizuku_not_installed">Shizuku نصب نیست. همدبیر به آن نیازی ندارد — این فقط برای کسانی است که همین حالا از آن استفاده می‌کنند.</string>
     <string name="settings_shizuku_not_running">Shizuku نصب است اما در حال اجرا نیست. باید پس از هر بار راه‌اندازی مجدد گوشی دوباره اجرا شود.</string>
-    <string name="settings_shizuku_no_permission">Shizuku در حال اجراست، اما هنوز به CallVault اجازه استفاده نداده است.</string>
-    <string name="settings_shizuku_ready">Shizuku در حال اجرا و آماده است. با روشن بودن این، CallVault به مرتبط‌سازی اختصاصی خودش نیاز ندارد.</string>
-    <string name="settings_shizuku_grant">اجازه دادن به CallVault در Shizuku</string>
+    <string name="settings_shizuku_no_permission">Shizuku در حال اجراست، اما هنوز به همدبیر اجازه استفاده نداده است.</string>
+    <string name="settings_shizuku_ready">Shizuku در حال اجرا و آماده است. با روشن بودن این، همدبیر به مرتبط‌سازی اختصاصی خودش نیاز ندارد.</string>
+    <string name="settings_shizuku_grant">اجازه دادن به همدبیر در Shizuku</string>
     <string name="settings_shizuku_grant_description">Shizuku را باز می‌کند تا بتوانید اجازه دهید. تا آن زمان چیزی ضبط نمی‌شود.</string>
     <string name="settings_section_general">عمومی</string>
     <string name="settings_section_visual">تنظیمات ظاهری</string>
@@ -144,7 +144,7 @@
     <string name="settings_voip_recording_label">ضبط تماس‌های VoIP</string>
     <string name="settings_voip_recording_description">تماس‌های انجام‌شده در برنامه‌هایی مانند WhatsApp، Signal و Telegram را نیز ضبط می‌کند. آزمایشی — برخی برنامه‌ها ضبط را مسدود می‌کنند و این تا زمانی که تماس در جریان باشد قابل تشخیص نیست.</string>
     <string name="settings_voip_auto_start_label">شروع خودکار</string>
-    <string name="settings_voip_auto_start_description">خاموش یعنی CallVault ابتدا می‌پرسد: هنگام شروع یک تماس درون‌برنامه‌ای، اعلانی با دکمه ضبط ظاهر می‌شود.</string>
+    <string name="settings_voip_auto_start_description">خاموش یعنی همدبیر ابتدا می‌پرسد: هنگام شروع یک تماس درون‌برنامه‌ای، اعلانی با دکمه ضبط ظاهر می‌شود.</string>
     <string name="voip_prompt_title">تماس درون‌برنامه‌ای در جریان است</string>
     <string name="voip_prompt_text">برای ضبط این تماس، روی ضبط بزنید.</string>
     <string name="voip_prompt_text_named">تماس %1$s. برای ضبط آن، روی ضبط بزنید.</string>
@@ -153,8 +153,8 @@
     <string name="voip_recording_warning_continue">متوجه شدم، روشنش کن</string>
     <string name="voip_recording_arming">در حال آماده‌سازی ضبط VoIP…</string>
     <string name="notif_voip_recording_title">در حال ضبط تماس VoIP</string>
-    <string name="notif_voip_recording_text">CallVault در حال ضبط یک تماس درون‌برنامه‌ای است.</string>
-    <string name="voip_missed_not_ready">یک تماس درون‌برنامه‌ای ضبط نشد — CallVault به‌موقع آماده نبود. این ممکن است برای مدت کوتاهی پس از پایان یک تماس تلفنی رخ دهد. تماس بعدی باید به‌طور عادی ضبط شود.</string>
+    <string name="notif_voip_recording_text">همدبیر در حال ضبط یک تماس درون‌برنامه‌ای است.</string>
+    <string name="voip_missed_not_ready">یک تماس درون‌برنامه‌ای ضبط نشد — همدبیر به‌موقع آماده نبود. این ممکن است برای مدت کوتاهی پس از پایان یک تماس تلفنی رخ دهد. تماس بعدی باید به‌طور عادی ضبط شود.</string>
     <string name="voip_missed_no_folder">یک تماس درون‌برنامه‌ای ضبط نشد — پوشه فایل‌های ضبط‌شده وجود ندارد یا قابل نوشتن نیست. آن را دوباره در تنظیمات انتخاب کنید.</string>
     <string name="voip_missed_label">تماس درون‌برنامه‌ای</string>
     <string name="voip_one_sided_warning">فقط صدای شما از آن تماس درون‌برنامه‌ای ضبط شد — برنامه دیگر اجازه نمی‌دهد صدای تماسش گرفته شود.</string>
@@ -162,13 +162,13 @@
     <string name="voip_recording_unavailable">در این دستگاه قابل فعال‌سازی نبود — ضبط VoIP اینجا در دسترس نیست.</string>
     <string name="voip_recording_names_hint">نام مخاطبین از اعلان تماس خودِ برنامه تماس‌گیرنده می‌آید. اگر اعلان‌های آن برنامه خاموش باشند، فایل‌های ضبط‌شده‌اش بدون نام ذخیره می‌شوند.</string>
     <string name="settings_usb_debugging_label">اشکال‌زدایی USB</string>
-    <string name="settings_usb_debugging_description">توصیه می‌شود. ضبط را هنگامی که از Wi-Fi خارج می‌شوید فعال نگه می‌دارد و به CallVault اجازه می‌دهد اشکال‌زدایی بی‌سیم را خاموش کند. نیازی به کابل نیست.</string>
+    <string name="settings_usb_debugging_description">توصیه می‌شود. ضبط را هنگامی که از Wi-Fi خارج می‌شوید فعال نگه می‌دارد و به همدبیر اجازه می‌دهد اشکال‌زدایی بی‌سیم را خاموش کند. نیازی به کابل نیست.</string>
     <string name="settings_usb_debugging_recommended">بدون این، ضبط فقط روی Wi-Fi کار می‌کند و اشکال‌زدایی بی‌سیم باید روشن بماند.</string>
-    <string name="settings_usb_debugging_on_hint">CallVault می‌تواند اشکال‌زدایی بی‌سیم را خاموش نگه دارد. اگر این را خاموش کنید، ضبط برای چند ثانیه متوقف می‌شود تا CallVault آن را روی Wi-Fi دوباره راه‌اندازی کند — و دور از Wi-Fi نمی‌تواند دوباره راه‌اندازی کند.</string>
-    <string name="settings_usb_debugging_shizuku_hint">هنگام استفاده از Shizuku، اشکال‌زدایی USB را روشن بگذارید. سرویس Shizuku از طریق سرویس اشکال‌زدایی Android اجرا می‌شود و با آن متوقف می‌شود — CallVault در حالت Shizuku به این کلید نیازی ندارد.</string>
-    <string name="settings_usb_debugging_failed">نشد تغییرش داد — CallVault به مجوزی که هنگام راه‌اندازی می‌گیرد نیاز دارد.</string>
-    <string name="notif_info_channel">اطلاعیه‌های CallVault</string>
-    <string name="notif_wd_required">چون اشکال‌زدایی USB خاموش است، اشکال‌زدایی بی‌سیم باید روشن بماند. اشکال‌زدایی USB را در تنظیمات ▸ آزمایشی روشن کنید تا CallVault دوباره اشکال‌زدایی بی‌سیم را خاموش کند.</string>
+    <string name="settings_usb_debugging_on_hint">همدبیر می‌تواند اشکال‌زدایی بی‌سیم را خاموش نگه دارد. اگر این را خاموش کنید، ضبط برای چند ثانیه متوقف می‌شود تا همدبیر آن را روی Wi-Fi دوباره راه‌اندازی کند — و دور از Wi-Fi نمی‌تواند دوباره راه‌اندازی کند.</string>
+    <string name="settings_usb_debugging_shizuku_hint">هنگام استفاده از Shizuku، اشکال‌زدایی USB را روشن بگذارید. سرویس Shizuku از طریق سرویس اشکال‌زدایی Android اجرا می‌شود و با آن متوقف می‌شود — همدبیر در حالت Shizuku به این کلید نیازی ندارد.</string>
+    <string name="settings_usb_debugging_failed">نشد تغییرش داد — همدبیر به مجوزی که هنگام راه‌اندازی می‌گیرد نیاز دارد.</string>
+    <string name="notif_info_channel">اطلاعیه‌های همدبیر</string>
+    <string name="notif_wd_required">چون اشکال‌زدایی USB خاموش است، اشکال‌زدایی بی‌سیم باید روشن بماند. اشکال‌زدایی USB را در تنظیمات ▸ آزمایشی روشن کنید تا همدبیر دوباره اشکال‌زدایی بی‌سیم را خاموش کند.</string>
     <string name="settings_section_debug">اشکال‌زدایی</string>
     <string name="settings_section_security">امنیت</string>
     <string name="settings_section_recorder_server">سرویس ضبط‌کننده</string>
@@ -215,7 +215,7 @@
     <string name="usb_mode_midi">MIDI</string>
     <string name="offline_recording_warning_title">ضبط آفلاین فعال شود؟</string>
     <string name="offline_recording_warning_message">این کار یک درگاه اشکال‌زدایی محلی روی گوشی شما باز می‌کند تا تماس‌ها بدون Wi-Fi ضبط شوند. با کلید دستگاه شما محافظت می‌شود، اما یک بده‌بستان امنیتی کوچک است. فقط در صورتی آن را فعال کنید که نیاز دارید تماس‌ها را بدون Wi-Fi ضبط کنید.</string>
-    <string name="offline_recording_warning_shizuku">Shizuku در حال اجراست. روشن کردن این، سرویس اشکال‌زدایی Android را دوباره راه‌اندازی می‌کند که Shizuku را متوقف می‌کند — CallVault بلافاصله پس از آن دوباره اجرایش می‌کند و اگر نتواند به شما اطلاع می‌دهد.</string>
+    <string name="offline_recording_warning_shizuku">Shizuku در حال اجراست. روشن کردن این، سرویس اشکال‌زدایی Android را دوباره راه‌اندازی می‌کند که Shizuku را متوقف می‌کند — همدبیر بلافاصله پس از آن دوباره اجرایش می‌کند و اگر نتواند به شما اطلاع می‌دهد.</string>
     <string name="offline_recording_warning_continue">به‌هرحال ادامه بده</string>
 
     <string name="settings_file_name_template">الگوی نام فایل</string>
@@ -315,7 +315,7 @@
     <!-- Persistent reminder that debug logging is enabled -->
     <string name="debug_notification_channel_name">ضبط گزارش اشکال‌زدایی</string>
     <string name="debug_notification_title">ضبط گزارش اشکال‌زدایی روشن است</string>
-    <string name="debug_notification_text">برای باز کردن CallVault و خاموش کردنش پس از پایان کار، بزنید.</string>
+    <string name="debug_notification_text">برای باز کردن همدبیر و خاموش کردنش پس از پایان کار، بزنید.</string>
 
     <!-- Settings Screen: About/Server Section -->
     <string name="settings_copy_version">کپی نسخه</string>
@@ -361,7 +361,7 @@
     <string name="recording_unexpected_error">خطای غیرمنتظره‌ای در حین ضبط رخ داد. لطفاً آن را همراه با مراحل بازتولید و گزارش‌های برنامه گزارش کنید.</string>
 
     <!-- Setup Wizard -->
-    <string name="wizard_title">راه‌اندازی CallVault</string>
+    <string name="wizard_title">راه‌اندازی همدبیر</string>
     <string name="wizard_step_of">مرحله %1$d از %2$d</string>
     <string name="wizard_back">بازگشت</string>
     <string name="wizard_next">بعدی</string>
@@ -392,12 +392,12 @@
     <!-- Wizard: Auto-record step -->
     <string name="wizard_auto_record_title">ضبط خودکار</string>
     <string name="wizard_auto_record_subtitle">انتخاب کنید کدام تماس‌ها به‌طور خودکار ضبط شوند. می‌توانید این را بعداً در تنظیمات دقیق‌تر تنظیم کنید.</string>
-    <string name="wizard_auto_record_nothing_warning">با خاموش بودن هر دوی تماس‌های تلفنی و درون‌برنامه‌ای، CallVault چیزی ضبط نمی‌کند. مگر اینکه همین را بخواهید، دست‌کم یکی را روشن کنید.</string>
+    <string name="wizard_auto_record_nothing_warning">با خاموش بودن هر دوی تماس‌های تلفنی و درون‌برنامه‌ای، همدبیر چیزی ضبط نمی‌کند. مگر اینکه همین را بخواهید، دست‌کم یکی را روشن کنید.</string>
     <!-- Wizard: Audio step -->
     <string name="wizard_experimental_title">افزودنی‌های اختیاری</string>
     <string name="wizard_experimental_subtitle">قابلیتی که هنوز در حال اثبات است. به‌طور پیش‌فرض خاموش است — می‌توانید بعداً آن را در تنظیمات روشن کنید.</string>
     <string name="wizard_updates_title">به‌روز ماندن</string>
-    <string name="wizard_updates_subtitle">CallVault در فروشگاه برنامه نیست، بنابراین خودش GitHub را برای نسخه‌های جدید بررسی می‌کند.</string>
+    <string name="wizard_updates_subtitle">همدبیر در فروشگاه برنامه نیست، بنابراین خودش GitHub را برای نسخه‌های جدید بررسی می‌کند.</string>
     <string name="wizard_reliability_title">ضبط قابل اعتماد</string>
     <string name="wizard_reliability_subtitle">دو تنظیم اختیاری که ضبط را در شرایط دشوار فعال نگه می‌دارند. می‌توانید این‌ها را رد کنید و بعداً در تنظیمات تغییر دهید.</string>
     <string name="wizard_reliability_usb_title">ضبط را هنگام قفل شدن صفحه ادامه بده</string>
@@ -405,7 +405,7 @@
     <string name="wizard_reliability_usb_button">تنظیم USB روی فقط شارژ</string>
     <string name="wizard_reliability_usb_done">USB روی فقط شارژ تنظیم شد</string>
     <string name="wizard_transcription_title">تبدیل تماس‌ها به متن</string>
-    <string name="wizard_transcription_subtitle">CallVault می‌تواند یک فایل ضبط‌شده را روی خود گوشی به متن تبدیل کند و از آن یک خلاصه کوتاه بنویسد — چیزی به جایی فرستاده نمی‌شود. انتخاب کنید این کار چه زمانی انجام شود، تماس‌های شما به چه زبانی هستند، و آنچه لازم است دانلود کنید.</string>
+    <string name="wizard_transcription_subtitle">همدبیر می‌تواند یک فایل ضبط‌شده را روی خود گوشی به متن تبدیل کند و از آن یک خلاصه کوتاه بنویسد — چیزی به جایی فرستاده نمی‌شود. انتخاب کنید این کار چه زمانی انجام شود، تماس‌های شما به چه زبانی هستند، و آنچه لازم است دانلود کنید.</string>
     <string name="wizard_transcription_language_note">روی زبانی تنظیم کنید که این گوشی روی آن تنظیم شده است. مشخص کردن آن بسیار قابل‌اعتمادتر از این است که بگذارید برنامه حدس بزند، و همچنان می‌توانید بعداً برای هر تماس زبان دیگری انتخاب کنید.</string>
     <string name="wizard_transcription_model_note">رونویسی ابتدا به یک مدل گفتار روی گوشی نیاز دارد: %1$s برابر %2$d مگابایت است، %3$s برابر %4$d مگابایت. رونویسی یک تماس سپس تقریباً به اندازه طول تماس زمان می‌برد و پردازنده را سخت به کار می‌گیرد.</string>
     <string name="wizard_transcription_model_sizes_note">رونویسی ابتدا به یک مدل گفتار روی گوشی نیاز دارد: %1$s. رونویسی یک تماس سپس تقریباً به اندازه طول تماس زمان می‌برد و پردازنده را سخت به کار می‌گیرد.</string>
@@ -413,7 +413,7 @@
     <!-- Joins the list above. A resource because the comma is not the right separator everywhere. -->
     <string name="list_separator">"، "</string>
     <string name="wizard_transcription_summary_heading">خلاصه‌ها</string>
-    <string name="wizard_transcription_summary_body">پس از اینکه یک تماس رونوشت داشته باشد، CallVault می‌تواند یک خلاصه کوتاه از آن هم بنویسد — روی گوشی، مثل هر چیز دیگری اینجا.</string>
+    <string name="wizard_transcription_summary_body">پس از اینکه یک تماس رونوشت داشته باشد، همدبیر می‌تواند یک خلاصه کوتاه از آن هم بنویسد — روی گوشی، مثل هر چیز دیگری اینجا.</string>
     <string name="wizard_transcription_background_note">هر دو دانلود فقط روی Wi-Fi اجرا می‌شوند و در پس‌زمینه ادامه می‌یابند. می‌توانید همین حالا ادامه دهید و راه‌اندازی را تمام کنید — تنظیمات ▸ رونویسی و خلاصه‌ها بعداً همان پیشرفت را نشان می‌دهد.</string>
 
     <string name="wizard_audio_title">کیفیت صدا</string>
@@ -422,7 +422,7 @@
     <string name="wizard_filename_subtitle">انتخاب کنید فایل‌های ضبط‌شده چگونه نام‌گذاری شوند.</string>
 
     <!-- Home -->
-    <string name="home_all_set_message">همه‌چیز آماده است. CallVault برای ضبط تماس‌های شما آماده است.</string>
+    <string name="home_all_set_message">همه‌چیز آماده است. همدبیر برای ضبط تماس‌های شما آماده است.</string>
     <string name="home_open_settings">تنظیمات</string>
 
     <!-- Home: status card -->
@@ -431,11 +431,11 @@
     <string name="home_status_not_paired_title">راه‌اندازی کامل نشده است</string>
     <string name="home_status_not_paired_suggestion">مرتبط‌سازی اشکال‌زدایی بی‌سیم را در راه‌اندازی تمام کنید.</string>
     <string name="home_status_dev_options_off_title">گزینه‌های توسعه‌دهنده خاموش است</string>
-    <string name="home_status_dev_options_off_suggestion">CallVault از طریق اشکال‌زدایی بی‌سیم ضبط می‌کند، که به گزینه‌های توسعه‌دهنده نیاز دارد. تا زمانی که گزینه‌های توسعه‌دهنده (و اشکال‌زدایی بی‌سیم) را در تنظیمات سیستم دوباره فعال نکنید، ضبط نمی‌تواند کار کند.</string>
+    <string name="home_status_dev_options_off_suggestion">همدبیر از طریق اشکال‌زدایی بی‌سیم ضبط می‌کند، که به گزینه‌های توسعه‌دهنده نیاز دارد. تا زمانی که گزینه‌های توسعه‌دهنده (و اشکال‌زدایی بی‌سیم) را در تنظیمات سیستم دوباره فعال نکنید، ضبط نمی‌تواند کار کند.</string>
     <string name="home_status_update_regrant_title">برای ادامه ضبط دوباره متصل شوید</string>
-    <string name="home_status_update_regrant_suggestion">یک به‌روزرسانی مجوزی را که CallVault برای راه‌اندازی مجدد ضبط لازم دارد حذف کرد. ممکن است فعلاً هنوز کار کند — اینجا بزنید، سپس یک‌بار اشکال‌زدایی بی‌سیم را روشن کنید تا بازیابی شود. نیازی به نصب مجدد نیست.</string>
+    <string name="home_status_update_regrant_suggestion">یک به‌روزرسانی مجوزی را که همدبیر برای راه‌اندازی مجدد ضبط لازم دارد حذف کرد. ممکن است فعلاً هنوز کار کند — اینجا بزنید، سپس یک‌بار اشکال‌زدایی بی‌سیم را روشن کنید تا بازیابی شود. نیازی به نصب مجدد نیست.</string>
     <string name="home_status_ready_title">آماده ضبط</string>
-    <string name="home_status_ready_suggestion">CallVault تماس‌ها را طبق تنظیمات شما به‌طور خودکار ضبط می‌کند.</string>
+    <string name="home_status_ready_suggestion">همدبیر تماس‌ها را طبق تنظیمات شما به‌طور خودکار ضبط می‌کند.</string>
 
     <!-- Home: recordings list -->
     <string name="home_recordings_title">فایل‌های ضبط‌شده</string>
@@ -463,7 +463,7 @@
     <string name="settings_update_check_label">بررسی به‌روزرسانی‌ها</string>
     <string name="settings_update_check_description">روزی یک‌بار، در GitHub به‌دنبال نسخه جدید بگرد.</string>
     <string name="support_appeal_title">ساخته یک نفر 👋</string>
-    <string name="support_appeal_body">CallVault را به‌تنهایی و در وقت آزادم می‌سازم — رایگان، متن‌باز، بدون تبلیغ، بدون ردیابی. ☕ اگر برایتان مفید است، یک انعام کوچک مرا سرِ پا نگه می‌دارد. در هر صورت، ممنون! 🙏</string>
+    <string name="support_appeal_body">همدبیر را به‌تنهایی و در وقت آزادم می‌سازم — رایگان، متن‌باز، بدون تبلیغ، بدون ردیابی. ☕ اگر برایتان مفید است، یک انعام کوچک مرا سرِ پا نگه می‌دارد. در هر صورت، ممنون! 🙏</string>
     <string name="support_not_now">حالا نه</string>
     <string name="home_bulk_delete_message">این کار قابل بازگشت نیست.</string>
     <string name="home_bulk_delete_scope_message">برخی هم روی این دستگاه و هم در Drive ذخیره شده‌اند.</string>
@@ -544,7 +544,7 @@
     <string name="summary_model_failed">دانلود کامل نشد. دوباره تلاش کنید.</string>
     <string name="summary_requirements_title">آنچه این نیاز دارد</string>
     <string name="summary_requirements_body">خلاصه‌ها روی گوشی شما نوشته می‌شوند — چیزی به جایی فرستاده نمی‌شود. این کار %1$.1f گیگابایت دانلود و حدود %2$.1f گیگابایت حافظه در حین اجرا هزینه دارد، بنابراین به یک گوشی جدید با فضای کافی نیاز دارد. یک تماس کوتاه یکی دو دقیقه طول می‌کشد.</string>
-    <string name="summary_model_licence">خلاصه‌ساز، Gemma 4 از Google است که تحت مجوز Apache 2.0 استفاده می‌شود. به‌جای گنجانده شدن در CallVault، جداگانه دانلود می‌شود.</string>
+    <string name="summary_model_licence">خلاصه‌ساز، Gemma 4 از Google است که تحت مجوز Apache 2.0 استفاده می‌شود. به‌جای گنجانده شدن در همدبیر، جداگانه دانلود می‌شود.</string>
 
     <string name="summary_card_title">خلاصه</string>
     <string name="summary_card_decisions">تصمیم‌ها</string>
@@ -648,7 +648,7 @@
     <string name="transcript_note_add">افزودن یادداشت</string>
     <string name="transcript_note_hint">درباره چه بود، یا چه باید درباره‌اش کرد…</string>
     <string name="transcript_too_long_title">برای رونویسی خیلی طولانی است</string>
-    <string name="transcript_too_long_message">این تماس حدود %1$d دقیقه طول دارد. CallVault فعلاً فقط می‌تواند فایل‌های ضبط‌شده تا %2$d دقیقه را روی دستگاه رونویسی کند — طولانی‌ترها در میانه راه حافظه کم می‌آورند. خود فایل ضبط‌شده در امان است.</string>
+    <string name="transcript_too_long_message">این تماس حدود %1$d دقیقه طول دارد. همدبیر فعلاً فقط می‌تواند فایل‌های ضبط‌شده تا %2$d دقیقه را روی دستگاه رونویسی کند — طولانی‌ترها در میانه راه حافظه کم می‌آورند. خود فایل ضبط‌شده در امان است.</string>
     <string name="transcript_no_model_title">هنوز مدل گفتاری نیست</string>
     <string name="transcript_no_model_message">رونویسی روی این گوشی انجام می‌شود، بنابراین ابتدا به یک مدل گفتار دانلودشده نیاز دارد. می‌توانید یکی را در تنظیمات انتخاب و دانلود کنید.</string>
     <string name="transcript_no_model_open_settings">باز کردن تنظیمات</string>
@@ -664,9 +664,9 @@
     <string name="transcript_delete_confirm_title">این رونوشت حذف شود؟</string>
     <string name="transcript_delete_confirm_message">رونوشت %1$s حذف خواهد شد. خود فایل ضبط‌شده نگه داشته می‌شود و می‌توانید بعداً دوباره آن را رونویسی کنید.</string>
     <string name="home_status_recovery_stuck_title">ضبط از کار افتاده است</string>
-    <string name="home_status_recovery_stuck_suggestion">CallVault مدام در راه‌اندازی مجدد ضبط‌کننده‌اش ناموفق می‌شود، بنابراین تماس‌ها ضبط نمی‌شوند. باز کردن دوباره برنامه معمولاً آن را برطرف می‌کند.</string>
+    <string name="home_status_recovery_stuck_suggestion">همدبیر مدام در راه‌اندازی مجدد ضبط‌کننده‌اش ناموفق می‌شود، بنابراین تماس‌ها ضبط نمی‌شوند. باز کردن دوباره برنامه معمولاً آن را برطرف می‌کند.</string>
     <string name="home_hero_pill_recovery_stuck">ضبط نمی‌شود</string>
-    <string name="app_lock_prompt_title">باز کردن قفل CallVault</string>
+    <string name="app_lock_prompt_title">باز کردن قفل همدبیر</string>
     <string name="app_lock_locked">قفل‌شده</string>
     <string name="app_lock_unlock">باز کردن قفل</string>
     <string name="settings_section_privacy">حریم خصوصی</string>
@@ -674,7 +674,7 @@
     <string name="settings_app_lock_description">پیش از نمایش فایل‌های ضبط‌شده و رونوشت‌ها، قفل صفحه شما را می‌خواهد. همچنین آن‌ها را از تصاویر صفحه و جابه‌جاگر برنامه‌ها دور نگه می‌دارد.</string>
     <string name="settings_app_lock_unavailable">برای استفاده از این، روی گوشی خود یک قفل صفحه تنظیم کنید.</string>
     <string name="settings_allow_screenshots_title">اجازه گرفتن اسکرین‌شات</string>
-    <string name="settings_allow_screenshots_description">به شما اجازه می‌دهد از CallVault اسکرین‌شات بگیرید. این کار محتوای آن را در جابه‌جاگر برنامه‌ها نیز نشان می‌دهد. خاموش‌بودن همه‌چیز را پنهان نگه می‌دارد.</string>
+    <string name="settings_allow_screenshots_description">به شما اجازه می‌دهد از همدبیر اسکرین‌شات بگیرید. این کار محتوای آن را در جابه‌جاگر برنامه‌ها نیز نشان می‌دهد. خاموش‌بودن همه‌چیز را پنهان نگه می‌دارد.</string>
     <string name="playback_tags_title">برچسب‌ها</string>
     <string name="playback_tags_add">افزودن برچسب</string>
     <string name="playback_tags_remove">حذف برچسب</string>
@@ -698,18 +698,18 @@
     <string name="storage_cap_caption">وقتی فایل‌های ضبط‌شده شما از این فراتر روند، پاک‌سازی روزانه قدیمی‌ترین‌ها را از این گوشی حذف می‌کند تا جا شوند. فایل‌های ضبط‌شده ستاره‌دار هرگز حذف نمی‌شوند، حتی اگر به معنای فراتر رفتن از حد باشد. فایل ضبط‌شده‌ای که در Drive هم نگه داشته می‌شود فقط نسخه اینجای خود را از دست می‌دهد. صدایی که وارد کرده‌اید هم هرگز با این محدودیت حذف نمی‌شود: نسخه‌ای در Drive ندارد، پس این گوشی تنها نسخه را دارد.</string>
     <string name="storage_cap_confirm_message">هر وقت فایل‌های ضبط‌شده از حد فراتر روند، از این گوشی حذف می‌شوند، ابتدا قدیمی‌ترین‌ها. فایل‌های ضبط‌شده ستاره‌دار هرگز برداشته نمی‌شوند. این کار قابل بازگشت نیست.</string>
     <string name="notif_health_channel">مشکلاتی که به شما نیاز دارند</string>
-    <string name="notif_health_recorder_title">CallVault همین حالا نمی‌تواند ضبط کند</string>
+    <string name="notif_health_recorder_title">همدبیر همین حالا نمی‌تواند ضبط کند</string>
     <string name="notif_health_shizuku_stopped_title">Shizuku متوقف شد</string>
-    <string name="notif_health_shizuku_stopped_text">CallVault مجبور شد سرویس اشکال‌زدایی Android را دوباره راه‌اندازی کند، و آن Shizuku را متوقف می‌کند. اگر با برنامه‌های دیگر از آن استفاده می‌کنید، Shizuku را باز کنید و دوباره اجرایش کنید.</string>
+    <string name="notif_health_shizuku_stopped_text">همدبیر مجبور شد سرویس اشکال‌زدایی Android را دوباره راه‌اندازی کند، و آن Shizuku را متوقف می‌کند. اگر با برنامه‌های دیگر از آن استفاده می‌کنید، Shizuku را باز کنید و دوباره اجرایش کنید.</string>
     <string name="notif_health_shizuku_restarted_title">Shizuku دوباره اجرا شد</string>
-    <string name="notif_health_shizuku_restarted_text">CallVault مجبور شد سرویس اشکال‌زدایی Android را دوباره راه‌اندازی کند، که Shizuku را متوقف می‌کند، بنابراین Shizuku را برای شما دوباره اجرا کرد. کاری برای انجام دادن نیست.</string>
+    <string name="notif_health_shizuku_restarted_text">همدبیر مجبور شد سرویس اشکال‌زدایی Android را دوباره راه‌اندازی کند، که Shizuku را متوقف می‌کند، بنابراین Shizuku را برای شما دوباره اجرا کرد. کاری برای انجام دادن نیست.</string>
     <string name="notif_health_shizuku_restart_failed_title">Shizuku متوقف شد</string>
-    <string name="notif_health_shizuku_restart_failed_text">CallVault مجبور شد سرویس اشکال‌زدایی Android را دوباره راه‌اندازی کند، و آن Shizuku را متوقف می‌کند. تلاش کرد Shizuku را دوباره اجرا کند و نتوانست — Shizuku را باز کنید و خودتان اجرایش کنید.</string>
+    <string name="notif_health_shizuku_restart_failed_text">همدبیر مجبور شد سرویس اشکال‌زدایی Android را دوباره راه‌اندازی کند، و آن Shizuku را متوقف می‌کند. تلاش کرد Shizuku را دوباره اجرا کند و نتوانست — Shizuku را باز کنید و خودتان اجرایش کنید.</string>
     <string name="notif_health_recorder_text">تا زمانی که این گوشی یک‌بار به یک شبکه Wi-Fi بپیوندد، تماس‌ها ضبط نخواهند شد. هر شبکه‌ای مناسب است و نیازی به اینترنت ندارد — چند ثانیه کافی است، سپس حتی بدون Wi-Fi هم به کار ادامه می‌دهد.</string>
     <string name="notif_health_sync_title">فایل‌های ضبط‌شده به Drive نمی‌رسند</string>
-    <string name="notif_health_sync_text">کپی به Google Drive مدتی پیش متوقف شد. چیزی از دست نرفته — فایل‌های ضبط‌شده هنوز روی این گوشی هستند — اما پشتیبان‌گیری نمی‌شوند. برای بررسی تنظیمات فضای ذخیره‌سازی خود CallVault را باز کنید.</string>
+    <string name="notif_health_sync_text">کپی به Google Drive مدتی پیش متوقف شد. چیزی از دست نرفته — فایل‌های ضبط‌شده هنوز روی این گوشی هستند — اما پشتیبان‌گیری نمی‌شوند. برای بررسی تنظیمات فضای ذخیره‌سازی خود همدبیر را باز کنید.</string>
     <string name="notif_health_recorder_text_shizuku">تا زمانی که Shizuku دوباره در حال اجرا باشد، تماس‌ها ضبط نخواهند شد. یک راه‌اندازی مجدد آن را متوقف می‌کند، پس باید یک‌بار پس از راه‌اندازی مجدد گوشی اجرا شود.</string>
-    <string name="settings_offline_recording_reboot_note">پس از راه‌اندازی مجدد، این تا زمانی که گوشی یک‌بار به یک شبکه Wi-Fi بپیوندد کار نمی‌کند. هر شبکه‌ای مناسب است و نیازی به اینترنت ندارد — چند ثانیه کافی است. CallVault وقتی این لازم باشد به شما اطلاع می‌دهد.</string>
+    <string name="settings_offline_recording_reboot_note">پس از راه‌اندازی مجدد، این تا زمانی که گوشی یک‌بار به یک شبکه Wi-Fi بپیوندد کار نمی‌کند. هر شبکه‌ای مناسب است و نیازی به اینترنت ندارد — چند ثانیه کافی است. همدبیر وقتی این لازم باشد به شما اطلاع می‌دهد.</string>
     <string name="general_stop">توقف</string>
     <string name="settings_metadata_file_label">نوشتن یک فایل جزئیات</string>
     <string name="settings_metadata_file_desc">یک فایل .json کوچک کنار هر فایل ضبط‌شده ذخیره کن</string>
@@ -752,16 +752,16 @@
     <string name="settings_bugreport_save_failed">نشد گزارش را ذخیره کرد</string>
     <string name="settings_debug_log_wrap">شکستن خطوط</string>
     <string name="usb_debugging_off_warn_title">اشکال‌زدایی USB خاموش شود؟</string>
-    <string name="usb_debugging_off_warn_no_way_in">شما روی Wi-Fi نیستید، بنابراین CallVault هیچ راهی برای رسیدن به ضبط‌کننده نخواهد داشت. تا زمانی که به Wi-Fi متصل شوید یا این را دوباره روشن کنید، تماس‌ها ضبط نمی‌شوند.</string>
+    <string name="usb_debugging_off_warn_no_way_in">شما روی Wi-Fi نیستید، بنابراین همدبیر هیچ راهی برای رسیدن به ضبط‌کننده نخواهد داشت. تا زمانی که به Wi-Fi متصل شوید یا این را دوباره روشن کنید، تماس‌ها ضبط نمی‌شوند.</string>
     <string name="usb_debugging_off_warn_offline">ضبط بدون Wi-Fi به اشکال‌زدایی USB نیاز دارد. با خاموش بودن آن، تماس‌های انجام‌شده دور از Wi-Fi ضبط نمی‌شوند.</string>
     <string name="usb_debugging_off_confirm">به‌هرحال خاموش کن</string>
     <string name="usb_debugging_off_keep">روشن نگهش دار</string>
     <string name="settings_wd_enforce_label">اشکال‌زدایی بی‌سیم را برای ضبط روشن نگه دار</string>
-    <string name="settings_wd_enforce_description">اگر اشکال‌زدایی بی‌سیم را خاموش کنید در حالی که هیچ چیز دیگری به CallVault اجازه دسترسی نمی‌دهد، آن را دوباره روشن می‌کند تا تماس‌ها ضبط بمانند. وقتی این خاموش باشد، کلید شما خاموش می‌ماند و اعلان می‌گوید ضبط متوقف شده است.</string>
+    <string name="settings_wd_enforce_description">اگر اشکال‌زدایی بی‌سیم را خاموش کنید در حالی که هیچ چیز دیگری به همدبیر اجازه دسترسی نمی‌دهد، آن را دوباره روشن می‌کند تا تماس‌ها ضبط بمانند. وقتی این خاموش باشد، کلید شما خاموش می‌ماند و اعلان می‌گوید ضبط متوقف شده است.</string>
     <string name="oem_gate_title">گوشی شما این مرحله را مسدود می‌کند</string>
     <string name="oem_gate_body_oppo">گوشی‌های OnePlus، OPPO و realme تا زمانی که \"Disable system optimization\" را در گزینه‌های توسعه‌دهنده روشن نکنید به برنامه‌ها این مجوز را نمی‌دهند — نزدیک پایین، زیر Apps. نسخه‌های قدیمی‌تر آن را \"Disable permission monitoring\" می‌نامند. آن را روشن کنید و دوباره تلاش کنید. اگر نمی‌توانید پیدایش کنید، گوشی را به انگلیسی تغییر دهید، روشنش کنید، سپس برگردید.</string>
     <string name="oem_gate_body_xiaomi">گوشی‌های Xiaomi، Redmi و POCO تا زمانی که \"USB debugging (Security settings)\" را در گزینه‌های توسعه‌دهنده روشن نکنید به برنامه‌ها این مجوز را نمی‌دهند. این از اشکال‌زدایی USB جداست و لازم است به یک حساب Mi وارد شده باشید. آن را روشن کنید و دوباره تلاش کنید.</string>
-    <string name="oem_gate_body_other">این گوشی از دادن مجوزی که CallVault لازم دارد امتناع می‌کند. در گزینه‌های توسعه‌دهنده، دنبال کلیدی درباره نظارت بر مجوزها یا بهینه‌سازی سیستم بگردید، آن را روشن کنید و دوباره تلاش کنید.</string>
+    <string name="oem_gate_body_other">این گوشی از دادن مجوزی که همدبیر لازم دارد امتناع می‌کند. در گزینه‌های توسعه‌دهنده، دنبال کلیدی درباره نظارت بر مجوزها یا بهینه‌سازی سیستم بگردید، آن را روشن کنید و دوباره تلاش کنید.</string>
     <string name="oem_gate_open_dev_options">باز کردن گزینه‌های توسعه‌دهنده</string>
     <string name="oem_gate_continue_hint">می‌توانید فعلاً ادامه دهید، اما تا زمانی که این انجام نشود تماس‌ها ضبط نمی‌شوند.</string>
     <string name="home_hub_community_eyebrow">بپیوندید</string>
@@ -800,24 +800,24 @@
     <string name="note_saved">ذخیره شد</string>
     <string name="note_saving">در حال ذخیره…</string>
     <string name="home_status_pairing_lost_title">مرتبط‌سازی منقضی شد</string>
-    <string name="home_status_pairing_lost_suggestion">Android مرتبط‌سازی اشکال‌زدایی بی‌سیم CallVault را فراموش کرد، بنابراین ضبط‌کننده نمی‌تواند دوباره راه‌اندازی شود. برای مرتبط‌سازی دوباره اینجا بزنید — فایل‌های ضبط‌شده و تنظیمات شما همان‌طور که هستند می‌مانند.</string>
+    <string name="home_status_pairing_lost_suggestion">Android مرتبط‌سازی اشکال‌زدایی بی‌سیم همدبیر را فراموش کرد، بنابراین ضبط‌کننده نمی‌تواند دوباره راه‌اندازی شود. برای مرتبط‌سازی دوباره اینجا بزنید — فایل‌های ضبط‌شده و تنظیمات شما همان‌طور که هستند می‌مانند.</string>
     <string name="settings_pair_again_label">مرتبط‌سازی دوباره</string>
-    <string name="settings_pair_again_value">مرتبط‌سازی CallVault با اشکال‌زدایی بی‌سیم</string>
-    <string name="settings_pair_again_hint">اگر Android مرتبط‌سازی CallVault را فراموش کرد از این استفاده کنید. فایل‌های ضبط‌شده و تنظیمات شما همان‌طور که هستند می‌مانند. روشن کردن ضبط آفلاین از منقضی شدن مرتبط‌سازی جلوگیری می‌کند.</string>
-    <string name="notif_readiness_pairing_lost_text">Android مرتبط‌سازی CallVault را فراموش کرد، بنابراین تماس‌ها ضبط نمی‌شوند. CallVault را باز کنید و روی کارت وضعیت بزنید تا دوباره مرتبط‌سازی کنید.</string>
+    <string name="settings_pair_again_value">مرتبط‌سازی همدبیر با اشکال‌زدایی بی‌سیم</string>
+    <string name="settings_pair_again_hint">اگر Android مرتبط‌سازی همدبیر را فراموش کرد از این استفاده کنید. فایل‌های ضبط‌شده و تنظیمات شما همان‌طور که هستند می‌مانند. روشن کردن ضبط آفلاین از منقضی شدن مرتبط‌سازی جلوگیری می‌کند.</string>
+    <string name="notif_readiness_pairing_lost_text">Android مرتبط‌سازی همدبیر را فراموش کرد، بنابراین تماس‌ها ضبط نمی‌شوند. همدبیر را باز کنید و روی کارت وضعیت بزنید تا دوباره مرتبط‌سازی کنید.</string>
     <string name="notif_cut_off_saved_title">یک تماس قطع شد</string>
-    <string name="notif_cut_off_saved_text">گوشی شما CallVault را در حین یک تماس بست. آنچه پیش از آن ضبط شده بود به‌صورت %1$s ذخیره شد.</string>
-    <string name="home_health_failed_cut_off">آخرین تماس شما وقتی گوشی CallVault را بست قطع شد — بخشی که پیش از آن ضبط شده بود ذخیره شد.</string>
+    <string name="notif_cut_off_saved_text">گوشی شما همدبیر را در حین یک تماس بست. آنچه پیش از آن ضبط شده بود به‌صورت %1$s ذخیره شد.</string>
+    <string name="home_health_failed_cut_off">آخرین تماس شما وقتی گوشی همدبیر را بست قطع شد — بخشی که پیش از آن ضبط شده بود ذخیره شد.</string>
     <string name="settings_needs_newer_android">به Android %1$s یا جدیدتر نیاز دارد — این گوشی Android %2$s را اجرا می‌کند.</string>
     <string name="notif_turned_off_for_android_title">برخی تنظیمات خاموش شدند</string>
     <string name="notif_turned_off_for_android_text">%1$s: این به نسخه Android جدیدتری از نسخه روی این گوشی (Android %2$s) نیاز دارد، بنابراین خاموش شد. تماس‌های تلفنی همچنان ضبط می‌شوند.</string>
-    <string name="update_popup_title">CallVault %1$s در دسترس است</string>
+    <string name="update_popup_title">همدبیر %1$s در دسترس است</string>
     <string name="update_popup_text">نسخه جدیدی برای نصب آماده است. به‌روزرسانی، ضبط را قابل اعتماد نگه می‌دارد و جدیدترین رفع‌اشکال‌ها را می‌آورد.</string>
     <string name="update_popup_update_now">اکنون به‌روزرسانی کن</string>
     <string name="update_popup_later">بعداً</string>
     <!-- Master recording On/Off switch -->
     <string name="home_status_stopped_title">ضبط متوقف شد</string>
-    <string name="home_status_stopped_suggestion">‏CallVault خاموش است، تماس‌ها ضبط نخواهند شد.</string>
+    <string name="home_status_stopped_suggestion">‏همدبیر خاموش است، تماس‌ها ضبط نخواهند شد.</string>
     <string name="home_hero_pill_stopped">متوقف</string>
     <string name="home_recording_stop">توقف</string>
     <string name="home_recording_start">شروع</string>

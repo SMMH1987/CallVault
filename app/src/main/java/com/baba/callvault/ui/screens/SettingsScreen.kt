@@ -40,7 +40,6 @@ import androidx.compose.material.icons.filled.Smartphone
 import androidx.compose.material.icons.filled.SystemUpdate
 import androidx.compose.material.icons.filled.Cloud
 import androidx.compose.material.icons.filled.ColorLens
-import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -76,7 +75,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.rememberCoroutineScope
 import com.baba.callvault.R
 import com.baba.callvault.system.PersistentFolderPickerContract
-import com.baba.callvault.system.copyToClipboard
 import com.baba.callvault.system.openOriginalProjectRepo
 import com.baba.callvault.system.diagnostics.SystemLogCollector
 import com.baba.callvault.system.shareLogFiles
@@ -121,7 +119,6 @@ import com.baba.callvault.data.StorageTarget
 import com.baba.callvault.integrations.scrcpy.RECOMMENDED_AUDIO_BIT_RATE
 import com.baba.callvault.integrations.scrcpy.ScrcpyAudioCodec
 import com.baba.callvault.integrations.scrcpy.ScrcpyAudioSource
-import com.baba.callvault.integrations.scrcpy.ScrcpyConfig
 import com.baba.callvault.system.storage.SafHelper
 import com.baba.callvault.system.takePersistableFolderPermission
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -2868,7 +2865,7 @@ internal fun OfflineRecordingToggle() {
     }
 }
 
-/** Shows the app version, server version, clipboard buttons, and a GitHub link.
+/** Shows the app version, the fork attribution with a short legal notice, and the licenses button.
  *
  * @param versionString         The formatted app-version string to display.
  * @param onShowLicenses        Called when the user taps "View Licenses".
@@ -2881,7 +2878,6 @@ private fun AboutSection(
     onToggle: () -> Unit
 ) {
     val context = LocalContext.current
-    val serverVersion = ScrcpyConfig.SCRCPY_VERSION
     var showSupportDialog by remember { mutableStateOf(false) }
 
     if (showSupportDialog) {
@@ -2893,7 +2889,6 @@ private fun AboutSection(
             icon = Icons.Filled.Save,
             label = stringResource(R.string.settings_ui_about_app),
             value = versionString,
-            supporting = stringResource(R.string.settings_scrcpy_server, serverVersion),
             showChevron = false
         )
 
@@ -2904,7 +2899,7 @@ private fun AboutSection(
             icon = Icons.Filled.Gavel,
             label = stringResource(R.string.settings_fork_attribution),
             value = stringResource(R.string.settings_fork_attribution_supporting),
-            supporting = stringResource(R.string.settings_ui_open_repo_hint),
+            supporting = stringResource(R.string.settings_legal_notice),
             onClick = { context.openOriginalProjectRepo() }
         )
 
@@ -2924,12 +2919,6 @@ private fun AboutSection(
             modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 12.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            CvSecondaryButton(
-                text = stringResource(R.string.settings_copy_version),
-                onClick = { context.copyToClipboard("Scrcpy-Server Version", ScrcpyConfig.SCRCPY_VERSION) },
-                leadingIcon = Icons.Filled.ContentCopy,
-                modifier = Modifier.weight(1f)
-            )
             CvSecondaryButton(
                 text = stringResource(R.string.settings_view_licenses),
                 onClick = onShowLicenses,
