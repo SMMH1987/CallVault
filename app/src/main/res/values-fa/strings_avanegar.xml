@@ -19,4 +19,18 @@
     <string name="avanegar_check_ok">متصل است. موجودی: %1$s (حدود %2$s دقیقه)</string>
     <string name="avanegar_check_failed">اتصال برقرار نشد: %1$s</string>
     <string name="avanegar_not_set">وارد نشده</string>
+    <string name="avanegar_blocked_title">این نسخه باید به‌روز شود</string>
+    <string name="avanegar_blocked_body">پوزش می‌خواهیم، این نسخه از برنامه مشکلی دارد و دیگر قابل استفاده نیست. برای ادامه، نسخه جدید را نصب کنید. ضبط‌ها و تنظیمات شما سر جایشان می‌مانند و ضبط تماس‌ها در این مدت ادامه دارد.</string>
+    <string name="avanegar_update_whats_new">تغییرات نسخه %1$s</string>
+    <string name="avanegar_update_install">نصب نسخه %1$s</string>
+    <string name="avanegar_update_downloading">در حال دانلود نسخه جدید…</string>
+    <string name="avanegar_update_retry">بررسی دوباره</string>
+    <string name="avanegar_update_direct">دانلود در مرورگر</string>
+    <string name="avanegar_update_installed_version">نسخه نصب‌شده: %1$s</string>
+    <string name="avanegar_message_ok">باشه</string>
+    <string name="avanegar_message_open">باز کردن</string>
+    <string name="avanegar_message_later">بعداً</string>
+    <string name="avanegar_config_url_label">آدرس فایل تنظیمات</string>
+    <string name="avanegar_config_url_hint">اختیاری. اگر خالی بماند، اول از سرور و بعد از GitHub خوانده می‌شود.</string>
+    <string name="avanegar_config_url_default">سرور، سپس GitHub</string>
 </resources>

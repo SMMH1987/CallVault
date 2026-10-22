@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "config_urls": [
+    "https://avanegar.co-ir.com:8440/app/config.json",
+    "https://raw.githubusercontent.com/SMMH1987/CallVault/app-config/app-config.json"
+  ],
+  "update": {
+    "version_code": 20470,
+    "version_name": "2.4.7-avanegar.1",
+    "apk_url": "https://avanegar.co-ir.com:8440/app/CallVault-2.4.7-avanegar.1.apk",
+    "apk_size": 61234567,
+    "apk_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "page_url": "https://avanegar.co-ir.com:8440/app/",
+    "critical": false,
+    "changelog": "ارسال خودکار تماس‌ها به آوانگار\nرفع مشکل ضبط دوکاناله"
+  },
+  "versions": {
+    "min_supported_code": 0,
+    "blocked_codes": [],
+    "block_title": "",
+    "block_body": ""
+  },
+  "messages": [
+    {
+      "id": "2026-10-welcome",
+      "title": "خوش آمدید",
+      "body": "از این نسخه تماس‌های شرکت خودکار برای آوانگار فرستاده می‌شود.",
+      "level": "info",
+      "until": "2026-12-01",
+      "action_label": "شارژ کیف پول",
+      "action_url": "https://t.me/YOUR_AVANEGAR_BOT",
+      "min_version_code": 0,
+      "channels": []
+    }
+  ],
+  "settings": {
+    "avanegar_wifi_only": false
+  },
+  "features": {
+    "wallet": true
+  },
+  "channels": {
+    "test": {
+      "versions": { "min_supported_code": 0 }
+    }
+  }
+}

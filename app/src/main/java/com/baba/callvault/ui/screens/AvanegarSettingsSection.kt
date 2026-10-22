@@ -28,18 +28,20 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import com.baba.callvault.R
 import com.baba.callvault.data.AppPreferences
 import com.baba.callvault.integrations.avanegar.AvanegarClient
+import com.baba.callvault.system.remoteconfig.RemoteConfigWorker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.Locale
 
 /** Which of the section's text settings the edit dialog is open for. */
-private enum class AvanegarField { URL, KEY, NAME, SIMS }
+private enum class AvanegarField { URL, KEY, NAME, SIMS, CONFIG }
 
 /**
  * Settings for sending recordings to the Avanegar server: where, with which device key, under which
@@ -48,6 +50,7 @@ private enum class AvanegarField { URL, KEY, NAME, SIMS }
 @Composable
 internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onToggle: () -> Unit) {
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
     // Local re-read trigger: these rows write straight to preferences, not through SettingsActions.
     var version by remember { mutableIntStateOf(0) }
     var editing by remember { mutableStateOf<AvanegarField?>(null) }
@@ -59,6 +62,7 @@ internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onT
     val deviceName = remember(version) { preferences.getAvanegarDeviceName() }
     val sims = remember(version) { preferences.getAvanegarSimNumbers() }
     val wifiOnly = remember(version) { preferences.isAvanegarWifiOnly() }
+    val configUrl = remember(version) { preferences.getAvanegarConfigUrl() }
     val notSet = stringResource(R.string.avanegar_not_set)
     val needsSetup = url.isEmpty() || key.isEmpty()
 
@@ -106,6 +110,13 @@ internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onT
             onCheckedChange = { preferences.setAvanegarWifiOnly(it); version++ },
             icon = Icons.Filled.Wifi,
         )
+        NavigationRow(
+            icon = Icons.Filled.Info,
+            label = stringResource(R.string.avanegar_config_url_label),
+            value = configUrl.ifEmpty { stringResource(R.string.avanegar_config_url_default) },
+            supporting = stringResource(R.string.avanegar_config_url_hint),
+            onClick = { editing = AvanegarField.CONFIG },
+        )
         val checking = stringResource(R.string.avanegar_check_running)
         // Read here, as composition does, rather than from the context inside the coroutine.
         val okFormat = stringResource(R.string.avanegar_check_ok)
@@ -143,6 +154,7 @@ internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onT
             AvanegarField.KEY -> Triple(R.string.avanegar_device_key_label, key, KeyboardType.Password)
             AvanegarField.NAME -> Triple(R.string.avanegar_device_name_label, deviceName, KeyboardType.Text)
             AvanegarField.SIMS -> Triple(R.string.avanegar_sims_label, sims, KeyboardType.Phone)
+            AvanegarField.CONFIG -> Triple(R.string.avanegar_config_url_label, configUrl, KeyboardType.Uri)
         }
         var text by remember(field) { mutableStateOf(initial) }
         AlertDialog(
@@ -165,6 +177,11 @@ internal fun AvanegarSection(preferences: AppPreferences, expanded: Boolean, onT
                         AvanegarField.KEY -> preferences.setAvanegarDeviceKey(text)
                         AvanegarField.NAME -> preferences.setAvanegarDeviceName(text)
                         AvanegarField.SIMS -> preferences.setAvanegarSimNumbers(text)
+                        AvanegarField.CONFIG -> preferences.setAvanegarConfigUrl(text)
+                    }
+                    // A new address may serve a different config: read it now rather than in hours.
+                    if (field == AvanegarField.URL || field == AvanegarField.CONFIG) {
+                        RemoteConfigWorker.fetchNow(context, force = true)
                     }
                     checkStatus = null
                     editing = null

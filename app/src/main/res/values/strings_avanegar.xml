@@ -21,4 +21,18 @@
     <string name="avanegar_check_ok">Connected. Balance: %1$s (about %2$s minutes)</string>
     <string name="avanegar_check_failed">Could not connect: %1$s</string>
     <string name="avanegar_not_set">Not set</string>
+    <string name="avanegar_blocked_title">This version needs an update</string>
+    <string name="avanegar_blocked_body">Sorry, this version of the app has a problem and can no longer be used. Install the new version to carry on. Your recordings and settings stay as they are, and calls keep being recorded meanwhile.</string>
+    <string name="avanegar_update_whats_new">What is new in %1$s</string>
+    <string name="avanegar_update_install">Install version %1$s</string>
+    <string name="avanegar_update_downloading">Downloading the new version…</string>
+    <string name="avanegar_update_retry">Check again</string>
+    <string name="avanegar_update_direct">Download in the browser</string>
+    <string name="avanegar_update_installed_version">Installed version: %1$s</string>
+    <string name="avanegar_message_ok">OK</string>
+    <string name="avanegar_message_open">Open</string>
+    <string name="avanegar_message_later">Later</string>
+    <string name="avanegar_config_url_label">Config file address</string>
+    <string name="avanegar_config_url_hint">Optional. Leave empty to use the server address, then GitHub.</string>
+    <string name="avanegar_config_url_default">Server, then GitHub</string>
 </resources>

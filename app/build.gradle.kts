@@ -170,6 +170,13 @@ android {
         buildConfigField("boolean", "ON_DEVICE_AI", onDeviceAi.toString())
         // Upstream's donation pill, appeal and settings row. Off in this fork's company build.
         buildConfigField("boolean", "UPSTREAM_SUPPORT_LINKS", "false")
+        // Last-resort address of the app config (update, messages, managed settings), used when our
+        // own server cannot be reached. Overridable per build: -PconfigFallbackUrl=...
+        val configFallbackUrl = providers.gradleProperty("configFallbackUrl")
+            .orElse("https://raw.githubusercontent.com/SMMH1987/CallVault/app-config/app-config.json")
+        buildConfigField("String", "CONFIG_FALLBACK_URL", "\"${configFallbackUrl.get()}\"")
+        // Which build this is ("company", "test", ...), so the config can target one flavour only.
+        buildConfigField("String", "BUILD_CHANNEL", "\"${providers.gradleProperty("buildChannel").orElse("company").get()}\"")
 
         externalNativeBuild {
             cmake {
