@@ -37,18 +37,6 @@
     <string name="disclaimer_title">Welcome to Hamdabir</string>
     <string name="disclaimer_introduction">Please read the disclaimer below carefully before continuing.</string>
     <string name="disclaimer_body" translatable="false">
-        By using this application, you confirm that you have read this disclaimer and acknowledge that this software is licensed under the GNU General Public License v3.0 with additional clauses under Section 7.\n\n
-
-        Copyright © 2026 The CallVault Authors\n\n
-
-        This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\n
-
-        This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\n
-
-        You should have received a copy of the GNU General Public License along with this program. If not, see the LICENSE file included with this application.\n\n
-
-        ----------------------Disclaimer---------------------------\n\n
-
         Recording phone calls may be subject to complex and varying laws in different countries and jurisdictions. For example, you may need to ensure you have consent from all parties before recording conversations. The developers and contributors are not responsible for any misuse or legal consequences arising from the use of this application.\n
         You can learn more on Wikipedia at:\n https://en.wikipedia.org/wiki/Telephone_call_recording_laws.\n\n
 
@@ -372,6 +360,8 @@
     <string name="settings_scrcpy_server" translatable="false">Scrcpy-Server: %1$s</string>
     <string name="settings_fork_attribution" translatable="false">Hamdabir is a fork of ShizuCallRecorder</string>
     <string name="settings_fork_attribution_supporting" translatable="false">github.com/kitsumed/ShizuCallRecorder</string>
+    <!-- GPLv3 §5(d) legal notice, kept short: the full text is behind "View Licenses" and in LICENSE. -->
+    <string name="settings_legal_notice" translatable="false">© 2026 The CallVault Authors · GPLv3, no warranty</string>
     <string name="settings_support_label">Support development</string>
     <string name="settings_support_value">Buy me a coffee on Ko-fi</string>
     <string name="settings_support_supporting">Opens Ko-fi in your browser</string>
