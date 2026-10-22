@@ -46,6 +46,9 @@ def main():
     p.add_argument("--critical", action="store_true", help="mark this version as essential")
     p.add_argument("--min-supported", type=int, help="block every version below this code")
     p.add_argument("--block", type=int, action="append", default=[], help="block one version code")
+    p.add_argument("--rollout", type=int, default=100, help="share of phones offered it first (0-100)")
+    p.add_argument("--key", default=os.environ.get("CONFIG_SIGNING_KEY"),
+                   help="private key PEM; signs config.json (phones reject an unsigned config)")
     a = p.parse_args()
 
     code, name = badging(a.apk)
@@ -75,6 +78,7 @@ def main():
         "apk_size": os.path.getsize(dest),
         "apk_sha256": digest,
         "critical": a.critical,
+        "rollout_percent": max(0, min(100, a.rollout)),
     })
     if a.changelog:
         update["changelog"] = a.changelog
@@ -89,6 +93,11 @@ def main():
         json.dump(config, f, ensure_ascii=False, indent=2)
         f.write("\n")
     print(f"{file_name}  code={code}  sha256={digest}\n{out_config} written")
+    if a.key:
+        subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "sign_config.py"),
+                        out_config, "--key", a.key], check=True)
+    else:
+        print("NOT signed: run sign_config.py before uploading, or phones will ignore it")
 
 
 if __name__ == "__main__":

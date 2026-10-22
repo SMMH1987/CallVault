@@ -67,9 +67,12 @@ object UpdateManager {
 
         // The app config is this fork's update source. It compares version codes, which the build
         // raises every release; the upstream GitHub check still runs when the user turned it on.
-        val configured = RemoteConfig.load(context)?.update
+        val config = RemoteConfig.load(context)
+        val configured = config?.update
         if (configured != null) {
-            if (configured.versionCode <= BuildConfig.VERSION_CODE.toLong()) {
+            // A staged release reaches only its share of phones, except one that is blocked anyway.
+            val offered = config.isBlocked() || RemoteConfig.isOfferedHere(context, configured)
+            if (configured.versionCode <= BuildConfig.VERSION_CODE.toLong() || !offered) {
                 preferences.setAvailableUpdateTag(null)
                 return null
             }

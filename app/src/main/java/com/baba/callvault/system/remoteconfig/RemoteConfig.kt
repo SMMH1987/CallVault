@@ -29,6 +29,11 @@ import java.net.URL
  * It is fetched from a list of addresses, first success wins: the address typed in Settings, the
  * addresses the last good config named, our server's `/app/config.json`, then the GitHub copy. The
  * last good copy is kept, so a phone that is offline still knows its version is blocked.
+ *
+ * The values the app uses are the defaults shipped inside it (assets/default-config.json) with the
+ * fetched file laid over them, key by key: a field the server leaves out keeps its built-in value.
+ * A fetched file is only accepted with a valid signature (`<address>.sig`) from the company's key,
+ * because the file can move the server address and a forged one could redirect every phone.
  */
 object RemoteConfig {
 
@@ -41,6 +46,11 @@ object RemoteConfig {
     private const val CONNECT_TIMEOUT_MS = 10_000
     private const val READ_TIMEOUT_MS = 15_000
     private const val MAX_BYTES = 256 * 1024
+    private const val MAX_SIG_BYTES = 1024
+    private const val KEY_BUCKET = "rollout_bucket"
+    private const val DEFAULTS_ASSET = "default-config.json"
+    /** Highest `schema` this build fully understands; newer files are still read, field by field. */
+    const val SCHEMA = 1
 
     data class Update(
         val versionCode: Long,
@@ -50,7 +60,9 @@ object RemoteConfig {
         val apkSizeBytes: Long,
         val changelog: String,
         val critical: Boolean,
-        val pageUrl: String?
+        val pageUrl: String?,
+        /** Share of phones (0-100) offered this version, so a release can reach 10% first. */
+        val rolloutPercent: Int
     )
 
     data class Message(
@@ -69,6 +81,23 @@ object RemoteConfig {
 
     data class Block(val title: String?, val body: String?)
 
+    /** How the wallet is shown and topped up. Amounts are in [currency], as the server's credits are. */
+    data class Wallet(
+        val topupUrlTemplate: String?,
+        val topupAmounts: List<Long>,
+        val defaultTopup: Long,
+        val currency: String,
+        val warnBelow: Long,
+        val criticalBelow: Long,
+        val warnText: String?,
+        val criticalText: String?,
+        val emptyText: String?
+    ) {
+        /** The top-up link for [amount], or null when no bot or page is configured. */
+        fun topupUrl(amount: Long = defaultTopup): String? =
+            topupUrlTemplate?.replace("{amount}", amount.toString())
+    }
+
     data class Config(
         val update: Update?,
         /** Versions below this may not be used; the app shows the update screen instead. */
@@ -78,7 +107,9 @@ object RemoteConfig {
         val messages: List<Message>,
         val settings: JSONObject,
         val features: JSONObject,
-        val configUrls: List<String>
+        val configUrls: List<String>,
+        val wallet: Wallet,
+        val schema: Int
     ) {
         /** True when this installed build must not be used until it is updated. */
         fun isBlocked(versionCode: Long = BuildConfig.VERSION_CODE.toLong()): Boolean =
@@ -96,8 +127,27 @@ object RemoteConfig {
     /** Loads the stored copy into [state]. Cheap; safe on the main thread at start. */
     fun load(context: Context): Config? {
         _state.value?.let { return it }
-        val json = prefs(context).getString(KEY_JSON, null) ?: return null
-        return parse(json)?.also { _state.value = it }
+        return effective(context, prefs(context).getString(KEY_JSON, null))?.also { _state.value = it }
+    }
+
+    /** The built-in defaults with [fetched] laid over them; null only when neither parses. */
+    private fun effective(context: Context, fetched: String?): Config? {
+        val defaults = runCatching {
+            context.assets.open(DEFAULTS_ASSET).bufferedReader().use { JSONObject(it.readText()) }
+        }.getOrElse { JSONObject() }
+        val remote = fetched?.let { runCatching { JSONObject(it) }.getOrNull() } ?: JSONObject()
+        return parse(deepMerge(defaults, remote).toString())
+    }
+
+    /** [over] laid onto [base]: objects merge key by key, anything else (arrays included) replaces. */
+    internal fun deepMerge(base: JSONObject, over: JSONObject): JSONObject {
+        val out = JSONObject(base.toString())
+        for (key in over.keys()) {
+            val a = out.opt(key)
+            val b = over.get(key)
+            out.put(key, if (a is JSONObject && b is JSONObject) deepMerge(a, b) else b)
+        }
+        return out
     }
 
     /**
@@ -108,11 +158,17 @@ object RemoteConfig {
     fun refresh(context: Context): Config? {
         val preferences = AppPreferences(context)
         for (url in candidateUrls(context, preferences)) {
-            val body = fetch(url) ?: continue
-            val config = parse(body) ?: run {
+            val body = fetch(url, MAX_BYTES) ?: continue
+            if (!signatureValid(url, body)) {
+                AppLogger.w(TAG, "Config at $url has no valid signature; trying the next address")
+                continue
+            }
+            if (parse(body) == null) {
                 AppLogger.w(TAG, "Config at $url did not parse; trying the next address")
-                null
-            } ?: continue
+                continue
+            }
+            val config = effective(context, body) ?: continue
+            if (config.schema > SCHEMA) AppLogger.i(TAG, "Config schema ${config.schema} is newer than $SCHEMA; reading known fields")
             prefs(context).edit {
                 putString(KEY_JSON, body)
                 putLong(KEY_FETCHED_AT, System.currentTimeMillis())
@@ -163,7 +219,7 @@ object RemoteConfig {
         return urls.map { it.trim() }.filter { it.startsWith("https://") }.distinct()
     }
 
-    private fun fetch(url: String): String? = runCatching {
+    private fun fetch(url: String, maxBytes: Int): String? = runCatching {
         val connection = (URL(url).openConnection() as HttpURLConnection).apply {
             connectTimeout = CONNECT_TIMEOUT_MS
             readTimeout = READ_TIMEOUT_MS
@@ -178,9 +234,9 @@ object RemoteConfig {
                 return null
             }
             connection.inputStream.use { input ->
-                val bytes = input.readNBytesCompat(MAX_BYTES + 1)
-                if (bytes.size > MAX_BYTES) {
-                    AppLogger.w(TAG, "Config at $url is larger than $MAX_BYTES bytes; ignored")
+                val bytes = input.readNBytesCompat(maxBytes + 1)
+                if (bytes.size > maxBytes) {
+                    AppLogger.w(TAG, "$url is larger than $maxBytes bytes; ignored")
                     return null
                 }
                 String(bytes, Charsets.UTF_8)
@@ -226,7 +282,9 @@ object RemoteConfig {
                 .mapNotNull(::parseMessage),
             settings = section("settings") ?: JSONObject(),
             features = section("features") ?: JSONObject(),
-            configUrls = root.optJSONArray("config_urls").strings()
+            configUrls = root.optJSONArray("config_urls").strings(),
+            wallet = parseWallet(section("wallet") ?: JSONObject()),
+            schema = root.optInt("schema", SCHEMA)
         )
     }.getOrElse { e ->
         AppLogger.w(TAG, "Config parse failed: ${e.message}")
@@ -245,7 +303,23 @@ object RemoteConfig {
             apkSizeBytes = size,
             changelog = o.optString("changelog"),
             critical = o.optBoolean("critical", false),
-            pageUrl = o.optString("page_url").takeIf { it.startsWith("https://") }
+            pageUrl = o.optString("page_url").takeIf { it.startsWith("https://") },
+            rolloutPercent = o.optInt("rollout_percent", 100).coerceIn(0, 100)
+        )
+    }
+
+    private fun parseWallet(o: JSONObject): Wallet {
+        val amounts = o.optJSONArray("topup_amounts").longs()
+        return Wallet(
+            topupUrlTemplate = o.optString("topup_url").takeIf { it.startsWith("https://") || it.startsWith("tg://") },
+            topupAmounts = amounts,
+            defaultTopup = o.optLong("default_topup", amounts.firstOrNull() ?: 0L),
+            currency = o.optString("currency"),
+            warnBelow = o.optLong("warn_below", 0L),
+            criticalBelow = o.optLong("critical_below", 0L),
+            warnText = o.optString("warn_text").ifBlank { null },
+            criticalText = o.optString("critical_text").ifBlank { null },
+            emptyText = o.optString("empty_text").ifBlank { null }
         )
     }
 
@@ -288,6 +362,42 @@ object RemoteConfig {
             preferences.setAvanegarWifiOnly(settings.optBoolean("avanegar_wifi_only"))
         }
     }
+
+    /**
+     * Checks `<url>.sig`: base64 of an ECDSA P-256 / SHA-256 signature over the file's exact bytes,
+     * made with tools/app-config/sign_config.py. A build without a public key accepts any file.
+     */
+    private fun signatureValid(url: String, body: String): Boolean {
+        val publicKey = BuildConfig.CONFIG_PUBLIC_KEY.trim()
+        if (publicKey.isEmpty()) return true
+        val signature = fetch("$url.sig", MAX_SIG_BYTES)?.trim() ?: return false
+        return verify(publicKey, body.toByteArray(Charsets.UTF_8), signature)
+    }
+
+    internal fun verify(publicKeyBase64: String, data: ByteArray, signatureBase64: String): Boolean = runCatching {
+        val key = java.security.KeyFactory.getInstance("EC").generatePublic(
+            java.security.spec.X509EncodedKeySpec(java.util.Base64.getDecoder().decode(publicKeyBase64))
+        )
+        java.security.Signature.getInstance("SHA256withECDSA").run {
+            initVerify(key)
+            update(data)
+            verify(java.util.Base64.getDecoder().decode(signatureBase64))
+        }
+    }.getOrDefault(false)
+
+    /** This phone's fixed place (0-99) in staged rollouts, drawn once at random. */
+    fun rolloutBucket(context: Context): Int {
+        val prefs = prefs(context)
+        val stored = prefs.getInt(KEY_BUCKET, -1)
+        if (stored in 0..99) return stored
+        val bucket = java.security.SecureRandom().nextInt(100)
+        prefs.edit { putInt(KEY_BUCKET, bucket) }
+        return bucket
+    }
+
+    /** True when [update] is offered to this phone now, given its rollout share. */
+    fun isOfferedHere(context: Context, update: Update): Boolean =
+        rolloutBucket(context) < update.rolloutPercent
 
     private fun prefs(context: Context) =
         context.applicationContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)

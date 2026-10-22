@@ -9,6 +9,7 @@
 package com.baba.callvault.system.remoteconfig
 
 import com.baba.callvault.BuildConfig
+import org.json.JSONObject
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
@@ -76,5 +77,32 @@ class RemoteConfigTest {
     @Test
     fun garbage_is_not_a_config() {
         assertNull(RemoteConfig.parse("not json"))
+    }
+    @Test
+    fun signature_from_sign_config_py_verifies() {
+        val data = "{\"schema\":1}".toByteArray()
+        val signature = "MEYCIQDcrYCQGDTav+d1++IlVCLvjpv86d6SelYep/NBBeqslwIhALDapJMdEnKERX9UuQLbc40ljQ5IPQYUZfnMXGqHt29b"
+        assertTrue(RemoteConfig.verify(BuildConfig.CONFIG_PUBLIC_KEY, data, signature))
+        assertFalse(RemoteConfig.verify(BuildConfig.CONFIG_PUBLIC_KEY, "{\"schema\":2}".toByteArray(), signature))
+    }
+
+    @Test
+    fun fetched_fields_override_defaults_key_by_key() {
+        val merged = RemoteConfig.deepMerge(
+            JSONObject("""{"wallet": {"warn_below": 300000, "currency": "T"}, "features": {"a": true}}"""),
+            JSONObject("""{"wallet": {"warn_below": 50000}}""")
+        )
+        assertEquals(50000L, merged.getJSONObject("wallet").getLong("warn_below"))
+        assertEquals("T", merged.getJSONObject("wallet").getString("currency"))
+        assertTrue(merged.getJSONObject("features").getBoolean("a"))
+    }
+
+    @Test
+    fun wallet_topup_url_fills_the_amount() {
+        val config = RemoteConfig.parse(
+            """{"wallet": {"topup_url": "https://t.me/bot?start=topup_{amount}", "topup_amounts": [200000, 500000]}}"""
+        )!!
+        assertEquals(200000L, config.wallet.defaultTopup)
+        assertEquals("https://t.me/bot?start=topup_500000", config.wallet.topupUrl(500000))
     }
 }

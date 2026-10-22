@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "versions": {
+    "min_supported_code": 0,
+    "blocked_codes": []
+  },
+  "messages": [],
+  "settings": {},
+  "features": {
+    "wallet": true
+  },
+  "wallet": {
+    "topup_url": "",
+    "topup_amounts": [200000, 500000, 1000000],
+    "default_topup": 500000,
+    "currency": "تومان",
+    "warn_below": 300000,
+    "critical_below": 100000
+  }
+}
