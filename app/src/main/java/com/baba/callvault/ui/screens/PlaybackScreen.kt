@@ -232,6 +232,8 @@ fun PlaybackScreen(
                     if (!isPlaying) onPlay()
                 }
             )
+            // The server's summary (Hamdabir hub), when this recording was sent there.
+            com.baba.callvault.ui.common.HubCallCard(recordingName = item.displayName)
             // Between the summary and the note: a tag is the shortest thing on the screen and the
             // one most often applied right after listening, so it sits where the thumb already is
             // rather than below a text field that opens the keyboard.

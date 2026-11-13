@@ -33,4 +33,14 @@
     <string name="avanegar_config_url_label">آدرس فایل تنظیمات</string>
     <string name="avanegar_config_url_hint">اختیاری. اگر خالی بماند، اول از سرور و بعد از GitHub خوانده می‌شود.</string>
     <string name="avanegar_config_url_default">سرور، سپس GitHub</string>
+    <string name="hub_card_title">خلاصه همدبیر</string>
+    <string name="hub_card_loading">در حال دریافت از سرور…</string>
+    <string name="hub_card_waiting">فرستاده شد. متن و خلاصه که آماده شد اینجا می‌آید.</string>
+    <string name="hub_card_error">به سرور وصل نشد.</string>
+    <string name="hub_card_result">نتیجه: %1$s</string>
+    <string name="hub_card_next">قدم بعدی: %1$s</string>
+    <string name="hub_card_tasks">کارها</string>
+    <string name="hub_card_objections">اعتراض‌ها: %1$s</string>
+    <string name="hub_card_history">تماس‌های قبلی با این شماره: %1$d</string>
+    <string name="hub_card_retry">دوباره</string>
 </resources>

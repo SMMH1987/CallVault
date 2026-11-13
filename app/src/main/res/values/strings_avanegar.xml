@@ -35,4 +35,14 @@
     <string name="avanegar_config_url_label">Config file address</string>
     <string name="avanegar_config_url_hint">Optional. Leave empty to use the server address, then GitHub.</string>
     <string name="avanegar_config_url_default">Server, then GitHub</string>
+    <string name="hub_card_title">Hamdabir summary</string>
+    <string name="hub_card_loading">Loading from the server…</string>
+    <string name="hub_card_waiting">Sent. The transcript and summary will appear here when ready.</string>
+    <string name="hub_card_error">Could not reach the server.</string>
+    <string name="hub_card_result">Result: %1$s</string>
+    <string name="hub_card_next">Next step: %1$s</string>
+    <string name="hub_card_tasks">Tasks</string>
+    <string name="hub_card_objections">Objections: %1$s</string>
+    <string name="hub_card_history">Past calls with this number: %1$d</string>
+    <string name="hub_card_retry">Try again</string>
 </resources>

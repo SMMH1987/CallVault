@@ -171,6 +171,11 @@ class AvanegarUploadWorker(ctx: Context, params: WorkerParameters) : CoroutineWo
         fun enqueue(context: Context, name: String, uri: Uri, mimeType: String) {
             val prefs = AppPreferences(context)
             if (!prefs.isAvanegarUploadEnabled()) return
+            // A hub token (hdv_...) means the phone talks to our Hamdabir server, which does the rest.
+            if (com.baba.callvault.integrations.hub.HubClient.isHubToken(prefs.getAvanegarDeviceKey())) {
+                com.baba.callvault.integrations.hub.HubUploadWorker.enqueue(context, name, uri, mimeType)
+                return
+            }
             val network = if (prefs.isAvanegarWifiOnly()) NetworkType.UNMETERED else NetworkType.CONNECTED
             val request = OneTimeWorkRequestBuilder<AvanegarUploadWorker>()
                 .setInputData(workDataOf(KEY_NAME to name, KEY_URI to uri.toString(), KEY_MIME to mimeType))
