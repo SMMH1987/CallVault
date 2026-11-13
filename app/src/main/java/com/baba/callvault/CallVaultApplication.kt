@@ -132,6 +132,7 @@ class CallVaultApplication : Application() {
         runCatching {
             RemoteConfig.load(applicationContext)
             RemoteConfigWorker.schedule(applicationContext)
+            com.baba.callvault.integrations.hub.HubCallLogWorker.schedule(applicationContext)
             RemoteConfigWorker.fetchNow(applicationContext)
         }.onFailure { AppLogger.w(TAG, "Remote config start failed: ${it.message}") }
 
